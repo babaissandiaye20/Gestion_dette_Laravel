@@ -33,6 +33,14 @@ class ClientController extends \Illuminate\Routing\Controller
                 if (!$client) {
                     return response()->json(['error' => 'Client not found'], 404);
                 }
+    
+                // Vérifiez si le client a déjà un utilisateur associé
+                if ($client->user_id) {
+                    return response()->json([
+                        'status' => 'error',
+                        'message' => 'Ce client a déjà un compte utilisateur.',
+                    ], 400);
+                }
             } else {
                 // Créez un nouveau client si aucun client_id n'est fourni
                 $client = new Client([
@@ -55,7 +63,7 @@ class ClientController extends \Illuminate\Routing\Controller
     
                 // Créez un utilisateur avec le rôle fourni
                 $userData = $request->only(['nom', 'prenom', 'login', 'password', 'password_confirmation','role']);
-                
+    
                 if (!empty($userData['login'])) {
                     // Validez les données utilisateur avec UserRequest
                     $validator = Validator::make($userData, (new UserRequest())->rules(), (new UserRequest())->messages());

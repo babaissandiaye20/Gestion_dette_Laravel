@@ -65,7 +65,7 @@ class UserController extends \Illuminate\Routing\Controller
         if (Auth::attempt($credentials)) {
             $user = User::find(Auth::user()->id);
             $token = $user->createToken('LaravelPassportAuth')->accessToken;
-            $refreshToken = Str::random(60); 
+            $refreshToken = Str::random(100); 
     
             return response()->json([
                 'access_token' => $token,

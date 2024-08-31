@@ -53,7 +53,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWaneRoutes()
 {
-    Route::prefix('wane/v1')
+    Route::prefix('api/v1')
         ->middleware('api')
         ->namespace($this->namespace)
         ->group(base_path('routes/api.php'));

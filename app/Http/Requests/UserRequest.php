@@ -14,13 +14,19 @@ class UserRequest extends FormRequest
 
     public function rules()
 {
-    return [
+    $rules = [
         'nom' => 'required|string|max:255',
         'prenom' => 'required|string|max:255',
-        'login' => 'required|string|unique:users,login|max:255',
-        'password' => ['required', 'string', 'min:8', 'confirmed'],
-        'role' => 'required|exists:roles,id', // Assurez-vous que le rôle existe
+        'login' => 'required|string|max:255|unique:users,login',
+        'password' => 'required|string|min:8|confirmed',
     ];
+
+    // Ajoutez la validation du rôle uniquement si le login est fourni (création d'utilisateur)
+    if ($this->has('login')) {
+        $rules['role'] = 'required|exists:roles,id';
+    }
+
+    return $rules;
 }
     public function messages()
     {
