@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
+use App\Rules\PasswordStrength;
 
 class UserRequest extends FormRequest
 {
@@ -13,21 +13,28 @@ class UserRequest extends FormRequest
     }
 
     public function rules()
-{
-    $rules = [
-        'nom' => 'required|string|max:255',
-        'prenom' => 'required|string|max:255',
-        'login' => 'required|string|max:255|unique:users,login',
-        'password' => 'required|string|min:8|confirmed',
-    ];
+    {
+        $rules = [
+            'nom' => 'required|string|max:255',
+            'prenom' => 'required|string|max:255',
+            'login' => 'required|string|max:255|unique:users,login',
+            'password' => [
+                'required',
+                'string',
+                'min:8',
+                'confirmed',
+                new PasswordStrength(), // Applying the custom PasswordStrength rule
+            ],
+        ];
 
-    // Ajoutez la validation du rôle uniquement si le login est fourni (création d'utilisateur)
-    if ($this->has('login')) {
-        $rules['role'] = 'required|exists:roles,id';
+        // Validate the role only if the login is provided (user creation)
+        if ($this->has('login')) {
+            $rules['role'] = 'required|exists:roles,id';
+        }
+
+        return $rules;
     }
 
-    return $rules;
-}
     public function messages()
     {
         return [

@@ -26,6 +26,7 @@ class UserController extends \Illuminate\Routing\Controller
             null,
             'La confirmation du mot de passe ne correspond pas.'
         ), 400);
+
     }
 
     // Récupérer l'id du rôle fourni

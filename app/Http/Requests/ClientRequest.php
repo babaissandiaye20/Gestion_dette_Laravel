@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use App\Rules\SenegalPhoneNumber;
+use App\Rules\PasswordStrength;
 
 class ClientRequest extends FormRequest
 {
@@ -15,6 +16,7 @@ class ClientRequest extends FormRequest
     public function rules()
     {
         $clientIdProvided = $this->input('client_id') !== null;
+        $userInfoProvided = $this->has(['nom', 'prenom', 'login', 'password']);
     
         return [
             'client_id' => 'nullable|exists:clients,id',
@@ -24,11 +26,17 @@ class ClientRequest extends FormRequest
             'nom' => 'nullable|string|max:255',
             'prenom' => 'nullable|string|max:255',
             'login' => 'nullable|string|unique:users,login|max:255',
-            'password' => 'nullable|string|min:8|confirmed',
-            'role' => 'required|exists:roles,id', // Assurez-vous que la validation du rôle est correcte ici
+            'password' => [
+                $clientIdProvided ? 'nullable' : 'required',
+                'string',
+                'min:8',
+                'confirmed',
+                new PasswordStrength(),
+            ],
+            // Rendre le rôle facultatif si aucune information utilisateur n'est fournie
+            'role' => $userInfoProvided ? 'required|exists:roles,id' : 'nullable|exists:roles,id',
         ];
     }
-    
 
     public function messages()
     {
@@ -40,8 +48,10 @@ class ClientRequest extends FormRequest
             'nom.required' => 'Le nom est obligatoire.',
             'prenom.required' => 'Le prénom est obligatoire.',
             'login.unique' => 'Ce login est déjà utilisé.',
+            'password.required' => 'Le mot de passe est obligatoire.',
             'password.min' => 'Le mot de passe doit contenir au moins 8 caractères.',
             'password.confirmed' => 'La confirmation du mot de passe ne correspond pas.',
+            'password_strength' => 'Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre, et un caractère spécial.',
             'role.exists' => 'Le rôle sélectionné est invalide.',
             'client_id.exists' => 'Le client spécifié n\'existe pas.',
         ];
