@@ -21,3 +21,4 @@ class Client extends Model
         return $this->hasMany(Dette::class);
     }
 }
+ 

@@ -97,4 +97,58 @@ public function create(UserRequest $request)
             return response()->json(['error' => 'Unauthorized'], 401);
         }
     }
+    public function index(Request $request)
+    {
+        $this->authorize('create', User::class);
+        
+        // Récupérer les paramètres de requête
+        $roleFilter = $request->query('roles');
+        $etatFilter = $request->query('actif');
+    
+        // Initialiser la requête de base pour les utilisateurs
+        $query = User::query();
+    
+        // Filtrer par rôle si le filtre est fourni
+        if ($roleFilter) {
+            // Trouver l'ID du rôle correspondant au nom fourni
+            $role = Role::where('name', $roleFilter)->first();
+            if ($role) {
+                $query->where('role_id', $role->id);
+            } else {
+                // Si aucun rôle n'est trouvé, retourner une réponse vide
+                return response()->json([
+                    'status' => 403,
+                    'message' => 'Aucun utilisateur trouvé pour le rôle spécifié.',
+                    'users' => []
+                ], 403);
+            }
+        }
+    
+        // Filtrer par état actif si le filtre est fourni
+        if ($etatFilter === 'oui') {
+            $query->where('etat', 'actif');
+        } elseif ($etatFilter === 'non') {
+            $query->where('etat', 'inactif');
+        }
+    
+        // Paginer les résultats
+        $users = $query->paginate(10);
+    
+        // Vérifier s'il y a des utilisateurs trouvés
+        if ($users->isEmpty()) {
+            return response()->json([
+                'status' => 403,
+                'message' => 'Aucun utilisateur trouvé.',
+                'users' => []
+            ], 403);
+        }
+    
+        // Retourner les résultats paginés en format JSON avec un message de succès
+        return response()->json([
+            'status' => 200,
+            'message' => 'Utilisateurs trouvés.',
+            'users' => $users
+        ], 200);
+    }
+    
 }

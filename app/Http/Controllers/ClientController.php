@@ -220,42 +220,71 @@ public function create(ClientCreateRequest $request)
         ), 200);
     }
     public function indexbis(): JsonResponse
-{
-    // Récupérer les paramètres de requête
-    $comptes = request()->query('comptes');
-    $etat = request()->query('actif');
+    {
+        // Récupérer les paramètres de requête
+        $comptes = request()->query('comptes');
+        $etat = request()->query('actif');
+        
+        // Initialiser la requête de base
+        $query = Client::query();
     
-    // Initialiser la requête de base
-    $query = Client::query();
-
-    // Filtrer en fonction de la présence du user_id
-    if ($comptes === 'oui') {
-        $query->whereNotNull('user_id');
-    } elseif ($comptes === 'non') {
-        $query->whereNull('user_id');
-    }
-
-    // Filtrer en fonction de l'état de l'utilisateur associé
-    if ($etat === 'oui') {
-        $query->whereHas('user', function($q) {
-            $q->where('etat', 'actif');
-        });
-    } elseif ($etat === 'non') {
-        $query->whereHas('user', function($q) {
-            $q->where('etat', 'inactif');
-        });
-    }
-
-    // Charger uniquement l'ID des utilisateurs par défaut
-    if (is_null($comptes) && is_null($etat)) {
-        $clients = $query->with('user:id')->paginate(10); // Seuls les IDs des users sont chargés
-    } else {
-        // Charger les utilisateurs complets si un filtre est appliqué
+        // Appliquer les filtres en fonction de la présence du user_id
+        if ($comptes === 'oui') {
+            $query->whereNotNull('user_id');
+        } elseif ($comptes === 'non') {
+            $query->whereNull('user_id');
+        }
+    
+        // Appliquer les filtres en fonction de l'état de l'utilisateur associé
+        if ($etat === 'oui') {
+            $query->whereHas('user', function($q) {
+                $q->where('etat', 'actif');
+            });
+        } elseif ($etat === 'non') {
+            $query->whereHas('user', function($q) {
+                $q->where('etat', 'inactif');
+            });
+        }
+    
+        // Charger les utilisateurs complets si des filtres sont appliqués
         $clients = $query->with('user')->paginate(10);
+    
+        // Vérifier s'il y a des clients trouvés
+        if ($clients->isEmpty()) {
+            return response()->json([
+                'status' => 403,
+                'message' => 'Aucun client trouvé.',
+                'clients' => []
+            ], 403);
+        }
+    
+        // Retourner les résultats paginés en format JSON avec un message de succès
+        return response()->json([
+            'status' => 200,
+            'message' => 'Clients trouvés.',
+            'clients' => $clients
+        ], 200);
     }
+    
+    public function getTelephones(Request $request)
+    {
+        // Récupérer tous les téléphones des clients
+        $telephones = Client::pluck('telephone');
 
-    // Retourner les résultats paginés en format JSON
-    return response()->json($clients);
-}
+        // Vérifier si des téléphones ont été trouvés
+        if ($telephones->isEmpty()) {
+            return response()->json([
+                'status' => 404,
+                'message' => 'Aucun numéro de téléphone trouvé.',
+                'telephones' => []
+            ], 404);
+        }
 
+        // Retourner les téléphones trouvés
+        return response()->json([
+            'status' => 200,
+            'message' => 'Numéros de téléphone trouvés.',
+            'telephones' => $telephones
+        ], 200);
+    }
 }

@@ -22,7 +22,7 @@ use App\Http\Controllers\RoleController;
     Route::get('/clients/{id}', [ClientController::class, 'show']);
     Route::post('/roles', [RoleController::class, 'create']);
     Route::get('/roles/{name}', [RoleController::class, 'getRoleByName']);
-
+    Route::post('/clients/telephone', [ClientController::class, 'getTelephones']);
 
    /*  Route::apiResource('articles', ArticleController::class)->except(['pdateQuantities']);  */
 
@@ -30,6 +30,7 @@ use App\Http\Controllers\RoleController;
     Route::apiResource('articles', ArticleController::class)->except(['destroy']);
 
     Route::middleware('auth:api')->group(function () {
+        Route::get('/users', [UserController::class, 'index']);
         Route::post('/users', [UserController::class, 'create']);
         Route::put('/users/{id}', [UserController::class, 'update']);
         Route::patch('/users/{id}', [UserController::class, 'updatePartial']); // Si vous avez une méthode patch

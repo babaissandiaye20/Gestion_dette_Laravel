@@ -27,3 +27,4 @@ class User extends Authenticatable
         return $this->belongsToMany(Article::class, 'articles_users');
     }
 }
+ 
