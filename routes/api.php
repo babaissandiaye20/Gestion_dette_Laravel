@@ -12,7 +12,7 @@ use App\Http\Controllers\RoleController;
         return App\Models\User::find($id);
     });
     Route::post('/users', [UserController::class, 'create']);
-    Route::post('/clients', [ClientController::class, 'create']);
+    /* Route::post('/clients', [ClientController::class, 'create']); */
     
     Route::get('/clients', [ClientController::class, 'indexbis']);
  Route::post('/articles', [ArticleController::class, 'store']); 
@@ -24,17 +24,19 @@ use App\Http\Controllers\RoleController;
     Route::get('/roles/{name}', [RoleController::class, 'getRoleByName']);
 
 
-    Route::apiResource('articles', ArticleController::class)->except(['pdateQuantities']); 
+   /*  Route::apiResource('articles', ArticleController::class)->except(['pdateQuantities']);  */
 
-      Route::post('/login', [UserController::class ,'login']);
+      Route::post('/login', [UserController::class ,'login'])->name('login');
     Route::apiResource('articles', ArticleController::class)->except(['destroy']);
 
     Route::middleware('auth:api')->group(function () {
+        Route::post('/users', [UserController::class, 'create']);
         Route::put('/users/{id}', [UserController::class, 'update']);
         Route::patch('/users/{id}', [UserController::class, 'updatePartial']); // Si vous avez une méthode patch
         Route::delete('/users/{id}', [UserController::class, 'destroy']);
 
-        Route::post('/clients', [ClientController::class, 'create']);
+        Route::post('/clients', [ClientController::class, 'register'])->middleware('custom.unauthorized');
+        Route::post('/client', [ClientController::class, 'create'])->middleware('custom.unauthorized');
      
     });
 

@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Models\users;
 use App\Models\Client;
 use App\Http\Requests\ClientRequest;
+use App\Http\Requests\ClientCreateRequest;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 use App\Traits\StatuesTrait;
@@ -13,12 +14,16 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB; // Importez la façade DB
 use App\Models\Role;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests; // Ajoutez ceci
+use Illuminate\Auth\Access\AuthorizationException;
+
 class ClientController extends \Illuminate\Routing\Controller
 {
-    use StatuesTrait;
+    use StatuesTrait,AuthorizesRequests;
 
-    public function create(ClientRequest $request)
+    public function register(ClientRequest $request)
     {
+        $this->authorize('create', Client::class);
         DB::beginTransaction();
     
         try {
@@ -40,16 +45,17 @@ class ClientController extends \Illuminate\Routing\Controller
                 ['client' => $client],
                 'Client créé avec succès.'
             ), 201);
-        } catch (\Exception $e) {
+        } catch (AuthorizationException $e) {
             DB::rollBack();
     
             return response()->json([
-                'status' => 'error',
-                'message' => 'Une erreur est survenue lors de la création du client.',
-                'error' => $e->getMessage(),
-            ], 500);
+                'statut' => 403,
+                'message' => "Vous n'êtes pas autorisé à effectuer cette action.",
+                'data' => null
+            ], 403);
         }
     }
+    
     
     private function registerUserForClient($request, $clientId)
     {
@@ -73,6 +79,7 @@ class ClientController extends \Illuminate\Routing\Controller
     
     private function createClient($request)
     {
+       
         // Créez un nouveau client
         $client = new Client([
             'surnom' => $request->surnom,
@@ -113,7 +120,10 @@ class ClientController extends \Illuminate\Routing\Controller
         if ($validator->fails()) {
             throw new \Exception(json_encode($validator->errors()));
         }
-
+        $photoPath = null;
+        if ($request->hasFile('photo')) {
+            $photoPath = $request->file('photo')->store('photos', 'public');
+        }
         // Créez un utilisateur avec le rôle fourni
         $user = User::create([
             'nom' => $userData['nom'],
@@ -121,6 +131,7 @@ class ClientController extends \Illuminate\Routing\Controller
             'login' => $userData['login'],
             'password' => Hash::make($userData['password']),
             'role_id' => $role->id,
+            'photo' => $photoPath,
         ]);
 
         // Associez l'utilisateur au client
@@ -128,9 +139,38 @@ class ClientController extends \Illuminate\Routing\Controller
         $client->save();
     }
 }
+public function create(ClientCreateRequest $request)
+{
+    $this->authorize('create', Client::class);
+    DB::beginTransaction();
 
-    
-    
+    try {
+        // Créez un nouveau client sans utilisateur
+        $client = new Client([
+            'surnom' => $request->surnom,
+            'telephone' => $request->telephone,
+            'adresse' => $request->adresse,
+        ]);
+        $client->save();
+
+        DB::commit();
+
+        return response()->json($this->response(
+            \App\Enums\Statues::SUCCESS(),
+            ['client' => $client],
+            'Client créé sans utilisateur avec succès.'
+        ), 201);
+    } catch (AuthorizationException $e) {
+        DB::rollBack();
+        
+        return response()->json([
+            'statut' => 403,
+            'message' => "Vous n'êtes pas autorisé à effectuer cette action.",
+            'data' => null
+        ], 403);
+    }
+}
+
     
     public function show($id)
     {
@@ -179,10 +219,43 @@ class ClientController extends \Illuminate\Routing\Controller
             'Détails du client récupérés avec succès.'
         ), 200);
     }
+    public function indexbis(): JsonResponse
+{
+    // Récupérer les paramètres de requête
+    $comptes = request()->query('comptes');
+    $etat = request()->query('actif');
+    
+    // Initialiser la requête de base
+    $query = Client::query();
 
-    public function indexbis():JsonResponse{
-        $data=Client::whereNotNull('user_id')->with('user')->paginate(1);
-        return response()->json ($data);
+    // Filtrer en fonction de la présence du user_id
+    if ($comptes === 'oui') {
+        $query->whereNotNull('user_id');
+    } elseif ($comptes === 'non') {
+        $query->whereNull('user_id');
     }
-         
+
+    // Filtrer en fonction de l'état de l'utilisateur associé
+    if ($etat === 'oui') {
+        $query->whereHas('user', function($q) {
+            $q->where('etat', 'actif');
+        });
+    } elseif ($etat === 'non') {
+        $query->whereHas('user', function($q) {
+            $q->where('etat', 'inactif');
+        });
+    }
+
+    // Charger uniquement l'ID des utilisateurs par défaut
+    if (is_null($comptes) && is_null($etat)) {
+        $clients = $query->with('user:id')->paginate(10); // Seuls les IDs des users sont chargés
+    } else {
+        // Charger les utilisateurs complets si un filtre est appliqué
+        $clients = $query->with('user')->paginate(10);
+    }
+
+    // Retourner les résultats paginés en format JSON
+    return response()->json($clients);
+}
+
 }

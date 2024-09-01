@@ -12,43 +12,62 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth; 
 use Laravel\Passport\HasApiTokens;
 use App\Http\Requests\LoginRequest;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests; // Ajoutez ceci
+use Illuminate\Auth\Access\AuthorizationException; 
 class UserController extends \Illuminate\Routing\Controller
 {
-    use StatuesTrait, HasApiTokens;
+    use StatuesTrait, HasApiTokens,AuthorizesRequests;
 
     // Création d'un utilisateur
-    public function create(UserRequest $request)
+public function create(UserRequest $request)
 {
-    // Vérification si la confirmation du mot de passe correspond
-    if ($request->password !== $request->password_confirmation) {
+    try {
+        // Authorize the action
+        $this->authorize('create', User::class);
+
+        // Check if password confirmation matches
+        if ($request->password !== $request->password_confirmation) {
+            return response()->json($this->response(
+                \App\Enums\Statues::ECHEC(),
+                null,
+                'La confirmation du mot de passe ne correspond pas.'
+            ), 400);
+        }
+        $photoPath = null;
+        if ($request->hasFile('photo')) {
+            $photo = $request->file('photo');
+            $photoPath = $photo->storeAs('photos', uniqid() . '.' . $photo->getClientOriginalExtension(), 'public');
+        }
+        // Get the role ID provided in the request
+        $roleId = $request->role;
+
+        // Create the user
+        $user = User::create([
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'login' => $request->login,
+            'password' => Hash::make($request->password),
+            'role_id' => $roleId,
+            'photo' => $photoPath
+        ]);
+
+        // Return a success response
+        return response()->json($this->response(
+            \App\Enums\Statues::SUCCESS(),
+            ['user' => $user],
+            'Utilisateur créé avec succès.'
+        ), 201);
+
+    } catch (AuthorizationException $e) {
+        // Handle unauthorized action
         return response()->json($this->response(
             \App\Enums\Statues::ECHEC(),
             null,
-            'La confirmation du mot de passe ne correspond pas.'
-        ), 400);
-
+            'Vous n\'êtes pas autorisé à créer un compte utilisateur.'
+        ), 403);
     }
-
-    // Récupérer l'id du rôle fourni
-    $roleId = $request->role;
-    /* dd($roleId); */
-
-    // Création de l'utilisateur
-    $user = User::create([
-        'nom' => $request->nom,
-        'prenom' => $request->prenom,
-        'login' => $request->login,
-        'password' => Hash::make($request->password),
-        'role_id' => $roleId, // Assigner l'id du rôle ici
-    ]);
-
-    // Retourne une réponse en utilisant le trait
-    return response()->json($this->response(
-        \App\Enums\Statues::SUCCESS(),
-        ['user' => $user],
-        'Utilisateur créé avec succès.'
-    ), 201);
 }
+
     // Suppression d'un utilisateur
     public function destroy($id)
     {

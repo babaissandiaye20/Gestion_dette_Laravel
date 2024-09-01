@@ -4,6 +4,8 @@ namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+use Illuminate\Http\JsonResponse;
 
 class Handler extends ExceptionHandler
 {
@@ -23,8 +25,14 @@ class Handler extends ExceptionHandler
      */
     public function register(): void
     {
-        $this->reportable(function (Throwable $e) {
-            //
+        $this->renderable(function (AccessDeniedHttpException $e, $request) {
+            if ($request->expectsJson()) {
+                return response()->json([
+                    'status' => JsonResponse::HTTP_FORBIDDEN, // Status code
+                    'message' => "Vous n''êtes pas autorisés à faire cette action.",
+                    'data' => null, // Adding 'data' with a null value
+                ], JsonResponse::HTTP_FORBIDDEN);
+            }
         });
     }
 }

@@ -47,6 +47,8 @@ class UserRequest extends FormRequest
             'password.confirmed' => 'La confirmation du mot de passe ne correspond pas.',
             'role.required' => 'Le rôle est obligatoire.',
             'role.exists' => 'Le rôle sélectionné est invalide. Veuillez sélectionner un rôle valide.',
+            'photo.mimes' => 'L\'image doit être de type jpeg, png, jpg ou gif.',
+            'photo.max' => 'L\'image ne doit pas dépasser 2MB.',
         ];
     }
 }

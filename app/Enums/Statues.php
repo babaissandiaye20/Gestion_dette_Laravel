@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Enums;
 
 use Spatie\Enum\Enum;
@@ -8,6 +7,7 @@ use Spatie\Enum\Enum;
  * @method static self SUCCESS()
  * @method static self BAD_REQUEST()
  * @method static self SERVER_ERROR()
+ * @method static self ECHEC()
  */
 class Statues extends Enum
 {
@@ -18,6 +18,7 @@ class Statues extends Enum
             self::SUCCESS()->value => 200,
             self::BAD_REQUEST()->value => 400,
             self::SERVER_ERROR()->value => 500,
+            self::ECHEC()->value => 403, // Code HTTP pour ECHEC (e.g., 403 Forbidden)
         };
     }
 
@@ -28,6 +29,7 @@ class Statues extends Enum
             self::SUCCESS()->value => 'L\'opération a réussi.',
             self::BAD_REQUEST()->value => 'Requête incorrecte.',
             self::SERVER_ERROR()->value => 'Erreur interne du serveur.',
+            self::ECHEC()->value => 'Vous n\'êtes pas autorisé à effectuer cette action.', // Message pour ECHEC
         };
     }
 

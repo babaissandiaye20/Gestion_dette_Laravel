@@ -35,6 +35,7 @@ class ClientRequest extends FormRequest
             ],
             // Rendre le rôle facultatif si aucune information utilisateur n'est fournie
             'role' => $userInfoProvided ? 'required|exists:roles,id' : 'nullable|exists:roles,id',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
 
@@ -54,6 +55,8 @@ class ClientRequest extends FormRequest
             'password_strength' => 'Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre, et un caractère spécial.',
             'role.exists' => 'Le rôle sélectionné est invalide.',
             'client_id.exists' => 'Le client spécifié n\'existe pas.',
+            'photo.mimes' => 'L\'image doit être de type jpeg, png, jpg ou gif.',
+            'photo.max' => 'L\'image ne doit pas dépasser 2MB.',
         ];
     }
 }
