@@ -15,20 +15,20 @@ use App\Http\Controllers\RoleController;
     /* Route::post('/clients', [ClientController::class, 'create']); */
     
     Route::get('/clients', [ClientController::class, 'indexbis']);
- Route::post('/articles', [ArticleController::class, 'store']); 
+    
     Route::post('/articles/update-quantities', [ArticleController::class, 'updateQuantities']);
-    Route::post('/update-quantities', [ArticleController::class, 'updateQuantities']);
     // Route pour show: afficher un client par ID
     Route::get('/clients/{id}', [ClientController::class, 'show']);
     Route::get('/roles/{name}', [RoleController::class, 'getRoleByName']);
-    
-   
+  
     /*  Route::apiResource('articles', ArticleController::class)->except(['pdateQuantities']);  */
     
     Route::post('/login', [UserController::class ,'login'])->name('login');
-    Route::apiResource('articles', ArticleController::class);
     
     Route::middleware('auth:api')->group(function () {
+        Route::post('/articles/libelle',[ArticleController::class,'searchByLibelle']);
+        Route::post('/articles/update-quantities', [ArticleController::class, 'updateQuantities']);
+        Route::apiResource('articles', ArticleController::class);
         Route::post('/clients/telephone', [ClientController::class, 'getClientsByTelephones']);
 
         Route::get('/clients/{id}', [ClientController::class, 'getClientById']);
