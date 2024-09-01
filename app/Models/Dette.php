@@ -20,5 +20,9 @@ class Dette extends Model
     {
         return $this->belongsToMany(Article::class, 'articles_dettes')->withPivot('qteVente', 'prixVente');
     }
+    public function details()
+    {
+        return $this->hasMany(DetailDette::class, 'dette_id');
+    }
 }
 

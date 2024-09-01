@@ -146,5 +146,40 @@ class ArticleController extends \Illuminate\Routing\Controller
         'message' => 'Article supprimé avec succès!',
     ], 200);
 }
+public function index(Request $request)
+{
+    // Récupérer le paramètre de requête 'disponible'
+    $disponible = $request->query('disponible');
+
+    // Initialiser la requête de base pour les articles
+    $query = Article::query();
+
+    // Appliquer le filtre basé sur la disponibilité des articles
+    if ($disponible === 'oui') {
+        $query->where('qutestock', '>', 0); // Correction ici
+    } elseif ($disponible === 'non') {
+        $query->where('qutestock', '=', 0); // Correction ici
+    }
+
+    // Récupérer les articles filtrés avec pagination
+    $articles = $query->paginate(10);
+
+    // Vérifier s'il y a des articles trouvés
+    if ($articles->isEmpty()) {
+        return response()->json([
+            'status' => 404,
+            'message' => 'Aucun article trouvé.',
+            'articles' => []
+        ], 404);
+    }
+
+    // Retourner les résultats paginés en format JSON avec un message de succès
+    return response()->json([
+        'status' => 200,
+        'message' => 'Articles trouvés.',
+        'articles' => $articles
+    ], 200);
+}
+
 
 }    

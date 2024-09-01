@@ -20,16 +20,22 @@ use App\Http\Controllers\RoleController;
     Route::post('/update-quantities', [ArticleController::class, 'updateQuantities']);
     // Route pour show: afficher un client par ID
     Route::get('/clients/{id}', [ClientController::class, 'show']);
-    Route::post('/roles', [RoleController::class, 'create']);
     Route::get('/roles/{name}', [RoleController::class, 'getRoleByName']);
-    Route::post('/clients/telephone', [ClientController::class, 'getTelephones']);
-
-   /*  Route::apiResource('articles', ArticleController::class)->except(['pdateQuantities']);  */
-
-      Route::post('/login', [UserController::class ,'login'])->name('login');
-    Route::apiResource('articles', ArticleController::class)->except(['destroy']);
-
+    
+   
+    /*  Route::apiResource('articles', ArticleController::class)->except(['pdateQuantities']);  */
+    
+    Route::post('/login', [UserController::class ,'login'])->name('login');
+    Route::apiResource('articles', ArticleController::class);
+    
     Route::middleware('auth:api')->group(function () {
+        Route::post('/clients/telephone', [ClientController::class, 'getClientsByTelephones']);
+
+        Route::get('/clients/{id}', [ClientController::class, 'getClientById']);
+    Route::post('/clients/{id}/user', [ClientController::class, 'getClientWithUser']);
+    Route::post('/clients/{id}/dettes', [ClientController::class, 'listDettes']);
+
+        Route::post('/roles', [RoleController::class, 'create']);
         Route::get('/users', [UserController::class, 'index']);
         Route::post('/users', [UserController::class, 'create']);
         Route::put('/users/{id}', [UserController::class, 'update']);

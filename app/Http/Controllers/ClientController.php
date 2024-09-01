@@ -221,6 +221,7 @@ public function create(ClientCreateRequest $request)
     }
     public function indexbis(): JsonResponse
     {
+        $this->authorize('create', Client::class);
         // Récupérer les paramètres de requête
         $comptes = request()->query('comptes');
         $etat = request()->query('actif');
@@ -266,25 +267,133 @@ public function create(ClientCreateRequest $request)
         ], 200);
     }
     
-    public function getTelephones(Request $request)
+    public function getClientsByTelephones(Request $request)
     {
-        // Récupérer tous les téléphones des clients
-        $telephones = Client::pluck('telephone');
-
-        // Vérifier si des téléphones ont été trouvés
-        if ($telephones->isEmpty()) {
+        // Authorize the action
+        $this->authorize('create', Client::class);
+    
+        // Retrieve phone numbers from the request
+        $telephones = $request->input('telephones');
+    
+        // Check if the input is valid
+        if (empty($telephones)) {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Veuillez fournir au moins un numéro de téléphone.',
+                'clients' => []
+            ], 400);
+        }
+    
+        // Convert the phone numbers into an array if they are comma-separated
+        $telephoneArray = explode(',', $telephones);
+    
+        // Search for clients with the provided phone numbers
+        $clients = Client::whereIn('telephone', $telephoneArray)->get();
+    
+        // Check if any clients were found
+        if ($clients->isEmpty()) {
             return response()->json([
                 'status' => 404,
-                'message' => 'Aucun numéro de téléphone trouvé.',
-                'telephones' => []
+                'message' => 'Aucun client trouvé pour les numéros de téléphone fournis.',
+                'clients' => []
+            ], 404);
+        }
+    
+        // Return the found clients
+        return response()->json([
+            'status' => 200,
+            'message' => 'Clients trouvés.',
+            'clients' => $clients
+        ], 200);
+    }
+    
+    public function getClientById($id): JsonResponse
+    {
+       /*  $this->authorize('create', Client::class); */
+        // Trouver le client par son ID
+        $client = Client::find($id);
+
+        // Vérifier si le client existe
+        if (!$client) {
+            return response()->json([
+                'status' => 404,
+                'message' => 'Client non trouvé.',
+                'client' => null
             ], 404);
         }
 
-        // Retourner les téléphones trouvés
+        // Retourner les informations du client trouvées
         return response()->json([
             'status' => 200,
-            'message' => 'Numéros de téléphone trouvés.',
-            'telephones' => $telephones
+            'message' => 'Client trouvé.',
+            'client' => $client
         ], 200);
     }
+    public function getClientWithUser(Request $request, $id): JsonResponse
+    {
+       /*  $this->authorize('create', Client::class); */
+        // Trouver le client par son ID
+        $client = Client::with('user')->find($id);
+
+        // Vérifier si le client existe
+        if (!$client) {
+            return response()->json([
+                'status' => 404,
+                'message' => 'Client non trouvé.',
+                'client' => null
+            ], 404);
+        }
+
+        // Préparer la réponse avec ou sans utilisateur
+        $response = [
+            'status' => 200,
+            'message' => 'Client trouvé.',
+            'client' => $client
+        ];
+
+        // Vérifier si l'utilisateur associé au client existe
+        if ($client->user_id) {
+            // Inclure les informations de l'utilisateur
+            $response['user'] = $client->user;
+        } else {
+            // Sinon, inclure user_id comme null
+            $response['client']['user_id'] = null;
+        }
+
+        return response()->json($response, 200);
+    }
+    /* public function getDettesWithDetails($clientId)
+    {
+        // Vérifiez si le client existe
+        $client = Client::find($clientId);
+    
+        if (!$client) {
+            return response()->json([
+                'status' => 404,
+                'message' => 'Client non trouvé.',
+            ], 404);
+        }
+    
+        // Récupérez les dettes du client avec leurs détails
+        $dettes = Dette::with('details')
+                        ->where('client_id', $clientId)
+                        ->get();
+    
+        // Vérifiez si des dettes sont trouvées
+        if ($dettes->isEmpty()) {
+            return response()->json([
+                'status' => 404,
+                'message' => 'Aucune dette trouvée pour ce client.',
+                'dettes' => []
+            ], 404);
+        }
+    
+        // Retourner les dettes trouvées avec les détails
+        return response()->json([
+            'status' => 200,
+            'message' => 'Dettes trouvées.',
+            'dettes' => $dettes
+        ], 200);
+    } */
+    
 }
