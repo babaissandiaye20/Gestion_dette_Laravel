@@ -6,6 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use App\Rules\SenegalPhoneNumber;
 use App\Rules\PasswordStrength;
 
+
 class ClientRequest extends FormRequest
 {
     public function authorize()

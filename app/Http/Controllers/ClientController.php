@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request; 
 use App\Models\users;
 use App\Models\Client;
+use App\Models\Dette;
 use App\Http\Requests\ClientRequest;
 use App\Http\Requests\ClientCreateRequest;
 use App\Http\Requests\UserRequest;
@@ -17,9 +18,11 @@ use App\Models\Role;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests; // Ajoutez ceci
 use Illuminate\Auth\Access\AuthorizationException;
 
+
 class ClientController extends \Illuminate\Routing\Controller
 {
     use StatuesTrait,AuthorizesRequests;
+    
 
     public function register(ClientRequest $request)
     {
@@ -219,6 +222,7 @@ public function create(ClientCreateRequest $request)
             'Détails du client récupérés avec succès.'
         ), 200);
     }
+    
     public function indexbis(): JsonResponse
     {
         $this->authorize('create', Client::class);
@@ -306,10 +310,10 @@ public function create(ClientCreateRequest $request)
             'clients' => $clients
         ], 200);
     }
-    
+      
     public function getClientById($id): JsonResponse
     {
-       /*  $this->authorize('create', Client::class); */
+        $this->authorize('create', Client::class); 
         // Trouver le client par son ID
         $client = Client::find($id);
 
@@ -329,9 +333,10 @@ public function create(ClientCreateRequest $request)
             'client' => $client
         ], 200);
     }
+   
     public function getClientWithUser(Request $request, $id): JsonResponse
     {
-       /*  $this->authorize('create', Client::class); */
+      $this->authorize('create', Client::class); 
         // Trouver le client par son ID
         $client = Client::with('user')->find($id);
 
@@ -362,38 +367,36 @@ public function create(ClientCreateRequest $request)
 
         return response()->json($response, 200);
     }
-    /* public function getDettesWithDetails($clientId)
-    {
-        // Vérifiez si le client existe
-        $client = Client::find($clientId);
     
+    public function afficherDettes($clientId)
+    {
+        $this->authorize('create', Client::class);
+        // Vérifier si le client existe
+        $client = Client::find($clientId);
         if (!$client) {
             return response()->json([
                 'status' => 404,
-                'message' => 'Client non trouvé.',
+                'message' => 'Client non trouvé.'
             ], 404);
         }
-    
-        // Récupérez les dettes du client avec leurs détails
-        $dettes = Dette::with('details')
-                        ->where('client_id', $clientId)
-                        ->get();
-    
-        // Vérifiez si des dettes sont trouvées
+
+        // Récupérer les dettes du client par ID
+        $dettes = Dette::where('client_id', $clientId)->with('articles', 'details')->get();
+
+        // Vérifier si des dettes existent pour ce client
         if ($dettes->isEmpty()) {
             return response()->json([
                 'status' => 404,
-                'message' => 'Aucune dette trouvée pour ce client.',
-                'dettes' => []
+                'message' => 'Aucune dette trouvée pour ce client.'
             ], 404);
         }
-    
-        // Retourner les dettes trouvées avec les détails
+
+        // Retourner les dettes en JSON avec un statut 200
         return response()->json([
             'status' => 200,
-            'message' => 'Dettes trouvées.',
+            'client' => $client->surnom,
             'dettes' => $dettes
         ], 200);
-    } */
-    
+    }
+ 
 }

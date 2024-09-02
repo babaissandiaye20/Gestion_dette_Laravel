@@ -12,13 +12,17 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth; 
 use Laravel\Passport\HasApiTokens;
 use App\Http\Requests\LoginRequest;
+use Exception;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests; // Ajoutez ceci
 use Illuminate\Auth\Access\AuthorizationException; 
+
+
 class UserController extends \Illuminate\Routing\Controller
 {
     use StatuesTrait, HasApiTokens,AuthorizesRequests;
 
     // Création d'un utilisateur
+    
 public function create(UserRequest $request)
 {
     try {
@@ -80,23 +84,33 @@ public function create(UserRequest $request)
     // Login avec création de token
     public function login(LoginRequest $request)
     {
-        $credentials = $request->only('login', 'password');
-    
-        if (Auth::attempt($credentials)) {
-            $user = User::find(Auth::user()->id);
-            $token = $user->createToken('LaravelPassportAuth')->accessToken;
-            $refreshToken = Str::random(100); 
-    
-            return response()->json([
-                'access_token' => $token,
-                'token_type' => 'Bearer',
-                'refresh_token' => $refreshToken,
-                'user' => $user,
-            ]);
-        } else {
-            return response()->json(['error' => 'Unauthorized'], 401);
+        try{
+            $credentials = $request->only('login', 'password');
+            
+            //dd(Auth::attempt($credentials));
+            
+            if (Auth::attempt($credentials)) {
+                //dd($credentials);
+                $user = User::find(Auth::user()->id);
+                $token = $user->createToken('LaravelPassportAuth',['view-posts'])->accessToken;
+                $refreshToken = Str::random(100); 
+        
+                return response()->json([
+                    'access_token' => $token,
+                    'token_type' => 'Bearer',
+                    'refresh_token' => $refreshToken,
+                     'user' => $user, 
+                ]);
+            } /* else {
+                return response()->json(['error' => 'Unauthorized'], 401);
+            }  */
+        
+        }catch(Exception $e){
+            return response()->json($e->getMessage(), 401);
+
         }
     }
+     
     public function index(Request $request)
     {
         $this->authorize('create', User::class);

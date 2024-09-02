@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Rules\SenegalPhoneNumber;
 
+
 class ClientCreateRequest extends FormRequest
 {
     public function authorize()

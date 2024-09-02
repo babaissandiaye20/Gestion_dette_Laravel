@@ -30,5 +30,10 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->registerPolicies();
+        Passport::tokensCan([
+            'view-posts' => 'View posts',
+            'edit-posts' => 'Edit posts',
+            // Ajoutez d'autres scopes ici
+        ]);
     }
 }

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class RoleController extends  \Illuminate\Routing\Controller
 {
+    
     // Méthode pour créer un rôle
     public function create(Request $request)
     {
