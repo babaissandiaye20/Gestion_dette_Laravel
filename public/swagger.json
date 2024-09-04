@@ -314,7 +314,7 @@
           }
         }
       },
-      "put": {
+      "patch": {
         "summary": "Mettre à jour un article",
         "operationId": "updateArticle",
         "parameters": [

@@ -12,23 +12,26 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth; 
 use Laravel\Passport\HasApiTokens;
 use App\Http\Requests\LoginRequest;
-use Exception;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests; // Ajoutez ceci
 use Illuminate\Auth\Access\AuthorizationException; 
-
-
+use App\Services\AuthentificationServiceInterface;
 class UserController extends \Illuminate\Routing\Controller
 {
+    protected $authService;
+    public function __construct(AuthentificationServiceInterface $authService)
+    {
+        $this->authService = $authService;
+    }
+
     use StatuesTrait, HasApiTokens,AuthorizesRequests;
 
     // Création d'un utilisateur
-    
 public function create(UserRequest $request)
 {
+    $this->authorize('create', User::class);
     try {
         // Authorize the action
-        $this->authorize('create', User::class);
-
+    
         // Check if password confirmation matches
         if ($request->password !== $request->password_confirmation) {
             return response()->json($this->response(
@@ -84,33 +87,39 @@ public function create(UserRequest $request)
     // Login avec création de token
     public function login(LoginRequest $request)
     {
-        try{
-            $credentials = $request->only('login', 'password');
-            
-            //dd(Auth::attempt($credentials));
-            
-            if (Auth::attempt($credentials)) {
-                //dd($credentials);
-                $user = User::find(Auth::user()->id);
-                $token = $user->createToken('LaravelPassportAuth',['view-posts'])->accessToken;
-                $refreshToken = Str::random(100); 
-        
-                return response()->json([
-                    'access_token' => $token,
+        $credentials = $request->only('login', 'password');
+       /*   dd($credentials);  */
+        $authResponse = $this->authService->authenticate($credentials);
+    
+        // Debugging output (you can remove this later)
+     /*  dd($authResponse);  */ 
+    
+        // Check if $authResponse is an array and 'success' key exists
+        if (is_array($authResponse) && isset($authResponse['success']) && $authResponse['success']) {
+            // Ensure 'user' and 'token' exist in the response
+            if (isset($authResponse['user']) && isset($authResponse['token'])) {
+                // Use the user returned by the authService instead of retrieving it again
+                $user = $authResponse['user'];
+                
+                // Generate a secure refresh token
+                $refreshToken = Str::random(100);
+    
+                // Save or update the refresh token for the user in the database
+                $user->update(['refresh_token' => $refreshToken]);
+    
+              return  [
+                    'access_token' => $authResponse['token'],
                     'token_type' => 'Bearer',
                     'refresh_token' => $refreshToken,
-                     'user' => $user, 
-                ]);
-            } /* else {
-                return response()->json(['error' => 'Unauthorized'], 401);
-            }  */
-        
-        }catch(Exception $e){
-            return response()->json($e->getMessage(), 401);
-
+                    'user' => $user,
+                ];
+            }
         }
+    
+        // Return unauthorized response if authentication failed
+        return ['error' => 'Unauthorized'];
     }
-     
+    
     public function index(Request $request)
     {
         $this->authorize('create', User::class);

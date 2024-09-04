@@ -28,6 +28,8 @@ class Kernel extends HttpKernel
         // ...
         'tokenMiddleware' => \App\Http\Middleware\TokenMiddleware::class,
         'custom.unauthorized' => \App\Http\Middleware\CustomUnauthorizedResponse::class,
+        \App\Http\Middleware\TransformResponseMiddleware::class,
+        
     ];
     
 
@@ -46,10 +48,12 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
-       'api' => [
+      'api' => [
+    \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
     \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
     \Illuminate\Routing\Middleware\SubstituteBindings::class,
     \App\Http\Middleware\CustomUnauthorizedResponse::class,
+
 ],
 
     ];

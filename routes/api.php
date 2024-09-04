@@ -8,12 +8,12 @@ use App\Http\Controllers\RoleController;
 
 // Endpoint pour le login
 Route::post('/login', [UserController::class, 'login']);
+Route::get('/clients', [ClientController::class, 'getClientsWithFilters']); // Affiche tous les clients
 
 // Routes protégées par middleware d'authentification (nécessitent un token valide)
 Route::middleware('auth:api')->group(function () {
 
     // Clients Routes
-    Route::get('/clients', [ClientController::class, 'indexbis']); // Affiche tous les clients
     Route::get('/clients/{id}', [ClientController::class, 'getClientById']); // Affiche les détails d'un client par ID
     Route::post('/clients', [ClientController::class, 'register'])->middleware('custom.unauthorized'); // Inscrit un nouveau client
     Route::post('/client', [ClientController::class, 'create'])->middleware('custom.unauthorized'); // Crée un client (duplicata ?)

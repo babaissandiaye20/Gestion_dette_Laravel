@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
+
 
 class Client extends Model
 {
@@ -19,6 +21,29 @@ class Client extends Model
     public function dettes()
     {
         return $this->hasMany(Dette::class);
+    }
+    public function scopeWithUsers(Builder $query)
+    {
+        return $query->whereNotNull('user_id');
+    }
+
+    public function scopeWithoutUsers(Builder $query)
+    {
+        return $query->whereNull('user_id');
+    }
+
+    public function scopeActive(Builder $query)
+    {
+        return $query->whereHas('user', function ($q) {
+            $q->where('etat', 'actif');
+        });
+    }
+
+    public function scopeInactive(Builder $query)
+    {
+        return $query->whereHas('user', function ($q) {
+            $q->where('etat', 'inactif');
+        });
     }
 }
  

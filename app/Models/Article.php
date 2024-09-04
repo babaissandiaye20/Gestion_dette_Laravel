@@ -20,5 +20,15 @@ class Article extends Model
     {
         return $this->belongsToMany(Dette::class, 'articles_dettes')->withPivot('qteVente', 'prixVente');
     }
+    public function scopeDisponible($query, $disponible)
+    {
+        if ($disponible === 'oui') {
+            return $query->where('qutestock', '>', 0);
+        } elseif ($disponible === 'non') {
+            return $query->where('qutestock', '=', 0);
+        }
+
+        return $query;
+    }
 }
 

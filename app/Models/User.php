@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-use Laravel\Passport\HasApiTokens;
+ use Laravel\Passport\HasApiTokens ;
+ // or
+ /* use Laravel\Sanctum\HasApiTokens as SanctumHasApiTokens; */
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory;
+    use  HasApiTokens  /* sanctumHasApiTokens */ ,HasFactory;
+
 
     protected $fillable = ['nom', 'prenom', 'login', 'password', 'role_id','photo'];
 
