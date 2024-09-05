@@ -10,14 +10,26 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Dette;
 use Illuminate\Pagination\LengthAwarePaginator;
+use App\Services\FidelityCardService;
+use App\Mail\FidelityCardMail;
+use Illuminate\Support\Facades\Mail;
+use Cloudinary\Cloudinary;
+use App\Services\PhotoStorageService;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Facades\Storage;
+
+
 
 class ClientRepository implements ClientRepositoryInterface
 {
     protected $qrCodeService;
-
-    public function __construct(QRCodeService $qrCodeService)
+    protected $fidelityCardService;
+     protected $photoStorageService;
+    public function __construct(QRCodeService $qrCodeService,FidelityCardService $fidelityCardService,PhotoStorageService $photoStorageService)
     {
         $this->qrCodeService = $qrCodeService;
+        $this->fidelityCardService = $fidelityCardService;
+        $this->photoStorageService = $photoStorageService;
     }
 
     public function registerUserForClient($request, $clientId)
@@ -32,7 +44,11 @@ class ClientRepository implements ClientRepositoryInterface
         }
 
         $this->createUserForClient($request, $client);
-        $this->generateQRCodeForClient($client); // Appel pour générer le QR code
+        $qrCodePath = $this->generateQRCodeForClient($client);
+
+        // Pass the $qrCodePath to generateFidelityCardForClient
+        $fidelityCardPath = $this->generateFidelityCardForClient($client, $qrCodePath);
+        Mail::to($client->user->login)->send(new FidelityCardMail($client, $fidelityCardPath));
         return $client;
     }
 
@@ -49,7 +65,10 @@ class ClientRepository implements ClientRepositoryInterface
             $this->createUserForClient($request, $client);
         }
 
-        $this->generateQRCodeForClient($client); // Appel pour générer le QR code
+        
+        $qrCodePath = $this->generateQRCodeForClient($client);
+        $fidelityCardPath = $this->generateFidelityCardForClient($client, $qrCodePath);
+        Mail::to($client->user->login)->send(new FidelityCardMail($client, $fidelityCardPath));
         return $client;
     }
 
@@ -69,10 +88,24 @@ class ClientRepository implements ClientRepositoryInterface
             throw new \Exception(json_encode($validator->errors()));
         }
 
-        $photoPath = null;
+     
+        $photoUrl = null;  // Initialize $photoUrl
+
+
         if ($request->hasFile('photo')) {
-            $photoPath = $request->file('photo')->store('photos', 'public');
+            $photo = $request->file('photo');
+         
+            // Use PhotoStorageService to handle photo upload
+            $photoUrl = $this->photoStorageService->uploadPhoto($photo);
+            
+           
         }
+
+    // Vérification si $photoUrl est null après la tentative de téléchargement
+    if (is_null($photoUrl)) {
+        throw new \Exception('Échec du téléchargement de la photo. Veuillez réessayer ou fournir une photo valide.');
+    }
+    
 
         $user = User::create([
             'nom' => $userData['nom'],
@@ -80,7 +113,7 @@ class ClientRepository implements ClientRepositoryInterface
             'login' => $userData['login'],
             'password' => Hash::make($userData['password']),
             'role_id' => $role->id,
-            'photo' => $photoPath,
+            'photo' => $photoUrl,
         ]);
 
         $client->user()->associate($user);
@@ -97,18 +130,41 @@ class ClientRepository implements ClientRepositoryInterface
 
     public function getClientsByTelephones(array $telephones)
     {
-        return Client::whereIn('telephone', $telephones)->get();
+        $clients = Client::whereIn('telephone', $telephones)->with('user')->get();
+    
+        foreach ($clients as $client) {
+            if ($client->user && $client->user->photo) {
+                $client->user->photo_base64 = $this->encodePhotoToBase64($client->user->photo);
+            }
+        }
+    
+        return $clients;
     }
+    
 
     public function getClientById($id)
     {
-        return Client::find($id);
+        $client = Client::with('user')->find($id);
+    
+        if ($client && $client->user && $client->user->photo) {
+            $client->user->photo_base64 = $this->encodePhotoToBase64($client->user->photo);
+        }
+    
+        return $client;
     }
+    
 
     public function getClientWithUser($id)
     {
-        return Client::with('user')->find($id);
+        $client = Client::with('user')->find($id);
+    
+        if ($client && $client->user && $client->user->photo) {
+            $client->user->photo_base64 = $this->encodePhotoToBase64($client->user->photo);
+        }
+    
+        return $client;
     }
+    
 
     public function afficherDettes($clientId)
     {
@@ -116,48 +172,93 @@ class ClientRepository implements ClientRepositoryInterface
     }
 
     public function getClientsWithFilters(?string $comptes, ?string $etat): LengthAwarePaginator
-    {
-        $query = Client::query();
+{
+    $query = Client::query();
 
-        // Ajouter des conditions en fonction des filtres fournis
-        if ($comptes === 'oui') {
-            $query->whereNotNull('user_id');
-        } elseif ($comptes === 'non') {
-            $query->whereNull('user_id');
-        }
-
-        if ($etat === 'oui') {
-            $query->whereHas('user', function($q) {
-                $q->where('etat', 'actif');
-            });
-        } elseif ($etat === 'non') {
-            $query->whereHas('user', function($q) {
-                $q->where('etat', 'inactif');
-            });
-        }
-
-        // Charger les relations avec l'utilisateur uniquement si des filtres sont appliqués
-        if ($comptes !== null || $etat !== null) {
-            $query->with('user');
-        }
-
-        return $query->paginate(10);
+    // Ajouter des conditions en fonction des filtres fournis
+    if ($comptes === 'oui') {
+        $query->whereNotNull('user_id');
+    } elseif ($comptes === 'non') {
+        $query->whereNull('user_id');
     }
 
-    protected function generateQRCodeForClient(Client $client)
-    {
-        $user = $client->user;
-        $qrContent = "ID Client: " . $client->id . "\n" .   // Ajout de l'ID du client
-                     "Nom: " . ($user->nom ?? 'N/A') . "\n" .
-                     "Prénom: " . ($user->prenom ?? 'N/A') . "\n" .
-                     "Téléphone: " . ($client->telephone ?? 'N/A') . "\n" .
-                     "Surnom: " . ($client->surnom ?? 'N/A');
-    
-        // Définir le chemin du fichier QR code
-        $qrCodePath = 'qrcodes/client_' . $client->id . '.png';
-    
-        // Appeler le service pour générer le QR code
-        $this->qrCodeService->generateQRCode($qrContent, $qrCodePath);
+    if ($etat === 'oui') {
+        $query->whereHas('user', function($q) {
+            $q->where('etat', 'actif');
+        });
+    } elseif ($etat === 'non') {
+        $query->whereHas('user', function($q) {
+            $q->where('etat', 'inactif');
+        });
     }
+
+    // Charger les relations avec l'utilisateur uniquement si des filtres sont appliqués
+    if ($comptes !== null || $etat !== null) {
+        $query->with('user');
+    }
+
+    $clients = $query->paginate(10);
+
+    // Encoder les photos en base64 pour chaque client
+    foreach ($clients as $client) {
+        if ($client->user && $client->user->photo) {
+            $client->user->photo_base64 = $this->encodePhotoToBase64($client->user->photo);
+        }
+    }
+
+    return $clients;
+}
+
+
+    protected function generateQRCodeForClient(Client $client): string
+{
+    $user = $client->user;
+    $qrContent = "ID Client: " . $client->id . "\n" .   // Ajout de l'ID du client
+                 "Nom: " . ($user->nom ?? 'N/A') . "\n" .
+                 "Prénom: " . ($user->prenom ?? 'N/A') . "\n" .
+                 "Téléphone: " . ($client->telephone ?? 'N/A') . "\n" .
+                 "Surnom: " . ($client->surnom ?? 'N/A');
+    
+    // Définir le chemin du fichier QR code
+    $qrCodePath = 'qrcodes/client_' . $client->id . '.png';
+    
+    // Appeler le service pour générer le QR code
+    $this->qrCodeService->generateQRCode($qrContent, $qrCodePath);
+    
+    return $qrCodePath; // Retourner le chemin du QR code
+}
+
+
+protected function generateFidelityCardForClient(Client $client, string $qrCodePath): string
+{
+    $user = $client->user;
+    $photoPath = $user->photo ? public_path('storage/' . $user->photo) : null;
+
+    // Define the directory path where the fidelity card will be saved
+    $fidelityCardDir = storage_path('app/public/fidelity_cards');
+    
+    // Check if the directory exists, if not, create it
+    if (!is_dir($fidelityCardDir)) {
+        mkdir($fidelityCardDir, 0755, true); // Create the directory with appropriate permissions
+    }
+
+    // Generate the fidelity card and save it to the specified directory
+    $fidelityCardPath = $this->fidelityCardService->generateFidelityCard($client, $qrCodePath, $photoPath);
+
+    return $fidelityCardPath;
+    
+    
+}
+
+protected function encodePhotoToBase64($photoPath)
+{
+    if ($photoPath && file_exists(public_path('storage/' . $photoPath))) {
+        $imageData = file_get_contents(public_path('storage/' . $photoPath));
+        return 'data:image/' . pathinfo($photoPath, PATHINFO_EXTENSION) . ';base64,' . base64_encode($imageData);
+    }
+    return null;
+}
+
+
     
 }

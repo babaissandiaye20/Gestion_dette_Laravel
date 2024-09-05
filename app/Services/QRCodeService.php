@@ -13,7 +13,7 @@ class QRCodeService
         $qrCode = Builder::create()
             ->writer(new PngWriter())
             ->data($qrContent)
-            ->size(200)
+            ->size(100)
             ->margin(10)
             ->build();
 

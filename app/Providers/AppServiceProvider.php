@@ -14,6 +14,11 @@ use App\Services\ClientService;
 use  App\Services\ClientServiceInterface;
 use App\Repositories\ClientRepositoryInterface;
 use App\Services\QRCodeService;
+use App\Services\FidelityCardService;
+use App\Services\UploadService;
+use App\Services\UploadServiceImpl;
+use App\Services\PhotoStorageService;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -24,13 +29,24 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(QRCodeService::class, function ($app) {
             return new QRCodeService();
         });
+        $this->app->singleton('imageUploadService', function ($app) {
+            return new UploadServiceImpl;
+        });
+          // Enregistrer FidelityCardService
+          $this->app->singleton(FidelityCardService::class, function ($app) {
+            return new FidelityCardService($app->make(QRCodeService::class));
+        });
         $this->app->singleton(CustomTokenService::class, function ($app) {
             return new CustomTokenService($app->make(PersonalAccessTokenFactory::class));
         });
         $this->app->bind(ArticleRepository::class, ArticleRepositoryImpl::class);
         $this->app->bind(ArticleService::class, ArticleServiceImpl::class);
         $this->app->singleton('client_repository', function ($app) {
-            return new ClientRepository($app->make(QRCodeService::class));
+            return new ClientRepository(
+                $app->make(QRCodeService::class),
+                $app->make(FidelityCardService::class), // Injection de FidelityCardService
+                $app->make(PhotoStorageService::class) // Injection de PhotoStorageService
+            );
         });
         
         // Vous pouvez également enregistrer le ClientService de la même manière si nécessaire

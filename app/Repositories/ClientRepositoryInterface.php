@@ -13,4 +13,5 @@ interface ClientRepositoryInterface
     public function getClientWithUser($id);
     public function afficherDettes($clientId);
     public function getClientsWithFilters(?string $comptes, ?string $etat): LengthAwarePaginator;
+    
 }

@@ -1,22 +1,25 @@
 <?php
 
+
+
 namespace App\Services;
 
-use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Storage;
-
-class UploadService
+interface UploadService
 {
     /**
-     * Gérer l'upload d'un fichier.
+     * Télécharge un fichier dans un répertoire spécifié.
      *
-     * @param UploadedFile $file Le fichier à uploader.
-     * @param string $directory Le répertoire où stocker le fichier.
-     * @param string|null $disk Le nom du disque de stockage (par défaut 'public').
-     * @return string Le chemin du fichier uploadé.
+     * @param \Illuminate\Http\UploadedFile $file
+     * @param string $directory
+     * @return mixed
      */
-    public function uploadFile(UploadedFile $file, string $directory, string $disk = 'public'): string
-    {
-        return $file->store($directory, $disk);
-    }
+    public function upload(\Illuminate\Http\UploadedFile $file, string $directory);
+
+    /**
+     * Récupère le contenu du fichier en Base64.
+     *
+     * @param string $filePath
+     * @return string
+     */
+    public function getBase64(string $filePath): string;
 }

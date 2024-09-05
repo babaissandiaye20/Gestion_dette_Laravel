@@ -35,16 +35,10 @@ class ClientService implements ClientServiceInterface
             $clientId = $request->input('client_id');
             $client = ClientRepositoryFacade::registerUserForClient($request, $clientId);
             // Générer le contenu du QR code
-            $qrContent = "Nom: " . $client->nom . "\n" .
-            "Prénom: " . $client->prenom . "\n" .
-            "Téléphone: " . $client->telephone . "\n" .
-            "Surnom: " . $client->surnom;
-
-// Définir le chemin du fichier QR code
-$qrCodePath = 'qrcodes/client_' . $client->id . '.png';
+            
 
 // Appeler le service pour générer le QR code
-$this->qrCodeService->generateQRCode($qrContent, $qrCodePath);
+
             DB::commit();
 
             return response()->json(['statut' => 201, 'message' => 'Utilisateur enregistré pour le client avec succès.', 'client' => $client], 201);
