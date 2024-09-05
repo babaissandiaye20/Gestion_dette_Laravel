@@ -18,7 +18,7 @@ class PhotoStorageService
                 'api_secret' => env('CLOUDINARY_API_SECRET'),
             ],
         ]);
-    }
+    } 
 
     /**
      * Upload photo to Cloudinary or fallback to local Base64 storage.
