@@ -231,34 +231,50 @@ class ClientRepository implements ClientRepositoryInterface
 
 protected function generateFidelityCardForClient(Client $client, string $qrCodePath): string
 {
+    // Utilisateur lié au client
     $user = $client->user;
-    $photoPath = $user->photo ? public_path('storage/' . $user->photo) : null;
 
-    // Define the directory path where the fidelity card will be saved
+    // Récupération de l'URL de la photo de l'utilisateur
+    $photoUrl = $user->photo; // URL Cloudinary ou autre URL stockée dans la base de données
+    
+    // Encoder la photo en base64 si nécessaire
+    $encodedPhoto = $this->encodePhotoToBase64($photoUrl);
+
+    // Dossier où la carte de fidélité sera enregistrée
     $fidelityCardDir = storage_path('app/public/fidelity_cards');
     
-    // Check if the directory exists, if not, create it
+    // Vérifier si le dossier existe, sinon le créer
     if (!is_dir($fidelityCardDir)) {
-        mkdir($fidelityCardDir, 0755, true); // Create the directory with appropriate permissions
+        mkdir($fidelityCardDir, 0755, true); // Création du dossier avec les permissions appropriées
     }
 
-    // Generate the fidelity card and save it to the specified directory
-    $fidelityCardPath = $this->fidelityCardService->generateFidelityCard($client, $qrCodePath, $photoPath);
+    // Générer la carte de fidélité (en utilisant le service)
+    $fidelityCardPath = $this->fidelityCardService->generateFidelityCard($client, $qrCodePath, $encodedPhoto);
 
     return $fidelityCardPath;
-    
-    
 }
 
-protected function encodePhotoToBase64($photoPath)
+protected function encodePhotoToBase64($photoUrl)
 {
-    if ($photoPath && file_exists(public_path('storage/' . $photoPath))) {
-        $imageData = file_get_contents(public_path('storage/' . $photoPath));
-        return 'data:image/' . pathinfo($photoPath, PATHINFO_EXTENSION) . ';base64,' . base64_encode($imageData);
+    // Vérifier que l'URL est valide
+    if ($photoUrl) {
+        try {
+            // Récupérer le contenu de l'image depuis l'URL
+            $imageData = file_get_contents($photoUrl);
+            
+            // Obtenir l'extension de l'image à partir de l'URL
+            $imageExtension = pathinfo(parse_url($photoUrl, PHP_URL_PATH), PATHINFO_EXTENSION);
+            
+            // Encoder l'image en base64
+            return 'data:image/' . $imageExtension . ';base64,' . base64_encode($imageData);
+        } catch (\Exception $e) {
+            // Gérer les erreurs (e.g. URL invalide ou inaccessible)
+            return null;
+        }
     }
+    
     return null;
 }
-
 
     
 }
