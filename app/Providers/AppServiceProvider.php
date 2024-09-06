@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Facades\ClientRepositoryFacade;
+use App\Facades\ClientServiceFacade;
 use Illuminate\Support\ServiceProvider;
 use App\Services\CustomTokenService;
 use Laravel\Passport\PersonalAccessTokenFactory;
@@ -41,11 +43,14 @@ class AppServiceProvider extends ServiceProvider
         });
         $this->app->bind(ArticleRepository::class, ArticleRepositoryImpl::class);
         $this->app->bind(ArticleService::class, ArticleServiceImpl::class);
-        $this->app->singleton('client_repository', function ($app) {
-            return new ClientRepository(
+        $this->app->singleton('client_repository', function ($app){
+            return $app->make(ClientRepository::class);
+        });
+        $this->app->singleton('clientservice', function ($app) {
+            return new ClientServiceFacade(
                 $app->make(QRCodeService::class),
-                $app->make(FidelityCardService::class), // Injection de FidelityCardService
-                $app->make(PhotoStorageService::class) // Injection de PhotoStorageService
+                $app->make(FidelityCardService::class),
+                $app->make(PhotoStorageService::class)
             );
         });
         
@@ -53,6 +58,10 @@ class AppServiceProvider extends ServiceProvider
         /* $this->app->singleton('client_service', function ($app) {
             return new ClientService($app->make('client_repository'));
         });*/
+        $this->app->singleton(ClientServiceInterface::class, ClientService::class);
+        $this->app->singleton('clientservice', function ($app) {
+            return $app->make(ClientService::class);
+        });
         $this->app->bind(ClientRepositoryInterface::class, ClientRepository::class); 
         $this->app->singleton(ClientServiceInterface::class, ClientService::class);
     }

@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Providers;
-
+use App\Events\ClientCreated;
+use App\Jobs\SendFidelityCardEmailJob;
+use App\Listeners\UploadClientPhoto;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -18,7 +20,17 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        ClientCreated::class => [
+            SendFidelityCardEmailJob::class,
+            UploadClientPhoto::class,  // This will handle photo upload after client is created and fidelity card is sent.
+
+        ],
+        /* \App\Events\FidelityCardGeneratedEvent::class => [
+            \App\Listeners\GenerateFidelityCardListener::class, 
+        ],*/
+        
     ];
+    
 
     /**
      * Register any events for your application.

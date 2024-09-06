@@ -33,25 +33,37 @@
 </head>
 <body>
     <div class="card">
-        <h2>{{ $client->user->nom }} {{ $client->user->prenom }}</h2>
+        <!-- Displaying client name -->
+        <h2>
+            @if ($client->user)
+                {{ $client->user->nom }} {{ $client->user->prenom }}
+            @else
+                <p>Client information unavailable</p>
+            @endif
+        </h2>
 
-        <!-- Affichage de la photo à partir de l'URL de Cloudinary ou autre -->
+        <!-- Displaying profile photo -->
         @if($photoPath)
             <img src="{{ $photoPath }}" class="photo" alt="Photo de profil">
         @else
             <p>Photo non disponible</p>
         @endif
 
-        <p><strong>Email:</strong> {{ $client->user->login }}</p>
+        <!-- Safely checking if user exists before displaying login -->
+        @if ($client->user)
+            <p><strong>Email:</strong> {{ $client->user->login }}</p>
+        @else
+            <p><strong>Email:</strong> Non disponible</p>
+        @endif
+
         <p><strong>Téléphone:</strong> {{ $client->telephone }}</p>
 
-        <!-- Affichage du QR code -->
+        <!-- Displaying QR code -->
         @if($qrCodePath)
-        <img src="{{ public_path($qrCodePath) }}" alt="QR Code">
-
-@else
-    <p>QR Code non disponible</p>
-@endif
+            <img src="{{ public_path($qrCodePath) }}" alt="QR Code">
+        @else
+            <p>QR Code non disponible</p>
+        @endif
     </div>
 </body>
 </html>

@@ -1,80 +1,200 @@
 <?php
+
 namespace App\Services;
 
-use Illuminate\Support\Facades\DB;
-use App\Http\Requests\ClientRequest;
-use App\Http\Requests\ClientCreateRequest;
-use Illuminate\Http\Request;
+use App\Models\Client;
+use App\Models\User;
+use App\Models\Role;
+use App\Mail\FidelityCardMail;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
+use App\Services\QRCodeService;
+use App\Services\FidelityCardService;
+use App\Services\PhotoStorageService;
 use Illuminate\Pagination\LengthAwarePaginator;
 use App\Facades\ClientRepositoryFacade;
-use App\Services\QRCodeService;
+use Illuminate\Http\Request;
+use App\Http\Requests\ClientRequest;
+use App\Http\Requests\UserRequest;
+use App\Http\Requests\ClientCreateRequest;
+use  App\Services\UserService;
 class ClientService implements ClientServiceInterface
 {
     protected $qrCodeService;
-
-    public function __construct(QRCodeService $qrCodeService)
+    protected $fidelityCardService;
+    protected $photoStorageService;
+    protected $userService;
+    public function __construct(QRCodeService $qrCodeService, FidelityCardService $fidelityCardService, PhotoStorageService $photoStorageService,UserService $userService)
     {
         $this->qrCodeService = $qrCodeService;
+        $this->fidelityCardService = $fidelityCardService;
+        $this->photoStorageService = $photoStorageService;
+        $this->userService = $userService;
     }
 
-    public function register(ClientRequest $request)
+    public function registerUserForClient($request, $clientId)
     {
-        DB::beginTransaction();
-        try {
-            // Cas 1 : Créer un client avec ou sans informations utilisateur
-            if (!$request->has('client_id')) {
-                $client = ClientRepositoryFacade::createClient($request);
-                DB::commit();
+        $client = Client::find($clientId);
+        if (!$client) {
+            throw new \Exception('Client not found');
+        }
 
-                // Vérifie si les informations utilisateur sont fournies
-               
-                return response()->json(['statut' => 201,  'client' => $client], 201);
+        if ($client->user_id) {
+            throw new \Exception('Ce client a déjà un compte utilisateur.');
+        }
+
+        $this->createUserForClient($request, $client);
+        $qrCodePath = $this->generateQRCodeForClient($client);
+
+        $fidelityCardPath = $this->generateFidelityCardForClient($client, $qrCodePath);
+        Mail::to($client->user->login)->send(new FidelityCardMail($client, $fidelityCardPath));
+
+        return $client;
+    }
+
+    public function createClient($request)
+{
+    // Directly pass the request data to the ClientRepositoryFacade
+    $client = ClientRepositoryFacade::create($request->all());
+
+    // If user-related data is present, create a user for the client
+    if ($request->has(['nom', 'prenom', 'login', 'password', 'password_confirmation'])) {
+        $this->createUserForClient($request, $client);
+    }
+
+    $qrCodePath = $this->generateQRCodeForClient($client);
+    $fidelityCardPath = $this->generateFidelityCardForClient($client, $qrCodePath);
+    Mail::to($client->user->login)->send(new FidelityCardMail($client, $fidelityCardPath));
+
+    return $client;
+}
+
+
+    public function createUserForClient($request, $client)
+    {
+        $roleId = $request->input('role');
+        $role = Role::find($roleId);
+
+        if (!$role) {
+            throw new \Exception('Role not found');
+        }
+
+        $userData = $request->only(['nom', 'prenom', 'login', 'password', 'password_confirmation']);
+        $validator = Validator::make($userData, (new \App\Http\Requests\UserRequest())->rules(), (new \App\Http\Requests\UserRequest())->messages());
+
+        if ($validator->fails()) {
+            throw new \Exception(json_encode($validator->errors()));
+        }
+
+        $photoUrl = null;
+
+        if ($request->hasFile('photo')) {
+            $photo = $request->file('photo');
+          /*   $photoUrl = $this->photoStorageService->uploadPhoto($photo); */
+        }
+
+       /*  if (is_null($photoUrl)) {
+            throw new \Exception('Échec du téléchargement de la photo.');
+        } */
+        $user = $this->userService->createUser($request->all());
+        $client->user()->associate($user);
+        $client->save();
+    }
+
+    public function generateQRCodeForClient(Client $client): string
+    {
+        $user = $client->user;
+        $qrContent = "ID Client: " . $client->id . "\n" .
+                     "Nom: " . ($user->nom ?? 'N/A') . "\n" .
+                     "Prénom: " . ($user->prenom ?? 'N/A') . "\n" .
+                     "Téléphone: " . ($client->telephone ?? 'N/A') . "\n" .
+                     "Surnom: " . ($client->surnom ?? 'N/A');
+        
+        $qrCodePath = 'qrcodes/client_' . $client->id . '.png';
+        $this->qrCodeService->generateQRCode($qrContent, $qrCodePath);
+        
+        return $qrCodePath;
+    }
+
+    public function generateFidelityCardForClient(Client $client, string $qrCodePath): string
+    {
+        $user = $client->user;
+        $photoUrl = $user->photo;
+        $encodedPhoto = $this->encodePhotoToBase64($photoUrl);
+
+        $fidelityCardPath = $this->fidelityCardService->generateFidelityCard($client, $qrCodePath, $encodedPhoto);
+
+        return $fidelityCardPath;
+    }
+
+    protected function encodePhotoToBase64($photoUrl)
+    {
+        if ($photoUrl) {
+            try {
+                $imageData = file_get_contents($photoUrl);
+                $imageExtension = pathinfo(parse_url($photoUrl, PHP_URL_PATH), PATHINFO_EXTENSION);
+                return 'data:image/' . $imageExtension . ';base64,' . base64_encode($imageData);
+            } catch (\Exception $e) {
+                return null;
             }
+        }
 
-            // Cas 2 : Enregistrer un utilisateur pour un client existant
-            $clientId = $request->input('client_id');
-            $client = ClientRepositoryFacade::registerUserForClient($request, $clientId);
-            // Générer le contenu du QR code
-            
+        return null;
+    }
+    public function create(array $data)
+    {
+        // Directly pass the entire data array to the ClientRepositoryFacade
+        $client = ClientRepositoryFacade::create($data);
+    
+        return response()->json([
+            'statut' => 201,
+            'message' => 'Client créé sans utilisateur avec succès.',
+            'client' => $client
+        ], 201);
+    }
+    
+    public function getClientsByTelephones(array $telephones)
+{
+    $clients = ClientRepositoryFacade::getClientsByTelephones($telephones);
 
-// Appeler le service pour générer le QR code
-
-            DB::commit();
-
-            return response()->json(['statut' => 201, 'message' => 'Utilisateur enregistré pour le client avec succès.', 'client' => $client], 201);
-
-        } catch (\Exception $e) {
-            DB::rollBack();
-            return response()->json(['statut' => 500, 'message' => $e->getMessage()], 500);
+    // Parcourez chaque client et encodez la photo en base64 s'il y a un utilisateur avec une photo
+    foreach ($clients as $client) {
+        if ($client->user && $client->user->photo) {
+            $client->user->photo_base64 = $this->encodePhotoToBase64($client->user->photo);
         }
     }
 
-    public function create(ClientCreateRequest $request)
-    {
-        $clientData = $request->only(['surnom', 'telephone', 'adresse']);
-        $client = ClientRepositoryFacade::create($clientData);
-        return response()->json(['statut' => 201, 'message' => 'Client créé sans utilisateur avec succès.', 'client' => $client], 201);
+    return response()->json(['statut' => 200, 'clients' => $clients], 200);
+}
+
+    
+public function getClientById($id)
+{
+    $client = ClientRepositoryFacade::getClientById($id);
+
+    // Encodez la photo en base64 s'il y a un utilisateur avec une photo
+    if ($client && $client->user && $client->user->photo) {
+        $client->user->photo_base64 = $this->encodePhotoToBase64($client->user->photo);
     }
 
-    public function getClientsByTelephones(Request $request)
-    {
-        $telephones = explode(',', $request->input('telephones'));
-        $clients = ClientRepositoryFacade::getClientsByTelephones($telephones);
+    return response()->json(['statut' => 200, 'client' => $client], 200);
+}
 
-        return response()->json(['statut' => 200, 'clients' => $clients], 200);
+
+public function getClientWithUser($id)
+{
+    $client = ClientRepositoryFacade::getClientWithUser($id);
+
+    // Encodez la photo en base64 s'il y a un utilisateur avec une photo
+    if ($client && $client->user && $client->user->photo) {
+        $client->user->photo_base64 = $this->encodePhotoToBase64($client->user->photo);
     }
 
-    public function getClientById($id)
-    {
-        $client = ClientRepositoryFacade::getClientById($id);
-        return response()->json(['statut' => 200, 'client' => $client], 200);
-    }
+    return response()->json(['statut' => 200, 'client' => $client], 200);
+}
 
-    public function getClientWithUser(Request $request, $id)
-    {
-        $client = ClientRepositoryFacade::getClientWithUser($id);
-        return response()->json(['statut' => 200, 'client' => $client], 200);
-    }
+    
 
     public function afficherDettes($clientId)
     {
@@ -84,6 +204,16 @@ class ClientService implements ClientServiceInterface
 
     public function getClientsWithFilters(?string $comptes, ?string $etat): LengthAwarePaginator
     {
-        return ClientRepositoryFacade::getClientsWithFilters($comptes, $etat);
+        $clients = ClientRepositoryFacade::getClientsWithFilters($comptes, $etat);
+    
+        // Parcourez chaque client et encodez la photo en base64 s'il y a un utilisateur avec une photo
+        foreach ($clients as $client) {
+            if ($client->user && $client->user->photo) {
+                $client->user->photo_base64 = $this->encodePhotoToBase64($client->user->photo);
+            }
+        }
+    
+        return $clients;
     }
+    
 }
