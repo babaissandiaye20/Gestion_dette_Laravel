@@ -1,50 +1,24 @@
 <?php
 
 namespace App\Providers;
-use App\Events\ClientCreated;
-use App\Jobs\SendFidelityCardEmailJob;
-use App\Listeners\UploadClientPhoto;
-use Illuminate\Auth\Events\Registered;
-use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
+
+use App\Events\UserCreated;
+use App\Events\PhotoUploaded;
+use App\Listeners\UploadUserPhotoListener;
+use App\Listeners\GenerateFidelityCardListener;
+use App\Listeners\GenerateQRCodeListener;
+use App\Listeners\SendFidelityCardEmailListener;
+use App\Events\ClientFidelityEvent;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
-    /**
-     * The event to listener mappings for the application.
-     *
-     * @var array<class-string, array<int, class-string>>
-     */
     protected $listen = [
-        Registered::class => [
-            SendEmailVerificationNotification::class,
+        UserCreated::class => [
+            UploadUserPhotoListener::class,
         ],
-        ClientCreated::class => [
-            SendFidelityCardEmailJob::class,
-            UploadClientPhoto::class,  // This will handle photo upload after client is created and fidelity card is sent.
-
+        ClientFidelityEvent::class => [
+            SendFidelityCardEmailListener::class,
         ],
-        /* \App\Events\FidelityCardGeneratedEvent::class => [
-            \App\Listeners\GenerateFidelityCardListener::class, 
-        ],*/
-        
-    ];
-    
-
-    /**
-     * Register any events for your application.
-     */
-    public function boot(): void
-    {
-        //
-    }
-
-    /**
-     * Determine if events and listeners should be automatically discovered.
-     */
-    public function shouldDiscoverEvents(): bool
-    {
-        return false;
-    }
+        ];
 }

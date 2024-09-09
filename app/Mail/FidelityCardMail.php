@@ -14,7 +14,7 @@ class FidelityCardMail extends Mailable
     public $client;
     public $fidelityCardPath;
 
-    public function __construct(Client $client, string $fidelityCardPath)
+    public function __construct(Client $client, $fidelityCardPath)
     {
         $this->client = $client;
         $this->fidelityCardPath = $fidelityCardPath;

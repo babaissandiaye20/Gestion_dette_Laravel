@@ -9,7 +9,7 @@ use App\Http\Controllers\RoleController;
 // Endpoint pour le login
 Route::post('/login', [UserController::class, 'login']);
 Route::get('/clients', [ClientController::class, 'getClientsWithFilters']); // Affiche tous les clients
-
+Route::post('/users', [UserController::class, 'create']); // Crée un nouvel utilisateur
 // Routes protégées par middleware d'authentification (nécessitent un token valide)
 Route::middleware('auth:api')->group(function () {
 
@@ -32,7 +32,7 @@ Route::middleware('auth:api')->group(function () {
 
     // Users Routes
     Route::get('/user', [UserController::class, 'index']); // Affiche la liste des utilisateurs
-    Route::post('/users', [UserController::class, 'create']); // Crée un nouvel utilisateur
+ 
     Route::put('/users/{id}', [UserController::class, 'update']); // Met à jour un utilisateur existant
     Route::patch('/users/{id}', [UserController::class, 'updatePartial']); // Mise à jour partielle d'un utilisateur
     Route::delete('/users/{id}', [UserController::class, 'destroy']); // Supprime un utilisateur

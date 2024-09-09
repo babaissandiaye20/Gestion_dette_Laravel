@@ -20,7 +20,7 @@ class QRCodeService
         // Sauvegarder le fichier QR code
         $qrCode->saveToFile(public_path($qrCodePath));
     }
-    public function generateQRCodeForClient($client)
+     public function generateQRCodeForClient($client)
     {
         $qrContent = "ID Client: " . $client->id . "\n" .
                      "Nom: " . ($client->user->nom ?? 'N/A') . "\n" .
@@ -32,5 +32,5 @@ class QRCodeService
         $this->generateQRCode($qrContent, $qrCodePath);
         
         return $qrCodePath;
-    }
+    } 
 }

@@ -37,40 +37,26 @@ class ClientRepository implements ClientRepositoryInterface
     }
 
     public function getClientsWithFilters(?string $comptes, ?string $actif): LengthAwarePaginator
-    {
-        // Requête de base sans chargement de la relation 'user'
-        $query = Client::query();  // Par défaut, ne charge pas 'user'
-    
-        // Si un filtre est appliqué, charger les utilisateurs associés
-        if ($comptes || $actif) {
-            $query->with('user');  // Charger les utilisateurs uniquement si un filtre est présent
-        }
-    
-        // Filtrer sur l'existence d'un compte utilisateur associé si 'comptes' est défini
-        if ($comptes === 'oui') {
-            // Clients avec un utilisateur associé (user_id non null)
-            $query->whereNotNull('user_id');
-        } elseif ($comptes === 'non') {
-            // Clients sans utilisateur associé (user_id null)
-            $query->whereNull('user_id');
-        }
-    
-        // Filtrer sur l'état de l'utilisateur associé (si applicable)
-        if ($actif === 'oui') {
-            // Clients avec un utilisateur et dont l'état est 'actif'
-            $query->whereHas('user', function($q) {
-                $q->where('etat', 'actif');
-            });
-        } elseif ($actif === 'non') {
-            // Clients avec un utilisateur et dont l'état est 'inactif'
-            $query->whereHas('user', function($q) {
-                $q->where('etat', 'inactif');
-            });
-        }
-    
-        // Retourne les résultats paginés
-        return $query->paginate(10);
+{
+    $query = Client::query();
+
+    // Filtrer sur l'existence d'un compte utilisateur associé
+    if ($comptes === 'oui') {
+        $query->withUsers();
+    } elseif ($comptes === 'non') {
+        $query->withoutUsers();
     }
+
+    // Filtrer sur l'état de l'utilisateur associé
+    if ($actif === 'oui') {
+        $query->active();
+    } elseif ($actif === 'non') {
+        $query->inactive();
+    }
+
+    return $query->paginate(10);
+}
+
     
     
     

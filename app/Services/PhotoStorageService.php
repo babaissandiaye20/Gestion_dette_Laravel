@@ -1,9 +1,8 @@
 <?php
-
 namespace App\Services;
 
 use Cloudinary\Cloudinary;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Log;
 
 class PhotoStorageService
 {
@@ -18,45 +17,76 @@ class PhotoStorageService
                 'api_secret' => env('CLOUDINARY_API_SECRET'),
             ],
         ]);
-    } 
-
-    /**
-     * Upload photo to Cloudinary or fallback to local Base64 storage.
-     *
-     * @param \Illuminate\Http\UploadedFile $photo
-     * @return string|null
-     */
-    public function uploadPhoto($photo)
-    {
-        try {
-            // Attempt to upload to Cloudinary
-            $uploadResult = $this->cloudinary->uploadApi()->upload($photo->getRealPath(), [
-                'folder' => 'clients'
-            ]);
-            return $uploadResult['secure_url']; // Return Cloudinary URL if successful
-        } catch (\Exception $e) {
-            // Log error and fallback to Base64 storage
-         /*    Log::error('Cloudinary upload failed: ' . $e->getMessage()); */
-            return $this->storePhotoAsBase64($photo); // Store photo as Base64
-        }
     }
 
     /**
-     * Encode the photo to Base64 and store locally.
+     * Upload photo to Cloudinary or fallback to original URL.
      *
-     * @param \Illuminate\Http\UploadedFile $photo
+     * @param string $photoPath
+     * @return string|null
+     */
+    public function uploadPhoto($photoPath)
+    {
+        try {
+            // Vérifier si $photoPath est une URL valide
+            if (filter_var($photoPath, FILTER_VALIDATE_URL)) {
+                Log::info("Téléchargement de l'image à partir de l'URL : " . $photoPath);
+
+                // Télécharger l'image à partir de l'URL distante
+                $imageContents = @file_get_contents($photoPath);
+
+                if ($imageContents === false) {
+                    Log::error("Échec du téléchargement de l'image à partir de l'URL : " . $photoPath);
+                    return $this->fallbackToOriginalUrl($photoPath);
+                }
+
+                // Sauvegarder temporairement le fichier téléchargé
+                $tempFilePath = tempnam(sys_get_temp_dir(), 'photo_');
+                file_put_contents($tempFilePath, $imageContents);
+
+                // Utiliser le fichier temporaire pour le chargement
+                $photoPath = $tempFilePath;
+            }
+
+            Log::info("Chemin de la photo avant le chargement : " . $photoPath);
+
+            // Vérifier si le chemin de la photo existe
+            if (!file_exists($photoPath)) {
+                Log::error("Le chemin de la photo n'existe pas : " . $photoPath);
+                return $this->fallbackToOriginalUrl($photoPath);
+            }
+
+            // Télécharger la photo sur Cloudinary
+            $uploadResult = $this->cloudinary->uploadApi()->upload($photoPath, [
+                'folder' => 'clients'
+            ]);
+
+            // Journaliser la réponse de Cloudinary
+            Log::info('Réponse du chargement sur Cloudinary : ' . json_encode($uploadResult));
+
+            // Vérifier si le téléchargement est réussi
+            if (isset($uploadResult['secure_url']) && !empty($uploadResult['secure_url'])) {
+                Log::info("Téléchargement réussi sur Cloudinary, URL sécurisée : " . $uploadResult['secure_url']);
+                return $uploadResult['secure_url'];
+            } else {
+                Log::error('Structure inattendue de la réponse Cloudinary : ' . json_encode($uploadResult));
+            }
+        } catch (\Exception $e) {
+            Log::error('Échec du chargement sur Cloudinary : ' . $e->getMessage());
+        }
+
+        return $this->fallbackToOriginalUrl($photoPath);
+    }
+
+    /**
+     * Fallback method to return the original URL of the photo.
+     *
+     * @param string $photoPath
      * @return string
      */
-    private function storePhotoAsBase64($photo)
+    private function fallbackToOriginalUrl($photoPath)
     {
-        $photoData = file_get_contents($photo->getRealPath());
-        $base64Photo = base64_encode($photoData);
-        $base64Url = 'data:image/' . $photo->getClientOriginalExtension() . ';base64,' . $base64Photo;
-
-        // Save Base64 photo to storage (optional if you want to persist it locally)
-        $photoPath = 'photos/' . uniqid() . '.txt';
-        Storage::disk('local')->put($photoPath, $base64Url);
-
-        return $base64Url; // Return Base64-encoded string
+        Log::info("Utilisation de l'URL de secours pour la photo : " . $photoPath);
+        return $photoPath; // Return the original URL of the photo
     }
 }

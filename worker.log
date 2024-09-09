@@ -1,0 +1,342 @@
+  2024-09-07 16:49:06 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 16:49:11 App\Jobs\UploadUserPhotoJob .................... 5s DONE
+  2024-09-07 16:55:42 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 16:55:48 App\Jobs\UploadUserPhotoJob .................... 6s DONE
+  2024-09-07 17:24:58 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 17:24:59 App\Jobs\UploadUserPhotoJob ............... 77.71ms DONE
+  2024-09-07 17:28:05 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 17:28:09 App\Jobs\UploadUserPhotoJob .................... 3s DONE
+  2024-09-07 18:29:44 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 18:29:49 App\Jobs\UploadUserPhotoJob .................... 4s DONE
+  2024-09-07 18:33:01 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 18:33:14 App\Jobs\UploadUserPhotoJob ................... 13s DONE
+  2024-09-07 19:31:37 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 19:31:41 App\Jobs\UploadUserPhotoJob .................... 3s DONE
+  2024-09-07 19:59:26 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 19:59:29 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-07 20:03:38 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 20:03:41 App\Jobs\UploadUserPhotoJob .................... 3s DONE
+  2024-09-07 20:07:33 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 20:07:36 App\Jobs\UploadUserPhotoJob .................... 3s DONE
+  2024-09-07 20:08:27 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 20:08:32 App\Jobs\UploadUserPhotoJob .................... 5s DONE
+  2024-09-07 20:11:33 App\Jobs\GenerateQRCodeJob ..................... RUNNING
+  2024-09-07 20:11:33 App\Jobs\GenerateQRCodeJob ................ 13.15ms DONE
+  2024-09-07 20:11:33 App\Jobs\GenerateFidelityCardJob ............... RUNNING
+  2024-09-07 20:11:33 App\Jobs\GenerateFidelityCardJob .......... 24.64ms DONE
+  2024-09-07 20:11:33 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 20:11:33 App\Jobs\SendFidelityCardEmailJob .......... 4.81ms FAIL
+  2024-09-07 20:11:33 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 20:11:33 App\Jobs\SendFidelityCardEmailJob .......... 2.25ms FAIL
+  2024-09-07 20:11:33 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 20:11:33 App\Jobs\SendFidelityCardEmailJob .......... 2.36ms FAIL
+  2024-09-07 20:14:27 App\Jobs\GenerateQRCodeJob ..................... RUNNING
+  2024-09-07 20:14:27 App\Jobs\GenerateQRCodeJob ................. 9.18ms DONE
+  2024-09-07 20:14:27 App\Jobs\GenerateFidelityCardJob ............... RUNNING
+  2024-09-07 20:14:27 App\Jobs\GenerateFidelityCardJob ........... 8.49ms DONE
+  2024-09-07 20:14:27 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 20:14:27 App\Jobs\SendFidelityCardEmailJob .......... 2.35ms FAIL
+  2024-09-07 20:14:27 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 20:14:27 App\Jobs\SendFidelityCardEmailJob .......... 1.63ms FAIL
+  2024-09-07 20:14:27 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 20:14:27 App\Jobs\SendFidelityCardEmailJob .......... 2.72ms FAIL
+  2024-09-07 22:21:27 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:21:27 App\Jobs\SendFidelityCardEmailJob .......... 3.24ms FAIL
+  2024-09-07 22:21:27 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:21:27 App\Jobs\SendFidelityCardEmailJob .......... 1.82ms FAIL
+  2024-09-07 22:21:27 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:21:27 App\Jobs\SendFidelityCardEmailJob .......... 2.69ms FAIL
+  2024-09-07 22:30:33 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 22:30:47 App\Jobs\UploadUserPhotoJob ................... 13s DONE
+  2024-09-07 22:33:44 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:33:44 App\Jobs\SendFidelityCardEmailJob .......... 2.65ms FAIL
+  2024-09-07 22:33:44 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:33:44 App\Jobs\SendFidelityCardEmailJob .......... 2.28ms FAIL
+  2024-09-07 22:33:44 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:33:44 App\Jobs\SendFidelityCardEmailJob .......... 2.60ms FAIL
+  2024-09-07 22:36:41 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:36:41 App\Jobs\SendFidelityCardEmailJob .......... 2.28ms FAIL
+  2024-09-07 22:36:41 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:36:41 App\Jobs\SendFidelityCardEmailJob .......... 1.80ms FAIL
+  2024-09-07 22:36:41 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:36:41 App\Jobs\SendFidelityCardEmailJob .......... 2.66ms FAIL
+  2024-09-07 22:41:47 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 22:42:00 App\Jobs\UploadUserPhotoJob ................... 12s DONE
+  2024-09-07 22:44:51 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 22:45:03 App\Jobs\UploadUserPhotoJob ................... 12s DONE
+  2024-09-07 22:50:31 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:50:31 App\Jobs\SendFidelityCardEmailJob .......... 2.77ms FAIL
+  2024-09-07 22:50:31 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:50:31 App\Jobs\SendFidelityCardEmailJob .......... 2.58ms FAIL
+  2024-09-07 22:50:31 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:50:31 App\Jobs\SendFidelityCardEmailJob .......... 2.54ms FAIL
+  2024-09-07 22:54:58 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 22:55:21 App\Jobs\UploadUserPhotoJob ................... 23s DONE
+  2024-09-07 22:56:30 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:56:30 App\Jobs\SendFidelityCardEmailJob .......... 1.93ms FAIL
+  2024-09-07 22:56:30 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:56:30 App\Jobs\SendFidelityCardEmailJob .......... 1.88ms FAIL
+  2024-09-07 22:56:33 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 22:56:58 App\Jobs\UploadUserPhotoJob ................... 25s DONE
+  2024-09-07 22:56:58 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:56:58 App\Jobs\SendFidelityCardEmailJob .......... 1.70ms FAIL
+  2024-09-07 22:56:58 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:56:58 App\Jobs\SendFidelityCardEmailJob .......... 1.68ms FAIL
+  2024-09-07 22:56:58 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:56:58 App\Jobs\SendFidelityCardEmailJob .......... 1.58ms FAIL
+  2024-09-07 22:57:38 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 22:57:55 App\Jobs\UploadUserPhotoJob ................... 17s DONE
+  2024-09-07 22:59:16 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:59:16 App\Jobs\SendFidelityCardEmailJob .......... 2.78ms FAIL
+  2024-09-07 22:59:16 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 22:59:16 App\Jobs\SendFidelityCardEmailJob .......... 3.35ms FAIL
+  2024-09-07 23:01:25 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 23:01:46 App\Jobs\UploadUserPhotoJob ................... 21s DONE
+  2024-09-07 23:03:02 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 23:03:02 App\Jobs\SendFidelityCardEmailJob .......... 3.40ms FAIL
+  2024-09-07 23:03:02 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 23:03:02 App\Jobs\SendFidelityCardEmailJob .......... 3.20ms FAIL
+  2024-09-07 23:05:44 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-07 23:06:14 App\Jobs\UploadUserPhotoJob ................... 30s DONE
+  2024-09-07 23:12:48 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 23:12:48 App\Jobs\SendFidelityCardEmailJob .......... 2.96ms FAIL
+  2024-09-07 23:12:48 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 23:12:48 App\Jobs\SendFidelityCardEmailJob .......... 1.69ms FAIL
+  2024-09-07 23:12:48 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-07 23:12:48 App\Jobs\SendFidelityCardEmailJob .......... 2.62ms FAIL
+  2024-09-08 00:10:42 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 00:11:25 App\Jobs\UploadUserPhotoJob ................... 43s DONE
+  2024-09-08 01:30:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 01:30:21 App\Jobs\SendFidelityCardEmailJob .......... 8.17ms FAIL
+  2024-09-08 01:30:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 01:30:21 App\Jobs\SendFidelityCardEmailJob .......... 6.76ms FAIL
+  2024-09-08 01:30:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 01:30:21 App\Jobs\SendFidelityCardEmailJob .......... 5.25ms FAIL
+  2024-09-08 01:33:57 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 01:34:02 App\Jobs\UploadUserPhotoJob .................... 5s DONE
+  2024-09-08 01:35:56 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 01:35:56 App\Jobs\SendFidelityCardEmailJob ......... 13.72ms FAIL
+  2024-09-08 01:35:56 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 01:35:56 App\Jobs\SendFidelityCardEmailJob ......... 15.97ms FAIL
+  2024-09-08 01:35:56 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 01:35:56 App\Jobs\SendFidelityCardEmailJob ......... 16.19ms FAIL
+  2024-09-08 01:37:45 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 01:37:50 App\Jobs\UploadUserPhotoJob .................... 4s DONE
+  2024-09-08 01:50:29 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 01:50:35 App\Jobs\UploadUserPhotoJob .................... 5s DONE
+  2024-09-08 02:07:15 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 02:07:21 App\Jobs\UploadUserPhotoJob .................... 5s DONE
+  2024-09-08 02:19:10 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 02:19:15 App\Jobs\UploadUserPhotoJob .................... 4s DONE
+  2024-09-08 02:20:18 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 02:20:23 App\Jobs\UploadUserPhotoJob .................... 4s DONE
+  2024-09-08 02:20:41 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 02:20:41 App\Jobs\SendFidelityCardEmailJob .......... 8.54ms FAIL
+  2024-09-08 11:44:14 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 11:44:18 App\Jobs\UploadUserPhotoJob .................... 3s DONE
+  2024-09-08 11:46:51 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 11:46:51 App\Jobs\SendFidelityCardEmailJob ......... 11.99ms FAIL
+  2024-09-08 11:46:51 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 11:46:51 App\Jobs\SendFidelityCardEmailJob ......... 10.18ms FAIL
+  2024-09-08 11:46:51 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 11:46:51 App\Jobs\SendFidelityCardEmailJob .......... 9.52ms FAIL
+  2024-09-08 11:49:48 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 11:50:04 App\Jobs\UploadUserPhotoJob ................... 16s DONE
+  2024-09-08 11:51:10 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 11:51:21 App\Jobs\UploadUserPhotoJob ................... 10s DONE
+  2024-09-08 11:57:15 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 11:57:15 App\Jobs\UploadUserPhotoJob ............... 87.99ms DONE
+  2024-09-08 11:57:15 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 11:57:15 App\Jobs\SendFidelityCardEmailJob ......... 10.24ms FAIL
+  2024-09-08 11:57:15 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 11:57:15 App\Jobs\SendFidelityCardEmailJob ......... 17.82ms FAIL
+  2024-09-08 11:57:15 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 11:57:15 App\Jobs\SendFidelityCardEmailJob ......... 36.07ms FAIL
+  2024-09-08 12:06:25 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 12:06:25 App\Jobs\UploadUserPhotoJob ............... 65.58ms DONE
+  2024-09-08 12:06:25 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 12:06:25 App\Jobs\SendFidelityCardEmailJob ......... 11.55ms FAIL
+  2024-09-08 12:06:25 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 12:06:25 App\Jobs\SendFidelityCardEmailJob ......... 17.29ms FAIL
+  2024-09-08 12:06:25 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 12:06:25 App\Jobs\SendFidelityCardEmailJob ......... 33.27ms FAIL
+  2024-09-08 12:17:29 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 12:17:34 App\Jobs\UploadUserPhotoJob .................... 5s DONE
+  2024-09-08 12:17:34 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 12:17:34 App\Jobs\SendFidelityCardEmailJob .......... 5.41ms FAIL
+  2024-09-08 12:17:34 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 12:17:34 App\Jobs\SendFidelityCardEmailJob .......... 3.74ms FAIL
+  2024-09-08 12:17:34 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 12:17:34 App\Jobs\SendFidelityCardEmailJob .......... 6.27ms FAIL
+  2024-09-08 12:18:22 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 12:18:26 App\Jobs\UploadUserPhotoJob .................... 3s DONE
+  2024-09-08 12:52:14 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 12:52:14 App\Jobs\UploadUserPhotoJob .............. 155.98ms DONE
+  2024-09-08 12:52:35 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 12:52:35 App\Jobs\UploadUserPhotoJob .............. 129.77ms DONE
+  2024-09-08 12:52:56 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 12:52:56 App\Jobs\UploadUserPhotoJob .............. 144.35ms DONE
+  2024-09-08 13:13:54 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 13:13:54 App\Jobs\UploadUserPhotoToCloudinaryJob ... 38.25ms DONE
+  2024-09-08 13:38:23 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 13:38:23 App\Jobs\UploadUserPhotoToCloudinaryJob ... 37.23ms DONE
+  2024-09-08 13:56:25 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 13:56:25 App\Jobs\UploadUserPhotoToCloudinaryJob ... 39.28ms DONE
+  2024-09-08 13:59:55 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 13:59:55 App\Jobs\UploadUserPhotoToCloudinaryJob ... 29.46ms DONE
+  2024-09-08 14:18:56 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 14:19:00 App\Jobs\UploadUserPhotoJob .................... 3s DONE
+  2024-09-08 14:22:39 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 14:22:39 App\Jobs\UploadUserPhotoJob ............... 59.46ms DONE
+  2024-09-08 14:22:39 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 14:22:39 App\Jobs\SendFidelityCardEmailJob .......... 9.46ms FAIL
+  2024-09-08 14:22:39 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 14:22:39 App\Jobs\SendFidelityCardEmailJob ......... 12.45ms FAIL
+  2024-09-08 14:22:39 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 14:22:39 App\Jobs\SendFidelityCardEmailJob ......... 18.58ms FAIL
+  2024-09-08 14:24:09 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 14:24:09 App\Jobs\UploadUserPhotoJob ............... 80.57ms DONE
+  2024-09-08 14:52:44 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 14:52:45 App\Jobs\UploadUserPhotoJob ............... 76.16ms DONE
+  2024-09-08 14:52:45 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 14:52:45 App\Jobs\SendFidelityCardEmailJob .......... 9.52ms FAIL
+  2024-09-08 14:52:45 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 14:52:45 App\Jobs\SendFidelityCardEmailJob .......... 7.95ms FAIL
+  2024-09-08 14:52:45 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 14:52:45 App\Jobs\SendFidelityCardEmailJob ......... 15.47ms FAIL
+  2024-09-08 14:57:36 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 14:57:39 App\Jobs\UploadUserPhotoJob .................... 3s DONE
+  2024-09-08 14:59:49 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 14:59:49 App\Jobs\UploadUserPhotoToCloudinaryJob .... 7.32ms DONE
+  2024-09-08 15:00:31 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 15:00:31 App\Jobs\UploadUserPhotoToCloudinaryJob .... 6.59ms DONE
+  2024-09-08 15:03:25 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 15:03:25 App\Jobs\UploadUserPhotoToCloudinaryJob .... 7.42ms DONE
+  2024-09-08 15:04:01 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 15:04:03 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-08 15:09:25 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 15:09:33 App\Jobs\UploadUserPhotoJob .................... 7s DONE
+  2024-09-08 15:10:33 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 15:10:33 App\Jobs\UploadUserPhotoToCloudinaryJob .... 9.20ms DONE
+  2024-09-08 15:16:45 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 15:16:45 App\Jobs\UploadUserPhotoToCloudinaryJob .... 8.01ms DONE
+  2024-09-08 15:17:27 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 15:17:27 App\Jobs\UploadUserPhotoToCloudinaryJob .... 6.97ms DONE
+  2024-09-08 15:19:22 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 15:19:22 App\Jobs\SendFidelityCardEmailJob ......... 10.33ms FAIL
+  2024-09-08 15:19:22 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 15:19:22 App\Jobs\SendFidelityCardEmailJob .......... 5.36ms FAIL
+  2024-09-08 15:19:22 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 15:19:22 App\Jobs\SendFidelityCardEmailJob .......... 5.15ms FAIL
+  2024-09-08 15:19:55 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 15:19:55 App\Jobs\UploadUserPhotoToCloudinaryJob .... 9.13ms DONE
+  2024-09-08 15:20:37 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 15:20:39 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-08 15:37:41 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 15:37:41 App\Jobs\UploadUserPhotoToCloudinaryJob ... 12.24ms DONE
+  2024-09-08 15:58:03 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 15:58:03 App\Jobs\UploadUserPhotoToCloudinaryJob .... 7.34ms DONE
+  2024-09-08 16:08:34 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 16:08:37 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-08 16:17:44 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 16:17:44 App\Jobs\UploadUserPhotoToCloudinaryJob .... 8.21ms DONE
+  2024-09-08 16:17:44 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 16:17:44 App\Jobs\UploadUserPhotoToCloudinaryJob .... 6.44ms DONE
+  2024-09-08 16:53:18 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 16:53:18 App\Jobs\UploadUserPhotoToCloudinaryJob .... 8.06ms DONE
+  2024-09-08 17:00:40 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 17:00:40 App\Jobs\SendFidelityCardEmailJob .......... 9.01ms FAIL
+  2024-09-08 17:00:40 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 17:00:40 App\Jobs\SendFidelityCardEmailJob .......... 4.51ms FAIL
+  2024-09-08 17:00:40 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 17:00:40 App\Jobs\SendFidelityCardEmailJob .......... 4.64ms FAIL
+  2024-09-08 17:01:22 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 17:01:22 App\Jobs\UploadUserPhotoJob ............... 59.20ms DONE
+  2024-09-08 17:01:22 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 17:01:22 App\Jobs\SendFidelityCardEmailJob .......... 8.18ms FAIL
+  2024-09-08 17:01:22 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 17:01:22 App\Jobs\SendFidelityCardEmailJob .......... 9.20ms FAIL
+  2024-09-08 17:01:22 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 17:01:22 App\Jobs\SendFidelityCardEmailJob ......... 14.05ms FAIL
+  2024-09-08 17:23:42 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-08 17:23:42 App\Jobs\UploadUserPhotoJob ............... 76.40ms DONE
+  2024-09-08 17:23:42 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 17:23:42 App\Jobs\SendFidelityCardEmailJob ......... 21.06ms FAIL
+  2024-09-08 17:23:42 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 17:23:42 App\Jobs\SendFidelityCardEmailJob ......... 15.97ms FAIL
+  2024-09-08 17:23:42 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-08 17:23:42 App\Jobs\SendFidelityCardEmailJob ......... 25.99ms FAIL
+  2024-09-08 18:34:10 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-08 18:34:10 App\Jobs\UploadUserPhotoToCloudinaryJob .... 6.30ms DONE
+  2024-09-09 00:53:01 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 00:53:01 App\Jobs\SendFidelityCardEmailJob .......... 9.63ms FAIL
+  2024-09-09 00:53:01 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 00:53:01 App\Jobs\SendFidelityCardEmailJob .......... 5.37ms FAIL
+  2024-09-09 00:53:01 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 00:53:01 App\Jobs\SendFidelityCardEmailJob .......... 4.42ms FAIL
+  2024-09-09 00:53:07 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 00:53:12 App\Jobs\UploadUserPhotoJob .................... 4s DONE
+  2024-09-09 00:54:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 00:54:18 App\Jobs\SendFidelityCardEmailJob .......... 3.20ms FAIL
+  2024-09-09 00:54:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 00:54:18 App\Jobs\SendFidelityCardEmailJob .......... 3.14ms FAIL
+  2024-09-09 00:54:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 00:54:18 App\Jobs\SendFidelityCardEmailJob .......... 2.70ms FAIL
+  2024-09-09 01:12:16 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 01:12:16 App\Jobs\SendFidelityCardEmailJob .......... 7.04ms FAIL
+  2024-09-09 01:12:16 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 01:12:16 App\Jobs\SendFidelityCardEmailJob .......... 6.37ms FAIL
+  2024-09-09 01:12:16 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 01:12:16 App\Jobs\SendFidelityCardEmailJob .......... 5.39ms FAIL
+  2024-09-09 01:12:22 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 01:12:28 App\Jobs\UploadUserPhotoJob .................... 5s DONE
+  2024-09-09 01:16:10 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 01:16:16 App\Jobs\UploadUserPhotoJob .................... 5s DONE
+  2024-09-09 07:12:48 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:12:48 App\Jobs\SendFidelityCardEmailJob .......... 7.94ms FAIL
+  2024-09-09 07:12:48 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:12:48 App\Jobs\SendFidelityCardEmailJob .......... 6.31ms FAIL
+  2024-09-09 07:12:48 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:12:48 App\Jobs\SendFidelityCardEmailJob .......... 7.80ms FAIL
+  2024-09-09 07:24:29 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:24:29 App\Jobs\SendFidelityCardEmailJob .......... 8.79ms FAIL
+  2024-09-09 07:24:29 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:24:29 App\Jobs\SendFidelityCardEmailJob .......... 5.15ms FAIL
+  2024-09-09 07:24:29 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:24:29 App\Jobs\SendFidelityCardEmailJob .......... 4.18ms FAIL
+  2024-09-09 07:25:35 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:25:35 App\Jobs\SendFidelityCardEmailJob .......... 4.77ms FAIL
+  2024-09-09 07:25:35 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:25:35 App\Jobs\SendFidelityCardEmailJob .......... 2.31ms FAIL
+  2024-09-09 07:25:35 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:25:35 App\Jobs\SendFidelityCardEmailJob .......... 2.22ms FAIL
+  2024-09-09 07:30:05 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 07:30:11 App\Jobs\UploadUserPhotoJob .................... 6s DONE
+  2024-09-09 07:37:45 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:37:45 App\Jobs\SendFidelityCardEmailJob ......... 20.15ms FAIL
+  2024-09-09 07:37:45 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:37:45 App\Jobs\SendFidelityCardEmailJob .......... 8.87ms FAIL
+  2024-09-09 07:37:45 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:37:45 App\Jobs\SendFidelityCardEmailJob .......... 8.39ms FAIL
+  2024-09-09 07:37:51 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 07:37:57 App\Jobs\UploadUserPhotoJob .................... 6s DONE
+  2024-09-09 07:39:00 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:39:00 App\Jobs\SendFidelityCardEmailJob ......... 20.67ms FAIL
+  2024-09-09 07:39:00 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:39:00 App\Jobs\SendFidelityCardEmailJob ......... 15.05ms FAIL
+  2024-09-09 07:39:00 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:39:00 App\Jobs\SendFidelityCardEmailJob .......... 8.41ms FAIL
+  2024-09-09 07:39:06 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 07:39:18 App\Jobs\UploadUserPhotoJob ................... 11s DONE
+  2024-09-09 07:40:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:40:21 App\Jobs\SendFidelityCardEmailJob ......... 21.12ms FAIL
+  2024-09-09 07:40:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:40:21 App\Jobs\SendFidelityCardEmailJob ......... 10.02ms FAIL
+  2024-09-09 07:40:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:40:21 App\Jobs\SendFidelityCardEmailJob ......... 16.87ms FAIL
+  2024-09-09 07:40:40 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 07:40:40 App\Jobs\UploadUserPhotoJob ............... 11.17ms DONE
+  2024-09-09 07:40:40 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 07:40:40 App\Jobs\SendFidelityCardEmailJob ........ 177.94ms FAIL
+  2024-09-09 07:41:15 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-09 07:41:24 App\Jobs\UploadUserPhotoToCloudinaryJob ........ 9s DONE

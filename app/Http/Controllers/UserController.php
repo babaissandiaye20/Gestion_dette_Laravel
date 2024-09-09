@@ -28,7 +28,7 @@ class UserController extends \Illuminate\Routing\Controller
     // Création d'un utilisateur
 public function create(UserRequest $request)
 {
-    $this->authorize('create', User::class);
+  /*   $this->authorize('create', User::class); */
     try {
         // Authorize the action
     

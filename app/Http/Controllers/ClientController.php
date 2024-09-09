@@ -15,7 +15,7 @@ class ClientController extends \Illuminate\Routing\Controller
 
     public function getClientsWithFilters(Request $request)
     {
-        $this->authorize('create', Client::class);
+     /*    $this->authorize('create', Client::class); */
 
         $comptes = $request->query('comptes');
         $etat = $request->query('actif');

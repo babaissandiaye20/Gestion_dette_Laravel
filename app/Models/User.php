@@ -29,5 +29,26 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Article::class, 'articles_users');
     }
+    public function setPhotoAttribute($value)
+    {
+        // URL de Cloudinary à vérifier
+        $cloudinaryBaseUrl = 'https://res.cloudinary.com/dv3nhosdz/image/upload/';
+
+        // Si la photo est nulle
+        if (is_null($value)) {
+            $this->attributes['photo'] = null;
+            $this->attributes['type'] = false; // Pas d'image (traiter comme une URL non valide)
+            return;
+        }
+
+        $this->attributes['photo'] = $value;
+
+        // Vérifier si l'URL commence par l'URL de base de Cloudinary
+        if (strpos($value, $cloudinaryBaseUrl) === 0) {
+            $this->attributes['type'] = true; // C'est une URL Cloudinary
+        } else {
+            $this->attributes['type'] = false; // Ce n'est pas une URL Cloudinary
+        }
+    }
 }
  

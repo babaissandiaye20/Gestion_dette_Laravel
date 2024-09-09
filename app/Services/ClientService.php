@@ -19,6 +19,7 @@ use App\Http\Requests\ClientRequest;
 use App\Http\Requests\UserRequest;
 use App\Http\Requests\ClientCreateRequest;
 use  App\Services\UserService;
+use App\Events\ClientFidelityEvent;
 class ClientService implements ClientServiceInterface
 {
     protected $qrCodeService;
@@ -45,11 +46,7 @@ class ClientService implements ClientServiceInterface
         }
 
         $this->createUserForClient($request, $client);
-        $qrCodePath = $this->generateQRCodeForClient($client);
-
-        $fidelityCardPath = $this->generateFidelityCardForClient($client, $qrCodePath);
-        Mail::to($client->user->login)->send(new FidelityCardMail($client, $fidelityCardPath));
-
+        /*  event(new ClientFidelityEvent($client));  */
         return $client;
     }
 
@@ -62,11 +59,9 @@ class ClientService implements ClientServiceInterface
     if ($request->has(['nom', 'prenom', 'login', 'password', 'password_confirmation'])) {
         $this->createUserForClient($request, $client);
     }
+  /*   event(new ClientFidelityEvent($client));  */
 
-    $qrCodePath = $this->generateQRCodeForClient($client);
-    $fidelityCardPath = $this->generateFidelityCardForClient($client, $qrCodePath);
-    Mail::to($client->user->login)->send(new FidelityCardMail($client, $fidelityCardPath));
-
+    
     return $client;
 }
 
@@ -88,44 +83,15 @@ class ClientService implements ClientServiceInterface
         }
 
         $photoUrl = null;
-
         if ($request->hasFile('photo')) {
             $photo = $request->file('photo');
-          /*   $photoUrl = $this->photoStorageService->uploadPhoto($photo); */
-        }
+            // Stocker la photo temporairement
+            $photoPath = $photo->store('temp_photos');
 
-       /*  if (is_null($photoUrl)) {
-            throw new \Exception('Échec du téléchargement de la photo.');
-        } */
+        }
         $user = $this->userService->createUser($request->all());
         $client->user()->associate($user);
         $client->save();
-    }
-
-    public function generateQRCodeForClient(Client $client): string
-    {
-        $user = $client->user;
-        $qrContent = "ID Client: " . $client->id . "\n" .
-                     "Nom: " . ($user->nom ?? 'N/A') . "\n" .
-                     "Prénom: " . ($user->prenom ?? 'N/A') . "\n" .
-                     "Téléphone: " . ($client->telephone ?? 'N/A') . "\n" .
-                     "Surnom: " . ($client->surnom ?? 'N/A');
-        
-        $qrCodePath = 'qrcodes/client_' . $client->id . '.png';
-        $this->qrCodeService->generateQRCode($qrContent, $qrCodePath);
-        
-        return $qrCodePath;
-    }
-
-    public function generateFidelityCardForClient(Client $client, string $qrCodePath): string
-    {
-        $user = $client->user;
-        $photoUrl = $user->photo;
-        $encodedPhoto = $this->encodePhotoToBase64($photoUrl);
-
-        $fidelityCardPath = $this->fidelityCardService->generateFidelityCard($client, $qrCodePath, $encodedPhoto);
-
-        return $fidelityCardPath;
     }
 
     protected function encodePhotoToBase64($photoUrl)
