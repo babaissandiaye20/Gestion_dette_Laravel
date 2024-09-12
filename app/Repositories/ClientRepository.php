@@ -60,9 +60,49 @@ class ClientRepository implements ClientRepositoryInterface
     
     
     
-    public function afficherDettes($clientId)
-    {
-        return Dette::where('client_id', $clientId)->with('articles', 'details')->get();
-    }
-    
+public function afficherDettes($clientId)
+{
+    // Fetch debts with their IDs for the given client without including articles
+    return Dette::where('client_id', $clientId)->get(['id', 'montant', 'client_id']);
+}
+
+
+public function getClientWithDebtswithArticle()
+{
+    $clients = Client::with(['dettes' => function ($query) {
+            // Inclure uniquement les dettes réglées et leurs articles
+            $query->where('status', 'settled')->with('articles');
+        }])
+        ->get()
+        ->filter(function ($client) {
+            // Inclure uniquement les clients ayant des dettes réglées
+            return $client->dettes->isNotEmpty();
+        })
+        ->map(function ($client) {
+            // Structurer les données du client et des dettes
+            return [
+                'client' => [
+                    'name' => $client->surnom, // Changement: Utilisation de l'attribut 'surnom' au lieu de 'surname'
+                    'phone' => $client->telephone,
+                    'debts' => $client->dettes->map(function ($dette) {
+                        return [
+                            'amount' => $dette->montant,
+                            'status' => 'settled',
+                            'articles' => $dette->articles->mapWithKeys(function ($article) {
+                                return [
+                                    $article->id => [
+                                        'name' => $article->libelle,
+                                        'price' => $article->prix,
+                                    ]
+                                ];
+                            }),
+                        ];
+                    }),
+                ]
+            ];
+        });
+
+    // Retourner ou afficher le résultat
+    return $clients;
+} 
 }

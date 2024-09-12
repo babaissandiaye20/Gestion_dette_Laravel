@@ -40,13 +40,17 @@ class ArticleRepositoryImpl implements ArticleRepository
         return false;
     }
 
+    // Utilisation du scope 'libelle' pour filtrer par libelle
     public function findByLibelle($libelle)
     {
-        return Article::where('libelle', $libelle)->first();
+        return Article::libelle($libelle)->first();
     }
 
-    public function findByEtat($etat)
+    // Utilisation du scope 'disponible' pour filtrer par disponibilité
+    public function findByEtat($disponible)
     {
-        return Article::where('etat', $etat)->get();
+        // Utiliser le scope disponible et retourner un Query Builder
+        return Article::disponible($disponible); // Pas de `get()`, juste la requête
     }
+    
 }

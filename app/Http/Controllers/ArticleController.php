@@ -1,11 +1,12 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+use Illuminate\Http\Request;
+use App\Policies\ArticlePolicy;
 use App\Services\ArticleService;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
-use App\Models\Article;
-use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class ArticleController extends \Illuminate\Routing\Controller
@@ -16,6 +17,7 @@ class ArticleController extends \Illuminate\Routing\Controller
     {
         $this->articleService = $articleService;
     }
+    
     use AuthorizesRequests;
 
     public function store(StoreArticleRequest $request)
@@ -24,6 +26,7 @@ class ArticleController extends \Illuminate\Routing\Controller
         $article = $this->articleService->create($request->validated());
 
         return [
+            'status' => 201,
             'message' => 'Article créé avec succès!',
             'article' => $article,
         ];
@@ -38,7 +41,7 @@ class ArticleController extends \Illuminate\Routing\Controller
             return [
                 'status' => 404,
                 'message' => "L'article avec l'ID $id n'existe pas.",
-                'article' => []
+                'article' => [],
             ];
         }
 
@@ -48,126 +51,55 @@ class ArticleController extends \Illuminate\Routing\Controller
             'article' => $article
         ];
     }
+
     public function update(UpdateArticleRequest $request, $id)
     {
         $this->authorize('create', Article::class); 
-        
-        $article = $this->articleService->find($id);
-    
-        if (!$article) {
-            return [
-                'message' => "L'article avec l'ID $id n'existe pas.",
-            ];
-        }
-    
-        $updatedArticle = $this->articleService->update($id, $request->validated());
-    
+        $article = $this->articleService->update($id, $request->validated());
+
         return [
             'message' => 'Article mis à jour avec succès!',
-            'article' => $updatedArticle,
+            'article' => $article,
         ];
     }
+
     public function destroy($id)
     {
-        $this->authorize('create', Article::class); 
-    
-        $article = $this->articleService->find($id);
-    
-        if (!$article) {
-            return [
-                'message' => "L'article avec l'ID $id n'existe pas.",
-            ];
-        }
-    
+        $this->authorize('delete', Article::class); 
         $this->articleService->delete($id);
-    
-        return [
-            'message' => 'Article supprimé avec succès!',
-        ];
+
+        return ['message' => 'Article supprimé avec succès!'];
     }
+
     public function updateQuantities(Request $request)
     {
         $this->authorize('create', Article::class); 
+
         $articles = $request->input('articles', []);
-        $articlesWithErrors = [];
-    
-        foreach ($articles as $articleData) {
-            $articleId = $articleData['articleId'] ?? null;
-            $quantity = $articleData['quantity'] ?? null;
-    
-            if (is_null($articleId) || is_null($quantity)) {
-                $articlesWithErrors[] = [
-                    'articleId' => $articleId,
-                    'quantity' => $quantity,
-                    'error' => 'Données manquantes',
-                ];
-                continue;
-            }
-    
-            $article = $this->articleService->find($articleId);
-    
-            if ($article) {
-                if ($quantity < 0) {
-                    $articlesWithErrors[] = [
-                        'article' => $article,
-                        'quantity' => $quantity,
-                        'error' => 'Quantité invalide',
-                    ];
-                } else {
-                    $updatedArticle = $this->articleService->update($articleId, [
-                        'qutestock' => $article->qutestock + $quantity
-                    ]);
-                }
-            } else {
-                $articlesWithErrors[] = [
-                    'articleId' => $articleId,
-                    'quantity' => $quantity,
-                    'error' => 'Article non trouvé',
-                ];
-            }
-        }
-    
-        if (count($articlesWithErrors) > 0) {
+        $articlesWithErrors = $this->articleService->updateQuantities($articles);
+
+        if (!empty($articlesWithErrors)) {
             return [
+                'statut'=>'400',
                 'message' => 'Certaines mises à jour ont échoué.',
                 'errors' => $articlesWithErrors,
             ];
         }
-    
-        return response()->json([
-            'message' => 'Tous les articles ont été mis à jour avec succès.',
-        ], 200);
-    }
-    public function destroybis($id)
-    {
-        $this->authorize('create', Article::class); 
-    
-        $article = $this->articleService->find($id);
-    
-        if (!$article) {
-            return [
-                'message' => "L'article avec l'ID $id n'existe pas.",
-            ];
-        }
-    
-        $this->articleService->delete($id);
-    
-        return [
-            'message' => 'Article supprimé avec succès!',
-        ];
+
+        return response()->json(['message' => 'Tous les articles ont été mis à jour avec succès.'], 200);
     }
     public function index(Request $request)
     {
-        /* $this->authorize('create', Article::class);  */
         $disponible = $request->query('disponible');
     
+        // La méthode findByEtat retourne un Query Builder, sur lequel vous pouvez paginer
         $articles = $this->articleService->findByEtat($disponible)->paginate(10);
     
         if ($articles->isEmpty()) {
-            return [
+            [
                 'status' => 404,
                 'message' => 'Aucun article trouvé.',
-                'articles' => []
+                'articles' => [],
             ];
         }
     
@@ -177,16 +109,16 @@ class ArticleController extends \Illuminate\Routing\Controller
             'articles' => $articles
         ];
     }
+    
+
     public function searchByLibelle(Request $request)
     {
-        $this->authorize('create', Article::class); 
         $libelle = $request->input('libelle');
     
         if (!$libelle) {
             return [
                 'status' => 400,
                 'message' => "Le champ 'libelle' est requis.",
-                'article' => []
             ];
         }
     
@@ -196,7 +128,7 @@ class ArticleController extends \Illuminate\Routing\Controller
             return [
                 'status' => 404,
                 'message' => "Aucun article trouvé avec le libelle '$libelle'.",
-                'article' => []
+                'article' => [],
             ];
         }
     
@@ -206,6 +138,4 @@ class ArticleController extends \Illuminate\Routing\Controller
             'article' => $article
         ];
     }
-                  
-    // Continuez avec les autres méthodes en utilisant les services
 }

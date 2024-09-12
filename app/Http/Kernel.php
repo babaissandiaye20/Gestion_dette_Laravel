@@ -23,6 +23,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\CustomUnauthorizedResponse::class,
           'custom.unauthorized' => \App\Http\Middleware\CustomUnauthorizedResponse::class,
+          'json.response' => \App\Http\Middleware\JsonResponseMiddleware::class,
     ];
     protected $routeMiddleware = [
         // ...

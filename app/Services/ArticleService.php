@@ -8,6 +8,7 @@ interface ArticleService
     public function find($id);
     public function update($id, array $data);
     public function delete($id);
+    public function updateQuantities(array $articles);
     public function findByLibelle($libelle);
     public function findByEtat($disponible);
 }

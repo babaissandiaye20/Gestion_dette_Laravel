@@ -12,7 +12,7 @@ class AuthCustomServiceProvider extends ServiceProvider
     {
         // Here you can choose which implementation to bind
         // For Passport:
-       $this->app->bind(AuthentificationServiceInterface::class, AuthentificationPassport::class); 
+      $this->app->bind(AuthentificationServiceInterface::class, AuthentificationPassport::class);  
 
         // For Sanctum:
      /*  $this->app->bind(AuthentificationServiceInterface::class, AuthentificationSanctum::class);  */

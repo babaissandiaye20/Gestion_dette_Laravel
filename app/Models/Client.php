@@ -14,6 +14,8 @@ class Client extends Model
     use HasFactory;
 
     protected $fillable = ['telephone', 'surnom', 'adresse', 'user_id'];
+    protected $hidden=['created_at','updated_at'];
+    protected $appends = ['photo'];
 
     public function user()
     {
@@ -28,7 +30,23 @@ class Client extends Model
     {
         return $query->whereNotNull('user_id');
     }
+    public function getPhotoAttribute()
+    {
+        // Si un utilisateur est associé, ne pas afficher l'attribut 'photo'
+        if (!is_null($this->user_id)) {
+            return null; // Pas d'attribut 'photo' pour les clients ayant un user_id
+        }
 
+        // Retourner la valeur de la photo par défaut si aucun utilisateur n'est associé
+        return 'public/storage/photos/0ZkPKVIGxRqPtrcEt7BGZleR3nq6nLVKXB2CVCPh.jpg';  // Remplacez par le chemin de la photo par défaut
+    }
+
+    // Supprimer l'événement retrieved
+    protected static function boot()
+    {
+        parent::boot();
+        // On peut enlever l'événement retrieved car l'accessoire fait le travail
+    }
     public function scopeWithoutUsers(Builder $query)
     {
         return $query->whereNull('user_id');
@@ -47,5 +65,6 @@ class Client extends Model
             $q->where('etat', 'inactif');
         });
     }
+    
 }
  

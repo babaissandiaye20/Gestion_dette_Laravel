@@ -11,23 +11,23 @@
         }
         .card {
             border: 1px solid #000;
-            padding: 20px;
-            width: 300px;
+            padding: 60px; /* Further increased padding */
+            width: 700px; /* Further increased width */
             margin: auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
         }
         .photo {
-            width: 100px;
-            height: 100px;
+            width: 200px; /* Increased photo size */
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         .qr-code {
-            margin-top: 20px;
-            width: 150px;
-            height: 150px;
+            margin-top: 40px;
+            width: 250px; /* Increased QR code size */
+            height: 250px;
         }
     </style>
 </head>
@@ -60,7 +60,7 @@
 
         <!-- Displaying QR code -->
         @if($qrCodePath)
-            <img src="{{ public_path($qrCodePath) }}" alt="QR Code">
+            <img src="{{ public_path($qrCodePath) }}" class="qr-code" alt="QR Code">
         @else
             <p>QR Code non disponible</p>
         @endif

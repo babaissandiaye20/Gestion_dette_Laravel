@@ -19,6 +19,7 @@ use App\Http\Requests\ClientRequest;
 use App\Http\Requests\UserRequest;
 use App\Http\Requests\ClientCreateRequest;
 use  App\Services\UserService;
+use App\Exceptions\ServiceException;
 use App\Events\ClientFidelityEvent;
 class ClientService implements ClientServiceInterface
 {
@@ -38,7 +39,7 @@ class ClientService implements ClientServiceInterface
     {
         $client = Client::find($clientId);
         if (!$client) {
-            throw new \Exception('Client not found');
+            throw new ServiceException('Client not found', 404);
         }
 
         if ($client->user_id) {
@@ -72,14 +73,14 @@ class ClientService implements ClientServiceInterface
         $role = Role::find($roleId);
 
         if (!$role) {
-            throw new \Exception('Role not found');
+            throw new ServiceException('Rôle not found', 404);
         }
 
         $userData = $request->only(['nom', 'prenom', 'login', 'password', 'password_confirmation']);
         $validator = Validator::make($userData, (new \App\Http\Requests\UserRequest())->rules(), (new \App\Http\Requests\UserRequest())->messages());
 
         if ($validator->fails()) {
-            throw new \Exception(json_encode($validator->errors()));
+            throw   new ServiceException(json_encode($validator->errors()));
         }
 
         $photoUrl = null;
@@ -101,7 +102,7 @@ class ClientService implements ClientServiceInterface
                 $imageData = file_get_contents($photoUrl);
                 $imageExtension = pathinfo(parse_url($photoUrl, PHP_URL_PATH), PATHINFO_EXTENSION);
                 return 'data:image/' . $imageExtension . ';base64,' . base64_encode($imageData);
-            } catch (\Exception $e) {
+            } catch (  ServiceException $e) {
                 return null;
             }
         }
@@ -131,7 +132,7 @@ class ClientService implements ClientServiceInterface
         }
     }
 
-    return response()->json(['statut' => 200, 'clients' => $clients], 200);
+    return ['statut' => 200, 'clients' => $clients,'message'=>'Success'];
 }
 
     
@@ -144,7 +145,7 @@ public function getClientById($id)
         $client->user->photo_base64 = $this->encodePhotoToBase64($client->user->photo);
     }
 
-    return response()->json(['statut' => 200, 'client' => $client], 200);
+    return ['statut' => 200, 'client' => $client,'message'=>'Sucess'];
 }
 
 
@@ -157,7 +158,7 @@ public function getClientWithUser($id)
         $client->user->photo_base64 = $this->encodePhotoToBase64($client->user->photo);
     }
 
-    return response()->json(['statut' => 200, 'client' => $client], 200);
+    return ['statut' => 200, 'client' => $client,'message'=>'Sucess'];
 }
 
     
@@ -165,7 +166,7 @@ public function getClientWithUser($id)
     public function afficherDettes($clientId)
     {
         $dettes = ClientRepositoryFacade::afficherDettes($clientId);
-        return response()->json(['statut' => 200, 'dettes' => $dettes], 200);
+        return ['statut' => 200, 'dettes' => $dettes,'message'=>'Succes'] ;
     }
 
     public function getClientsWithFilters(?string $comptes, ?string $etat): LengthAwarePaginator

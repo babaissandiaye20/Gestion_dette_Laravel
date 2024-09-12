@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Fidelity Card</title>
+    <title>Carte de Fidélité</title>
 </head>
 <body>
-    <p>Dear {{ $client->user->nom }} {{ $client->user->prenom }},</p>
-    <p>Attached is your fidelity card. Please keep it safe.</p>
-    <p>Thank you for being with us!</p>
+    <p>Chère/Cher {{ $client->user->prenom }} {{ $client->user->nom }},</p>
+    <p>Votre carte de fidélité est ci-jointe. Veuillez la conserver en sécurité.</p>
+    <p>Merci de votre fidélité !</p>
 </body>
 </html>

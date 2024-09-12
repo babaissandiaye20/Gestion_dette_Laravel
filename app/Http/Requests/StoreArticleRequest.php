@@ -19,7 +19,7 @@ class StoreArticleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'libelle' => 'required|string|max:255',
+            'libelle' => 'required|string|max:255|unique:articles,libelle', 
             'prix' => 'required|numeric|min:0',
             'qutestock' => 'required|integer|min:0',
         ];
@@ -32,12 +32,14 @@ class StoreArticleRequest extends FormRequest
     {
         return [
             'libelle.required' => 'Le libellé est obligatoire.',
+            'libelle.unique'=>'le libellé est déja utiliée',
             'prix.required' => 'Le prix est obligatoire.',
             'prix.numeric' => 'Le prix doit être un nombre.',
             'prix.min' => 'Le prix doit être un nombre positif.',
             'qutestock.required' => 'La quantité de stock est obligatoire.',
             'qutestock.integer' => 'La quantité de stock doit être un entier.',
             'qutestock.min' => 'La quantité de stock doit être un nombre positif.',
+
         ];
     }
 }

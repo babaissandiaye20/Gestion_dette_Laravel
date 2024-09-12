@@ -340,3 +340,1467 @@
   2024-09-09 07:40:40 App\Jobs\SendFidelityCardEmailJob ........ 177.94ms FAIL
   2024-09-09 07:41:15 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
   2024-09-09 07:41:24 App\Jobs\UploadUserPhotoToCloudinaryJob ........ 9s DONE
+  2024-09-09 08:37:02 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 08:37:06 App\Jobs\SendFidelityCardEmailJob .............. 3s DONE
+  2024-09-09 09:02:47 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:02:47 App\Jobs\SendFidelityCardEmailJob ......... 20.57ms FAIL
+  2024-09-09 09:02:47 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:02:47 App\Jobs\SendFidelityCardEmailJob .......... 8.02ms FAIL
+  2024-09-09 09:02:47 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:02:47 App\Jobs\SendFidelityCardEmailJob ......... 10.17ms FAIL
+  2024-09-09 09:03:05 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 09:03:14 App\Jobs\UploadUserPhotoJob .................... 9s DONE
+  2024-09-09 09:29:25 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:29:25 App\Jobs\SendFidelityCardEmailJob ......... 14.26ms FAIL
+  2024-09-09 09:29:25 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:29:25 App\Jobs\SendFidelityCardEmailJob ......... 13.57ms FAIL
+  2024-09-09 09:29:25 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:29:25 App\Jobs\SendFidelityCardEmailJob ......... 28.57ms FAIL
+  2024-09-09 09:29:46 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:29:48 App\Jobs\SendFidelityCardEmailJob .............. 1s DONE
+  2024-09-09 09:41:10 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:41:12 App\Jobs\SendFidelityCardEmailJob .............. 2s DONE
+  2024-09-09 09:43:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:43:18 App\Jobs\SendFidelityCardEmailJob ......... 10.12ms FAIL
+  2024-09-09 09:43:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:43:18 App\Jobs\SendFidelityCardEmailJob .......... 8.80ms FAIL
+  2024-09-09 09:43:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:43:18 App\Jobs\SendFidelityCardEmailJob ......... 15.65ms FAIL
+  2024-09-09 09:43:39 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 09:43:49 App\Jobs\UploadUserPhotoJob .................... 9s DONE
+  2024-09-09 09:44:52 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:44:52 App\Jobs\SendFidelityCardEmailJob ......... 22.38ms FAIL
+  2024-09-09 09:44:52 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:44:52 App\Jobs\SendFidelityCardEmailJob ......... 11.22ms FAIL
+  2024-09-09 09:44:52 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:44:52 App\Jobs\SendFidelityCardEmailJob .......... 9.64ms FAIL
+  2024-09-09 09:45:31 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 09:45:33 App\Jobs\UploadUserPhotoJob .................... 1s DONE
+  2024-09-09 09:57:37 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:57:37 App\Jobs\SendFidelityCardEmailJob ......... 14.57ms FAIL
+  2024-09-09 09:57:37 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:57:37 App\Jobs\SendFidelityCardEmailJob ......... 14.80ms FAIL
+  2024-09-09 09:57:37 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:57:37 App\Jobs\SendFidelityCardEmailJob ......... 15.88ms FAIL
+  2024-09-09 09:58:07 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 09:58:07 App\Jobs\UploadUserPhotoJob ............... 13.56ms DONE
+  2024-09-09 09:58:07 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 09:58:07 App\Jobs\SendFidelityCardEmailJob ......... 38.17ms FAIL
+  2024-09-09 10:18:56 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 10:19:10 App\Jobs\UploadUserPhotoJob ................... 14s DONE
+  2024-09-09 10:25:32 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 10:25:34 App\Jobs\SendFidelityCardEmailJob .............. 1s DONE
+  2024-09-09 10:25:34 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 10:25:35 App\Jobs\SendFidelityCardEmailJob .............. 1s DONE
+  2024-09-09 10:28:27 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 10:28:28 App\Jobs\SendFidelityCardEmailJob .............. 1s DONE
+  2024-09-09 10:28:28 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 10:28:38 App\Jobs\UploadUserPhotoJob ................... 10s DONE
+  2024-09-09 11:57:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 11:57:21 App\Jobs\SendFidelityCardEmailJob ......... 30.29ms FAIL
+  2024-09-09 11:57:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 11:57:21 App\Jobs\SendFidelityCardEmailJob ......... 14.52ms FAIL
+  2024-09-09 11:57:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 11:57:21 App\Jobs\SendFidelityCardEmailJob ......... 11.03ms FAIL
+  2024-09-09 12:03:31 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:03:31 App\Jobs\SendFidelityCardEmailJob ......... 15.00ms FAIL
+  2024-09-09 12:03:31 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:03:31 App\Jobs\SendFidelityCardEmailJob ......... 16.40ms FAIL
+  2024-09-09 12:03:31 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:03:31 App\Jobs\SendFidelityCardEmailJob ......... 11.76ms FAIL
+  2024-09-09 12:04:52 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 12:04:53 App\Jobs\UploadUserPhotoJob .................... 1s DONE
+  2024-09-09 12:04:53 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:04:57 App\Jobs\SendFidelityCardEmailJob .............. 3s DONE
+  2024-09-09 12:08:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:08:18 App\Jobs\SendFidelityCardEmailJob ......... 22.37ms FAIL
+  2024-09-09 12:08:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:08:18 App\Jobs\SendFidelityCardEmailJob ......... 13.73ms FAIL
+  2024-09-09 12:08:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:08:18 App\Jobs\SendFidelityCardEmailJob ......... 17.08ms FAIL
+  2024-09-09 12:09:21 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 12:09:24 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-09 12:09:24 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:09:27 App\Jobs\SendFidelityCardEmailJob .............. 2s DONE
+  2024-09-09 12:13:39 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:13:41 App\Jobs\SendFidelityCardEmailJob .............. 2s DONE
+  2024-09-09 12:13:41 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 12:13:44 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-09 12:13:44 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:13:48 App\Jobs\SendFidelityCardEmailJob .............. 4s DONE
+  2024-09-09 12:15:36 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:15:37 App\Jobs\SendFidelityCardEmailJob .............. 1s DONE
+  2024-09-09 12:15:37 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 12:15:39 App\Jobs\UploadUserPhotoJob .................... 1s DONE
+  2024-09-09 12:15:39 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:15:43 App\Jobs\SendFidelityCardEmailJob .............. 3s DONE
+  2024-09-09 12:16:16 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:16:16 App\Jobs\SendFidelityCardEmailJob ......... 22.35ms FAIL
+  2024-09-09 12:16:16 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:16:16 App\Jobs\SendFidelityCardEmailJob ......... 12.84ms FAIL
+  2024-09-09 12:16:16 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:16:16 App\Jobs\SendFidelityCardEmailJob .......... 9.37ms FAIL
+  2024-09-09 12:17:58 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 12:18:00 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-09 12:20:57 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:20:57 App\Jobs\SendFidelityCardEmailJob ......... 21.30ms FAIL
+  2024-09-09 12:20:57 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:20:57 App\Jobs\SendFidelityCardEmailJob ......... 12.56ms FAIL
+  2024-09-09 12:20:57 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:20:57 App\Jobs\SendFidelityCardEmailJob ......... 11.21ms FAIL
+  2024-09-09 12:22:46 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:22:46 App\Jobs\SendFidelityCardEmailJob ......... 10.31ms FAIL
+  2024-09-09 12:22:46 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:22:46 App\Jobs\SendFidelityCardEmailJob .......... 8.76ms FAIL
+  2024-09-09 12:22:46 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:22:46 App\Jobs\SendFidelityCardEmailJob .......... 7.64ms FAIL
+  2024-09-09 12:22:49 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:22:50 App\Jobs\SendFidelityCardEmailJob .............. 1s DONE
+  2024-09-09 12:49:22 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:49:22 App\Jobs\SendFidelityCardEmailJob ......... 21.61ms FAIL
+  2024-09-09 12:49:22 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:49:22 App\Jobs\SendFidelityCardEmailJob ......... 19.41ms FAIL
+  2024-09-09 12:49:22 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:49:22 App\Jobs\SendFidelityCardEmailJob ......... 10.05ms FAIL
+  2024-09-09 12:51:25 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 12:51:27 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-09 12:51:27 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-09 12:51:31 App\Jobs\SendFidelityCardEmailJob .............. 3s DONE
+  2024-09-09 12:52:31 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-09 12:52:33 App\Jobs\UploadUserPhotoJob .................... 1s DONE
+  2024-09-10 08:04:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:04:18 App\Jobs\SendFidelityCardEmailJob ......... 17.72ms FAIL
+  2024-09-10 08:04:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:04:18 App\Jobs\SendFidelityCardEmailJob .......... 8.45ms FAIL
+  2024-09-10 08:04:18 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:04:18 App\Jobs\SendFidelityCardEmailJob .......... 7.48ms FAIL
+  2024-09-10 08:06:37 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:06:39 App\Jobs\SendFidelityCardEmailJob .............. 2s DONE
+  2024-09-10 08:19:10 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:19:12 App\Jobs\SendFidelityCardEmailJob .............. 1s DONE
+  2024-09-10 08:21:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:21:21 App\Jobs\SendFidelityCardEmailJob ......... 21.37ms FAIL
+  2024-09-10 08:21:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:21:21 App\Jobs\SendFidelityCardEmailJob ......... 14.95ms FAIL
+  2024-09-10 08:21:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:21:21 App\Jobs\SendFidelityCardEmailJob ......... 14.14ms FAIL
+  2024-09-10 08:21:57 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:21:58 App\Jobs\SendFidelityCardEmailJob .............. 1s DONE
+  2024-09-10 08:26:41 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:26:41 App\Jobs\SendFidelityCardEmailJob ......... 21.25ms FAIL
+  2024-09-10 08:26:41 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:26:41 App\Jobs\SendFidelityCardEmailJob ......... 10.01ms FAIL
+  2024-09-10 08:26:41 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 08:26:41 App\Jobs\SendFidelityCardEmailJob .......... 9.09ms FAIL
+  2024-09-10 08:27:23 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-10 08:27:24 App\Jobs\UploadUserPhotoJob .................... 1s DONE
+  2024-09-10 14:50:08 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 14:50:08 App\Jobs\SendFidelityCardEmailJob ......... 20.19ms FAIL
+  2024-09-10 14:50:08 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 14:50:08 App\Jobs\SendFidelityCardEmailJob ......... 22.83ms FAIL
+  2024-09-10 14:50:08 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 14:50:08 App\Jobs\SendFidelityCardEmailJob ......... 18.77ms FAIL
+  2024-09-10 15:02:57 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:02:57 App\Jobs\SendDebtNotificationJob .......... 15.12ms FAIL
+  2024-09-10 15:02:57 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:02:57 App\Jobs\SendDebtNotificationJob .......... 10.05ms FAIL
+  2024-09-10 15:02:57 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:02:57 App\Jobs\SendDebtNotificationJob ........... 6.15ms FAIL
+  2024-09-10 15:24:01 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 15:24:01 App\Jobs\SendFidelityCardEmailJob ......... 12.59ms FAIL
+  2024-09-10 15:24:01 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 15:24:01 App\Jobs\SendFidelityCardEmailJob .......... 8.22ms FAIL
+  2024-09-10 15:24:01 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 15:24:01 App\Jobs\SendFidelityCardEmailJob .......... 7.89ms FAIL
+  2024-09-10 15:24:22 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-10 15:24:24 App\Jobs\UploadUserPhotoJob .................... 1s DONE
+  2024-09-10 15:26:09 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:26:09 App\Jobs\SendDebtNotificationJob .......... 11.11ms FAIL
+  2024-09-10 15:26:09 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:26:09 App\Jobs\SendDebtNotificationJob ........... 9.29ms FAIL
+  2024-09-10 15:26:09 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:26:09 App\Jobs\SendDebtNotificationJob ........... 7.15ms FAIL
+  2024-09-10 15:38:19 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:38:19 App\Jobs\SendDebtNotificationJob ........... 8.47ms FAIL
+  2024-09-10 15:38:19 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:38:19 App\Jobs\SendDebtNotificationJob ........... 6.02ms FAIL
+  2024-09-10 15:38:19 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:38:19 App\Jobs\SendDebtNotificationJob ........... 4.46ms FAIL
+  2024-09-10 15:46:44 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-10 15:46:46 App\Jobs\UploadUserPhotoJob .................... 1s DONE
+  2024-09-10 15:49:58 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:49:58 App\Jobs\SendDebtNotificationJob .......... 10.97ms FAIL
+  2024-09-10 15:49:58 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:49:58 App\Jobs\SendDebtNotificationJob .......... 10.64ms FAIL
+  2024-09-10 15:49:58 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:49:58 App\Jobs\SendDebtNotificationJob ........... 8.93ms FAIL
+  2024-09-10 15:52:01 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:52:01 App\Jobs\SendDebtNotificationJob ........... 9.84ms FAIL
+  2024-09-10 15:52:01 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:52:01 App\Jobs\SendDebtNotificationJob ........... 5.74ms FAIL
+  2024-09-10 15:52:01 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:52:01 App\Jobs\SendDebtNotificationJob ........... 2.84ms FAIL
+  2024-09-10 15:58:17 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-10 15:58:17 App\Jobs\UploadUserPhotoToCloudinaryJob .... 8.75ms FAIL
+  2024-09-10 15:58:17 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:58:17 App\Jobs\SendDebtNotificationJob ........... 8.98ms FAIL
+  2024-09-10 15:58:17 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:58:17 App\Jobs\SendDebtNotificationJob ........... 5.98ms FAIL
+  2024-09-10 15:58:17 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 15:58:17 App\Jobs\SendDebtNotificationJob ........... 4.76ms FAIL
+  2024-09-10 16:34:50 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 16:34:50 App\Jobs\SendFidelityCardEmailJob ......... 33.58ms FAIL
+  2024-09-10 16:34:50 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 16:34:50 App\Jobs\SendFidelityCardEmailJob ......... 33.17ms FAIL
+  2024-09-10 16:34:50 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-10 16:34:50 App\Jobs\SendFidelityCardEmailJob ......... 31.87ms FAIL
+  2024-09-10 16:35:23 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-10 16:35:25 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-10 17:26:18 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-10 17:26:18 App\Jobs\UploadUserPhotoToCloudinaryJob .... 6.67ms FAIL
+  2024-09-10 17:26:18 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 17:26:18 App\Jobs\SendDebtNotificationJob ........... 6.28ms FAIL
+  2024-09-10 17:26:18 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 17:26:18 App\Jobs\SendDebtNotificationJob ........... 4.69ms FAIL
+  2024-09-10 17:26:18 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 17:26:18 App\Jobs\SendDebtNotificationJob ........... 3.63ms FAIL
+  2024-09-10 17:46:46 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-10 17:46:46 App\Jobs\UploadUserPhotoToCloudinaryJob .... 8.98ms FAIL
+  2024-09-10 17:46:46 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 17:46:46 App\Jobs\SendDebtNotificationJob .......... 10.31ms FAIL
+  2024-09-10 17:46:46 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 17:46:46 App\Jobs\SendDebtNotificationJob .......... 10.40ms FAIL
+  2024-09-10 17:46:47 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-10 17:46:47 App\Jobs\SendDebtNotificationJob ........... 7.29ms FAIL
+  2024-09-11 08:23:40 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-11 08:23:40 App\Jobs\UploadUserPhotoToCloudinaryJob .... 7.99ms FAIL
+  2024-09-11 08:23:40 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 08:23:40 App\Jobs\SendDebtNotificationJob ........... 7.73ms DONE
+  2024-09-11 08:23:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 08:23:40 App\Jobs\Archivage ........................ 14.77ms FAIL
+  2024-09-11 08:23:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 08:23:40 App\Jobs\Archivage ......................... 5.50ms FAIL
+  2024-09-11 08:23:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 08:23:40 App\Jobs\Archivage ......................... 4.15ms FAIL
+  2024-09-11 08:37:20 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-11 08:37:20 App\Jobs\UploadUserPhotoToCloudinaryJob .... 7.73ms FAIL
+  2024-09-11 08:37:20 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 08:37:20 App\Jobs\SendDebtNotificationJob ........... 8.19ms DONE
+  2024-09-11 08:37:20 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 08:37:20 App\Jobs\Archivage ......................... 8.82ms FAIL
+  2024-09-11 08:37:21 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 08:37:21 App\Jobs\Archivage ........................ 11.66ms FAIL
+  2024-09-11 08:37:21 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 08:37:21 App\Jobs\Archivage ......................... 7.52ms FAIL
+  2024-09-11 09:42:25 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-11 09:42:27 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-11 09:59:56 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-11 09:59:56 App\Jobs\UploadUserPhotoToCloudinaryJob ... 11.24ms FAIL
+  2024-09-11 09:59:56 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 09:59:56 App\Jobs\SendDebtNotificationJob .......... 20.46ms FAIL
+  2024-09-11 09:59:56 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 09:59:56 App\Jobs\Archivage ........................ 23.92ms FAIL
+  2024-09-11 09:59:56 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 09:59:56 App\Jobs\SendDebtNotificationJob .......... 19.59ms FAIL
+  2024-09-11 09:59:56 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 09:59:56 App\Jobs\Archivage ........................ 15.56ms FAIL
+  2024-09-11 09:59:56 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 09:59:56 App\Jobs\SendDebtNotificationJob .......... 12.56ms FAIL
+  2024-09-11 09:59:56 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 09:59:56 App\Jobs\Archivage ........................ 15.33ms FAIL
+  2024-09-11 10:00:11 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-11 10:00:11 App\Jobs\UploadUserPhotoToCloudinaryJob .... 5.00ms FAIL
+  2024-09-11 10:00:11 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 10:00:11 App\Jobs\SendDebtNotificationJob ........... 7.51ms FAIL
+  2024-09-11 10:00:11 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 10:00:11 App\Jobs\Archivage ........................ 10.50ms FAIL
+  2024-09-11 10:00:11 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 10:00:11 App\Jobs\SendDebtNotificationJob ........... 8.52ms FAIL
+  2024-09-11 10:00:11 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 10:00:11 App\Jobs\Archivage ......................... 5.57ms FAIL
+  2024-09-11 10:00:11 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 10:00:11 App\Jobs\SendDebtNotificationJob ........... 6.72ms FAIL
+  2024-09-11 10:00:11 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 10:00:11 App\Jobs\Archivage ......................... 7.65ms FAIL
+  2024-09-11 10:49:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-11 10:49:21 App\Jobs\SendFidelityCardEmailJob ......... 18.40ms FAIL
+  2024-09-11 10:49:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-11 10:49:21 App\Jobs\SendFidelityCardEmailJob .......... 9.70ms FAIL
+  2024-09-11 10:49:21 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-11 10:49:21 App\Jobs\SendFidelityCardEmailJob .......... 7.70ms FAIL
+  2024-09-11 13:08:44 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 13:08:44 App\Jobs\Archivage ........................ 12.72ms FAIL
+  2024-09-11 13:08:44 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 13:08:44 App\Jobs\Archivage ......................... 7.48ms FAIL
+  2024-09-11 13:08:44 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 13:08:44 App\Jobs\Archivage ......................... 4.94ms FAIL
+  2024-09-11 13:10:09 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-11 13:10:09 App\Jobs\UploadUserPhotoToCloudinaryJob ... 10.00ms FAIL
+  2024-09-11 13:10:09 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 13:10:09 App\Jobs\SendDebtNotificationJob .......... 15.96ms FAIL
+  2024-09-11 13:10:09 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 13:10:09 App\Jobs\Archivage ........................ 13.35ms FAIL
+  2024-09-11 13:10:09 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 13:10:09 App\Jobs\SendDebtNotificationJob .......... 10.11ms FAIL
+  2024-09-11 13:10:09 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 13:10:09 App\Jobs\Archivage ........................ 13.36ms FAIL
+  2024-09-11 13:10:09 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 13:10:09 App\Jobs\SendDebtNotificationJob .......... 12.95ms FAIL
+  2024-09-11 13:10:09 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 13:10:09 App\Jobs\Archivage ......................... 6.01ms FAIL
+  2024-09-11 13:24:22 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-11 13:24:22 App\Jobs\UploadUserPhotoToCloudinaryJob .... 8.11ms FAIL
+  2024-09-11 13:24:22 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 13:24:22 App\Jobs\SendDebtNotificationJob .......... 13.42ms FAIL
+  2024-09-11 13:24:22 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 13:24:22 App\Jobs\Archivage ........................ 11.76ms FAIL
+  2024-09-11 13:24:22 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 13:24:22 App\Jobs\SendDebtNotificationJob ........... 9.34ms FAIL
+  2024-09-11 13:24:22 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 13:24:22 App\Jobs\Archivage ......................... 5.34ms FAIL
+  2024-09-11 13:24:22 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 13:24:22 App\Jobs\SendDebtNotificationJob ........... 3.85ms FAIL
+  2024-09-11 13:24:22 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 13:24:22 App\Jobs\Archivage ......................... 4.88ms FAIL
+  2024-09-11 15:46:49 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 15:46:49 App\Jobs\Archivage ........................ 11.16ms FAIL
+  2024-09-11 15:46:49 App\Jobs\ArchiveSoldeJob ....................... RUNNING
+  2024-09-11 15:46:49 App\Jobs\ArchiveSoldeJob ................... 5.53ms DONE
+  2024-09-11 15:46:49 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 15:46:49 App\Jobs\Archivage ......................... 4.97ms FAIL
+  2024-09-11 15:46:49 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 15:46:49 App\Jobs\Archivage ......................... 6.43ms FAIL
+  2024-09-11 15:52:28 App\Jobs\ArchiveSoldeJob ....................... RUNNING
+  2024-09-11 15:52:28 App\Jobs\ArchiveSoldeJob ................... 7.00ms DONE
+  2024-09-11 16:02:32 App\Jobs\ArchiveSoldeJob ....................... RUNNING
+  2024-09-11 16:02:32 App\Jobs\ArchiveSoldeJob ................... 8.94ms DONE
+  2024-09-11 16:06:53 App\Jobs\ArchiveSoldeJob ....................... RUNNING
+  2024-09-11 16:06:53 App\Jobs\ArchiveSoldeJob ................... 3.90ms DONE
+  2024-09-11 16:31:55 App\Jobs\ArchiveSoldeJob ....................... RUNNING
+  2024-09-11 16:31:55 App\Jobs\ArchiveSoldeJob ................... 6.29ms DONE
+  2024-09-11 16:40:17 App\Jobs\ArchiveSoldeJob ....................... RUNNING
+  2024-09-11 16:40:17 App\Jobs\ArchiveSoldeJob ................... 9.69ms DONE
+  2024-09-11 16:43:59 App\Jobs\ArchiveSoldeJob ....................... RUNNING
+  2024-09-11 16:43:59 App\Jobs\ArchiveSoldeJob ................... 7.59ms DONE
+  2024-09-11 17:28:43 App\Jobs\ArchiveSoldeJob ....................... RUNNING
+  2024-09-11 17:28:43 App\Jobs\ArchiveSoldeJob ................... 3.96ms DONE
+  2024-09-11 17:46:56 App\Jobs\ArchiveSoldeJob ....................... RUNNING
+  2024-09-11 17:46:56 App\Jobs\ArchiveSoldeJob ................... 3.06ms DONE
+  2024-09-11 17:59:23 App\Jobs\ArchiveSoldeJob ....................... RUNNING
+  2024-09-11 17:59:23 App\Jobs\ArchiveSoldeJob ................... 2.74ms DONE
+  2024-09-11 18:29:37 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 18:29:37 App\Jobs\MongoArchivage ................... 15.30ms FAIL
+  2024-09-11 18:29:37 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 18:29:37 App\Jobs\MongoArchivage ................... 10.94ms FAIL
+  2024-09-11 18:29:37 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 18:29:37 App\Jobs\MongoArchivage .................... 8.94ms FAIL
+  2024-09-11 18:35:50 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 18:35:50 App\Jobs\MongoArchivage ................... 14.30ms FAIL
+  2024-09-11 18:35:50 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 18:35:50 App\Jobs\MongoArchivage .................... 7.40ms FAIL
+  2024-09-11 18:35:50 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 18:35:50 App\Jobs\MongoArchivage .................... 9.06ms FAIL
+  2024-09-11 18:51:58 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 18:51:58 App\Jobs\MongoArchivage .................... 9.97ms FAIL
+  2024-09-11 18:51:58 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 18:51:58 App\Jobs\MongoArchivage .................... 5.64ms FAIL
+  2024-09-11 18:51:58 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 18:51:58 App\Jobs\MongoArchivage .................... 4.96ms FAIL
+  2024-09-11 18:53:25 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-11 18:53:25 App\Jobs\UploadUserPhotoToCloudinaryJob .... 7.21ms FAIL
+  2024-09-11 18:53:25 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 18:53:25 App\Jobs\SendDebtNotificationJob ........... 8.31ms FAIL
+  2024-09-11 18:53:25 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:53:25 App\Jobs\Archivage ......................... 7.89ms FAIL
+  2024-09-11 18:53:25 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 18:53:25 App\Jobs\SendDebtNotificationJob ........... 6.17ms FAIL
+  2024-09-11 18:53:25 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:53:25 App\Jobs\Archivage ......................... 4.31ms FAIL
+  2024-09-11 18:53:25 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 18:53:25 App\Jobs\SendDebtNotificationJob ........... 4.09ms FAIL
+  2024-09-11 18:53:25 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:53:25 App\Jobs\Archivage ......................... 4.61ms FAIL
+  2024-09-11 18:56:58 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-11 18:56:58 App\Jobs\UploadUserPhotoToCloudinaryJob .... 9.34ms FAIL
+  2024-09-11 18:56:58 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 18:56:58 App\Jobs\SendDebtNotificationJob ........... 8.19ms DONE
+  2024-09-11 18:56:58 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:56:58 App\Jobs\Archivage ........................ 16.57ms FAIL
+  2024-09-11 18:56:58 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:56:58 App\Jobs\Archivage ........................ 17.17ms FAIL
+  2024-09-11 18:56:58 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:56:58 App\Jobs\Archivage ........................ 12.06ms FAIL
+  2024-09-11 18:58:07 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:58:07 App\Jobs\Archivage ......................... 8.82ms FAIL
+  2024-09-11 18:58:07 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:58:07 App\Jobs\Archivage ......................... 5.72ms FAIL
+  2024-09-11 18:58:07 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:58:07 App\Jobs\Archivage ......................... 4.74ms FAIL
+  2024-09-11 18:58:28 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:58:28 App\Jobs\Archivage ........................ 10.27ms FAIL
+  2024-09-11 18:58:28 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:58:28 App\Jobs\Archivage ......................... 8.63ms FAIL
+  2024-09-11 18:58:28 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:58:28 App\Jobs\Archivage ......................... 6.47ms FAIL
+  2024-09-11 18:59:34 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:59:34 App\Jobs\Archivage ........................ 15.78ms FAIL
+  2024-09-11 18:59:34 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:59:34 App\Jobs\Archivage ........................ 15.59ms FAIL
+  2024-09-11 18:59:34 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:59:34 App\Jobs\Archivage ........................ 11.31ms FAIL
+  2024-09-11 18:59:47 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:59:47 App\Jobs\Archivage ........................ 10.48ms FAIL
+  2024-09-11 18:59:47 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:59:47 App\Jobs\Archivage ......................... 6.73ms FAIL
+  2024-09-11 18:59:47 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 18:59:47 App\Jobs\Archivage ......................... 5.45ms FAIL
+  2024-09-11 19:03:08 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:03:08 App\Jobs\Archivage ........................ 15.41ms FAIL
+  2024-09-11 19:03:08 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:03:08 App\Jobs\Archivage ......................... 7.93ms FAIL
+  2024-09-11 19:03:08 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:03:08 App\Jobs\Archivage ......................... 6.63ms FAIL
+  2024-09-11 19:04:11 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:04:11 App\Jobs\Archivage ......................... 8.03ms FAIL
+  2024-09-11 19:04:11 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:04:11 App\Jobs\Archivage ......................... 7.13ms FAIL
+  2024-09-11 19:04:11 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:04:11 App\Jobs\Archivage ......................... 8.09ms FAIL
+  2024-09-11 19:20:18 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:20:18 App\Jobs\MongoArchivage ................... 13.11ms FAIL
+  2024-09-11 19:20:18 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:20:18 App\Jobs\MongoArchivage .................... 8.45ms FAIL
+  2024-09-11 19:20:18 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:20:18 App\Jobs\MongoArchivage .................... 8.34ms FAIL
+  2024-09-11 19:25:40 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:25:40 App\Jobs\MongoArchivage .................... 8.29ms FAIL
+  2024-09-11 19:25:40 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:25:40 App\Jobs\MongoArchivage .................... 5.81ms FAIL
+  2024-09-11 19:25:40 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:25:40 App\Jobs\MongoArchivage .................... 5.15ms FAIL
+  2024-09-11 19:26:31 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:26:31 App\Jobs\MongoArchivage .................... 7.16ms FAIL
+  2024-09-11 19:26:31 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:26:31 App\Jobs\MongoArchivage .................... 7.18ms FAIL
+  2024-09-11 19:26:31 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:26:31 App\Jobs\MongoArchivage .................... 5.74ms FAIL
+  2024-09-11 19:31:19 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:31:19 App\Jobs\Archivage ........................ 12.16ms FAIL
+  2024-09-11 19:31:19 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:31:19 App\Jobs\Archivage ......................... 9.51ms FAIL
+  2024-09-11 19:31:19 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:31:19 App\Jobs\Archivage ......................... 7.25ms FAIL
+  2024-09-11 19:36:35 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-11 19:36:35 App\Jobs\SendFidelityCardEmailJob ......... 53.42ms FAIL
+  2024-09-11 19:36:35 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-11 19:36:37 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-11 19:49:23 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:49:23 App\Jobs\Archivage ........................ 11.82ms FAIL
+  2024-09-11 19:49:23 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:49:23 App\Jobs\Archivage ......................... 7.75ms FAIL
+  2024-09-11 19:49:23 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:49:23 App\Jobs\Archivage ........................ 10.56ms FAIL
+  2024-09-11 19:53:53 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:53:53 App\Jobs\MongoArchivage ................... 12.10ms FAIL
+  2024-09-11 19:53:53 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:53:53 App\Jobs\MongoArchivage .................... 7.75ms FAIL
+  2024-09-11 19:53:53 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:53:53 App\Jobs\MongoArchivage .................... 5.02ms FAIL
+  2024-09-11 19:54:05 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:54:05 App\Jobs\MongoArchivage ................... 11.35ms FAIL
+  2024-09-11 19:54:05 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:54:05 App\Jobs\MongoArchivage .................... 7.15ms FAIL
+  2024-09-11 19:54:05 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:54:05 App\Jobs\MongoArchivage .................... 4.58ms FAIL
+  2024-09-11 19:54:41 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:54:41 App\Jobs\MongoArchivage .................... 7.17ms FAIL
+  2024-09-11 19:54:41 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:54:41 App\Jobs\MongoArchivage .................... 7.54ms FAIL
+  2024-09-11 19:54:41 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 19:54:41 App\Jobs\MongoArchivage .................... 5.33ms FAIL
+  2024-09-11 19:55:17 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:55:17 App\Jobs\Archivage ......................... 9.89ms FAIL
+  2024-09-11 19:55:17 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:55:17 App\Jobs\Archivage ......................... 7.64ms FAIL
+  2024-09-11 19:55:17 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 19:55:17 App\Jobs\Archivage ......................... 7.47ms FAIL
+  2024-09-11 20:03:06 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 20:03:06 App\Jobs\MongoArchivage ................... 14.31ms FAIL
+  2024-09-11 20:03:06 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 20:03:06 App\Jobs\MongoArchivage ................... 10.52ms FAIL
+  2024-09-11 20:03:06 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 20:03:06 App\Jobs\MongoArchivage .................... 5.36ms FAIL
+  2024-09-11 20:33:44 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 20:33:44 App\Jobs\MongoArchivage .................... 8.29ms FAIL
+  2024-09-11 20:33:44 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 20:33:45 App\Jobs\MongoArchivage ................... 10.34ms FAIL
+  2024-09-11 20:33:45 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 20:33:45 App\Jobs\MongoArchivage .................... 8.17ms FAIL
+  2024-09-11 22:35:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:35:01 App\Jobs\Archivage ........................ 14.22ms FAIL
+  2024-09-11 22:35:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:35:01 App\Jobs\Archivage ......................... 9.33ms FAIL
+  2024-09-11 22:35:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:35:01 App\Jobs\Archivage ......................... 5.64ms FAIL
+  2024-09-11 22:36:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:36:01 App\Jobs\Archivage ........................ 10.29ms FAIL
+  2024-09-11 22:36:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:36:01 App\Jobs\Archivage ......................... 5.29ms FAIL
+  2024-09-11 22:36:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:36:01 App\Jobs\Archivage ......................... 7.98ms FAIL
+  2024-09-11 22:38:19 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:38:19 App\Jobs\Archivage ........................ 10.55ms FAIL
+  2024-09-11 22:38:19 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:38:19 App\Jobs\Archivage ......................... 7.65ms FAIL
+  2024-09-11 22:38:19 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:38:19 App\Jobs\Archivage ......................... 3.12ms FAIL
+  2024-09-11 22:43:02 App\Jobs\UploadUserPhotoToCloudinaryJob ........ RUNNING
+  2024-09-11 22:43:02 App\Jobs\UploadUserPhotoToCloudinaryJob .... 7.79ms FAIL
+  2024-09-11 22:43:02 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 22:43:02 App\Jobs\SendDebtNotificationJob .......... 10.53ms FAIL
+  2024-09-11 22:43:02 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:43:02 App\Jobs\Archivage ......................... 5.31ms FAIL
+  2024-09-11 22:43:02 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:43:02 App\Jobs\Archivage ......................... 7.65ms FAIL
+  2024-09-11 22:43:02 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 22:43:02 App\Jobs\SendDebtNotificationJob ........... 6.52ms FAIL
+  2024-09-11 22:43:02 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:43:02 App\Jobs\Archivage ......................... 8.35ms FAIL
+  2024-09-11 22:43:02 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:43:02 App\Jobs\Archivage ......................... 9.38ms FAIL
+  2024-09-11 22:43:02 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-11 22:43:02 App\Jobs\SendDebtNotificationJob ........... 5.36ms FAIL
+  2024-09-11 22:43:02 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:43:02 App\Jobs\Archivage ......................... 5.89ms FAIL
+  2024-09-11 22:43:02 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:43:02 App\Jobs\Archivage ......................... 5.04ms FAIL
+  2024-09-11 22:43:47 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:43:47 App\Jobs\Archivage ......................... 4.95ms FAIL
+  2024-09-11 22:43:47 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:43:47 App\Jobs\Archivage ......................... 5.74ms FAIL
+  2024-09-11 22:43:47 App\Jobs\Archivage ............................. RUNNING
+  2024-09-11 22:43:47 App\Jobs\Archivage ........................ 13.45ms FAIL
+  2024-09-11 23:15:13 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:15:13 App\Jobs\MongoArchivage ................... 13.90ms FAIL
+  2024-09-11 23:15:13 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:15:13 App\Jobs\MongoArchivage .................... 5.54ms FAIL
+  2024-09-11 23:15:13 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:15:13 App\Jobs\MongoArchivage .................... 7.54ms FAIL
+  2024-09-11 23:15:34 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:15:34 App\Jobs\MongoArchivage ................... 19.36ms FAIL
+  2024-09-11 23:15:34 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:15:34 App\Jobs\MongoArchivage ................... 13.76ms FAIL
+  2024-09-11 23:15:35 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:15:35 App\Jobs\MongoArchivage ................... 15.71ms FAIL
+  2024-09-11 23:20:29 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:20:29 App\Jobs\MongoArchivage .................... 9.56ms FAIL
+  2024-09-11 23:20:29 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:20:29 App\Jobs\MongoArchivage .................... 6.57ms FAIL
+  2024-09-11 23:20:29 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:20:29 App\Jobs\MongoArchivage .................... 7.14ms FAIL
+  2024-09-11 23:22:26 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:22:26 App\Jobs\MongoArchivage .................... 9.70ms FAIL
+  2024-09-11 23:22:26 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:22:26 App\Jobs\MongoArchivage .................... 5.71ms FAIL
+  2024-09-11 23:22:26 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:22:26 App\Jobs\MongoArchivage .................... 3.65ms FAIL
+  2024-09-11 23:25:11 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:25:11 App\Jobs\MongoArchivage ................... 12.12ms FAIL
+  2024-09-11 23:25:11 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:25:11 App\Jobs\MongoArchivage .................... 6.10ms FAIL
+  2024-09-11 23:25:11 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:25:11 App\Jobs\MongoArchivage .................... 5.89ms FAIL
+  2024-09-11 23:30:09 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:30:09 App\Jobs\MongoArchivage ................... 12.54ms FAIL
+  2024-09-11 23:30:09 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:30:09 App\Jobs\MongoArchivage .................... 8.06ms FAIL
+  2024-09-11 23:30:09 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:30:09 App\Jobs\MongoArchivage .................... 8.31ms FAIL
+  2024-09-11 23:39:28 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:39:28 App\Jobs\MongoArchivage ................... 11.43ms FAIL
+  2024-09-11 23:39:28 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:39:28 App\Jobs\MongoArchivage ................... 10.40ms FAIL
+  2024-09-11 23:39:28 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-11 23:39:28 App\Jobs\MongoArchivage .................... 6.58ms FAIL
+  2024-09-12 00:02:41 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:02:41 App\Jobs\SendDebtNotificationJob .......... 11.41ms FAIL
+  2024-09-12 00:02:41 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:02:41 App\Jobs\SendDebtNotificationJob .......... 10.21ms FAIL
+  2024-09-12 00:02:41 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:02:41 App\Jobs\SendDebtNotificationJob ........... 7.28ms FAIL
+  2024-09-12 00:03:21 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:03:21 App\Jobs\SendDebtNotificationJob .......... 16.87ms FAIL
+  2024-09-12 00:03:21 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:03:21 App\Jobs\SendDebtNotificationJob .......... 12.34ms FAIL
+  2024-09-12 00:03:21 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:03:21 App\Jobs\SendDebtNotificationJob ........... 8.18ms FAIL
+  2024-09-12 00:09:06 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:09:06 App\Jobs\SendDebtNotificationJob ........... 9.40ms FAIL
+  2024-09-12 00:09:06 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:09:06 App\Jobs\SendDebtNotificationJob ........... 6.25ms FAIL
+  2024-09-12 00:09:06 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:09:06 App\Jobs\SendDebtNotificationJob ........... 2.99ms FAIL
+  2024-09-12 00:09:42 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:09:42 App\Jobs\SendDebtNotificationJob .......... 11.17ms FAIL
+  2024-09-12 00:09:42 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:09:42 App\Jobs\SendDebtNotificationJob ........... 8.93ms FAIL
+  2024-09-12 00:09:42 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:09:42 App\Jobs\SendDebtNotificationJob ........... 7.03ms FAIL
+  2024-09-12 00:11:06 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:11:06 App\Jobs\SendDebtNotificationJob .......... 11.61ms FAIL
+  2024-09-12 00:11:06 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:11:06 App\Jobs\SendDebtNotificationJob ........... 9.92ms FAIL
+  2024-09-12 00:11:06 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:11:06 App\Jobs\SendDebtNotificationJob ........... 6.21ms FAIL
+  2024-09-12 00:42:33 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-12 00:42:33 App\Jobs\SendFidelityCardEmailJob ......... 14.98ms FAIL
+  2024-09-12 00:42:33 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-12 00:42:33 App\Jobs\SendFidelityCardEmailJob ......... 11.30ms FAIL
+  2024-09-12 00:42:33 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-12 00:42:33 App\Jobs\SendFidelityCardEmailJob ......... 18.06ms FAIL
+  2024-09-12 00:43:21 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:43:23 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-12 00:43:23 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:43:24 App\Jobs\SendDebtNotificationJob ......... 965.55ms FAIL
+  2024-09-12 00:43:24 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:43:25 App\Jobs\SendDebtNotificationJob ......... 961.14ms FAIL
+  2024-09-12 00:43:34 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:43:35 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-12 00:43:35 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:43:36 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-12 00:43:36 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:43:37 App\Jobs\SendDebtNotificationJob ......... 952.53ms FAIL
+  2024-09-12 00:45:22 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:45:23 App\Jobs\SendDebtNotificationJob ............... 1s DONE
+  2024-09-12 00:47:05 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:47:05 App\Jobs\SendDebtNotificationJob .......... 12.03ms FAIL
+  2024-09-12 00:47:05 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:47:05 App\Jobs\SendDebtNotificationJob ........... 6.34ms FAIL
+  2024-09-12 00:47:05 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:47:05 App\Jobs\SendDebtNotificationJob ........... 6.53ms FAIL
+  2024-09-12 00:50:06 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:50:06 App\Jobs\SendDebtNotificationJob .......... 16.64ms FAIL
+  2024-09-12 00:50:06 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:50:06 App\Jobs\SendDebtNotificationJob .......... 12.70ms FAIL
+  2024-09-12 00:50:06 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 00:50:06 App\Jobs\SendDebtNotificationJob ........... 9.93ms FAIL
+  2024-09-12 07:25:36 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 07:25:38 App\Jobs\SendDebtNotificationJob ............... 1s DONE
+  2024-09-12 07:37:36 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 07:37:36 App\Jobs\MongoArchivage .................... 9.87ms FAIL
+  2024-09-12 07:37:36 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 07:37:36 App\Jobs\MongoArchivage ................... 10.82ms FAIL
+  2024-09-12 07:37:36 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 07:37:36 App\Jobs\MongoArchivage .................... 6.50ms FAIL
+  2024-09-12 07:37:54 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 07:37:54 App\Jobs\MongoArchivage ................... 17.32ms FAIL
+  2024-09-12 07:37:54 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 07:37:54 App\Jobs\MongoArchivage ................... 15.49ms FAIL
+  2024-09-12 07:37:54 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 07:37:54 App\Jobs\MongoArchivage ................... 10.79ms FAIL
+  2024-09-12 07:41:12 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 07:41:12 App\Jobs\MongoArchivage ................... 15.72ms FAIL
+  2024-09-12 07:41:12 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 07:41:12 App\Jobs\MongoArchivage .................... 8.19ms FAIL
+  2024-09-12 07:41:12 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 07:41:12 App\Jobs\MongoArchivage .................... 7.20ms FAIL
+  2024-09-12 07:41:48 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:41:48 App\Jobs\Archivage ......................... 9.75ms FAIL
+  2024-09-12 07:41:48 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:41:48 App\Jobs\Archivage ......................... 9.64ms FAIL
+  2024-09-12 07:41:48 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:41:48 App\Jobs\Archivage ......................... 7.24ms FAIL
+  2024-09-12 07:42:00 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:42:00 App\Jobs\Archivage ......................... 9.70ms FAIL
+  2024-09-12 07:42:00 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:42:00 App\Jobs\Archivage ......................... 5.16ms FAIL
+  2024-09-12 07:42:00 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:42:00 App\Jobs\Archivage ........................ 10.49ms FAIL
+  2024-09-12 07:42:27 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:42:27 App\Jobs\Archivage ........................ 15.40ms FAIL
+  2024-09-12 07:42:27 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:42:27 App\Jobs\Archivage ........................ 12.87ms FAIL
+  2024-09-12 07:42:27 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:42:27 App\Jobs\Archivage ......................... 9.54ms FAIL
+  2024-09-12 07:42:39 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:42:39 App\Jobs\Archivage ........................ 13.85ms FAIL
+  2024-09-12 07:42:39 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:42:39 App\Jobs\Archivage ........................ 11.63ms FAIL
+  2024-09-12 07:42:39 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 07:42:39 App\Jobs\Archivage ......................... 9.21ms FAIL
+  2024-09-12 07:43:36 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 07:43:36 App\Jobs\SendDebtNotificationJob .......... 18.01ms FAIL
+  2024-09-12 07:43:36 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 07:43:36 App\Jobs\SendDebtNotificationJob .......... 15.90ms FAIL
+  2024-09-12 07:43:36 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 07:43:36 App\Jobs\SendDebtNotificationJob ........... 7.52ms FAIL
+  2024-09-12 07:43:54 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 07:43:54 App\Jobs\SendDebtNotificationJob .......... 15.54ms FAIL
+  2024-09-12 07:43:55 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 07:43:55 App\Jobs\SendDebtNotificationJob ........... 7.70ms FAIL
+  2024-09-12 07:43:55 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 07:43:55 App\Jobs\SendDebtNotificationJob ........... 3.54ms FAIL
+  2024-09-12 08:01:22 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 08:01:22 App\Jobs\MongoArchivage .................... 9.44ms FAIL
+  2024-09-12 08:01:22 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 08:01:22 App\Jobs\MongoArchivage .................... 8.87ms FAIL
+  2024-09-12 08:01:22 App\Jobs\MongoArchivage ........................ RUNNING
+  2024-09-12 08:01:22 App\Jobs\MongoArchivage .................... 6.77ms FAIL
+  2024-09-12 09:45:45 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 09:45:45 App\Jobs\Archivage ......................... 8.43ms FAIL
+  2024-09-12 09:45:45 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 09:45:45 App\Jobs\Archivage ........................ 10.34ms FAIL
+  2024-09-12 09:45:45 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 09:45:45 App\Jobs\Archivage ......................... 6.98ms FAIL
+  2024-09-12 09:50:00 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 09:50:00 App\Jobs\Archivage ........................ 11.99ms FAIL
+  2024-09-12 09:50:00 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 09:50:00 App\Jobs\Archivage ........................ 10.17ms FAIL
+  2024-09-12 09:50:00 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 09:50:00 App\Jobs\Archivage ......................... 6.87ms FAIL
+  2024-09-12 09:54:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 09:54:01 App\Jobs\Archivage ......................... 7.38ms FAIL
+  2024-09-12 09:54:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 09:54:01 App\Jobs\Archivage ......................... 5.45ms FAIL
+  2024-09-12 09:54:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 09:54:01 App\Jobs\Archivage ......................... 6.03ms FAIL
+  2024-09-12 10:19:27 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:19:27 App\Jobs\Archivage ........................ 14.06ms FAIL
+  2024-09-12 10:19:27 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:19:27 App\Jobs\Archivage ........................ 10.27ms FAIL
+  2024-09-12 10:19:27 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:19:27 App\Jobs\Archivage ......................... 6.48ms FAIL
+  2024-09-12 10:28:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:28:40 App\Jobs\Archivage ......................... 8.54ms FAIL
+  2024-09-12 10:28:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:28:40 App\Jobs\Archivage ......................... 6.40ms FAIL
+  2024-09-12 10:28:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:28:40 App\Jobs\Archivage ......................... 5.77ms FAIL
+  2024-09-12 10:29:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:29:01 App\Jobs\Archivage ........................ 14.52ms FAIL
+  2024-09-12 10:29:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:29:01 App\Jobs\Archivage ......................... 9.15ms FAIL
+  2024-09-12 10:29:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:29:01 App\Jobs\Archivage ......................... 8.53ms FAIL
+  2024-09-12 10:29:10 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:29:10 App\Jobs\Archivage ........................ 20.53ms FAIL
+  2024-09-12 10:29:10 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:29:10 App\Jobs\Archivage ........................ 21.19ms FAIL
+  2024-09-12 10:29:10 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:29:10 App\Jobs\Archivage ........................ 20.54ms FAIL
+  2024-09-12 10:37:14 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:37:14 App\Jobs\Archivage ........................ 27.24ms FAIL
+  2024-09-12 10:37:14 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:37:14 App\Jobs\Archivage ........................ 27.85ms FAIL
+  2024-09-12 10:37:14 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:37:14 App\Jobs\Archivage ........................ 21.97ms FAIL
+  2024-09-12 10:38:53 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:38:53 App\Jobs\Archivage ........................ 16.76ms FAIL
+  2024-09-12 10:38:53 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:38:53 App\Jobs\Archivage ........................ 12.65ms FAIL
+  2024-09-12 10:38:53 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:38:53 App\Jobs\Archivage ........................ 13.30ms FAIL
+  2024-09-12 10:39:32 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:39:32 App\Jobs\Archivage ........................ 12.17ms FAIL
+  2024-09-12 10:39:32 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:39:32 App\Jobs\Archivage ........................ 21.61ms FAIL
+  2024-09-12 10:39:32 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:39:32 App\Jobs\Archivage ........................ 16.61ms FAIL
+  2024-09-12 10:39:53 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:39:53 App\Jobs\Archivage ........................ 27.86ms FAIL
+  2024-09-12 10:39:53 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:39:53 App\Jobs\Archivage ........................ 23.54ms FAIL
+  2024-09-12 10:39:53 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:39:53 App\Jobs\Archivage ........................ 21.58ms FAIL
+  2024-09-12 10:42:20 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:42:20 App\Jobs\Archivage ......................... 6.94ms FAIL
+  2024-09-12 10:42:20 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:42:21 App\Jobs\Archivage ......................... 8.06ms FAIL
+  2024-09-12 10:42:21 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:42:21 App\Jobs\Archivage ......................... 5.52ms FAIL
+  2024-09-12 10:54:24 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:54:24 App\Jobs\Archivage ........................ 10.85ms FAIL
+  2024-09-12 10:54:24 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:54:24 App\Jobs\Archivage ......................... 5.39ms FAIL
+  2024-09-12 10:54:24 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:54:24 App\Jobs\Archivage ......................... 4.30ms FAIL
+  2024-09-12 10:54:55 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:54:55 App\Jobs\Archivage ........................ 14.14ms FAIL
+  2024-09-12 10:54:55 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:54:55 App\Jobs\Archivage ........................ 13.53ms FAIL
+  2024-09-12 10:54:55 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:54:55 App\Jobs\Archivage ......................... 5.29ms FAIL
+  2024-09-12 10:57:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:57:40 App\Jobs\Archivage ........................ 15.54ms FAIL
+  2024-09-12 10:57:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:57:40 App\Jobs\Archivage ......................... 8.75ms FAIL
+  2024-09-12 10:57:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 10:57:40 App\Jobs\Archivage ......................... 9.56ms FAIL
+  2024-09-12 11:01:19 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:01:19 App\Jobs\Archivage ........................ 10.69ms FAIL
+  2024-09-12 11:01:19 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:01:19 App\Jobs\Archivage ......................... 6.55ms FAIL
+  2024-09-12 11:01:19 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:01:19 App\Jobs\Archivage ......................... 7.67ms FAIL
+  2024-09-12 11:14:05 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:14:05 App\Jobs\Archivage ........................ 10.20ms FAIL
+  2024-09-12 11:14:05 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:14:05 App\Jobs\Archivage ........................ 10.89ms FAIL
+  2024-09-12 11:14:05 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:14:05 App\Jobs\Archivage ......................... 5.76ms FAIL
+  2024-09-12 11:16:03 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:16:03 App\Jobs\Archivage ........................ 18.05ms FAIL
+  2024-09-12 11:16:03 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:16:03 App\Jobs\Archivage ........................ 13.28ms FAIL
+  2024-09-12 11:16:03 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:16:03 App\Jobs\Archivage ........................ 10.56ms FAIL
+  2024-09-12 11:27:45 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:27:45 App\Jobs\Archivage ........................ 10.31ms FAIL
+  2024-09-12 11:27:45 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:27:45 App\Jobs\Archivage ......................... 8.26ms FAIL
+  2024-09-12 11:27:45 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:27:45 App\Jobs\Archivage ......................... 6.10ms FAIL
+  2024-09-12 11:37:25 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:37:25 App\Jobs\Archivage ........................ 15.23ms FAIL
+  2024-09-12 11:37:25 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:37:25 App\Jobs\Archivage ........................ 10.05ms FAIL
+  2024-09-12 11:37:25 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:37:25 App\Jobs\Archivage ......................... 6.58ms FAIL
+  2024-09-12 11:45:17 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:45:17 App\Jobs\Archivage ........................ 10.59ms FAIL
+  2024-09-12 11:45:17 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:45:17 App\Jobs\Archivage ......................... 6.78ms FAIL
+  2024-09-12 11:45:17 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:45:17 App\Jobs\Archivage ......................... 5.34ms FAIL
+  2024-09-12 11:53:27 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:53:27 App\Jobs\Archivage ......................... 8.62ms FAIL
+  2024-09-12 11:53:27 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:53:27 App\Jobs\Archivage ......................... 6.81ms FAIL
+  2024-09-12 11:53:27 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 11:53:27 App\Jobs\Archivage ......................... 5.00ms FAIL
+  2024-09-12 12:11:31 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:11:31 App\Jobs\Archivage ......................... 9.49ms FAIL
+  2024-09-12 12:11:31 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:11:31 App\Jobs\Archivage ......................... 6.43ms FAIL
+  2024-09-12 12:11:31 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:11:31 App\Jobs\Archivage ......................... 4.27ms FAIL
+  2024-09-12 12:11:55 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:11:55 App\Jobs\Archivage ......................... 5.01ms FAIL
+  2024-09-12 12:11:55 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:11:55 App\Jobs\Archivage ......................... 3.20ms FAIL
+  2024-09-12 12:12:10 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:12:10 App\Jobs\Archivage ......................... 6.53ms FAIL
+  2024-09-12 12:12:10 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:12:10 App\Jobs\Archivage ......................... 4.55ms FAIL
+  2024-09-12 12:12:10 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:12:10 App\Jobs\Archivage ......................... 3.62ms FAIL
+  2024-09-12 12:12:22 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:12:22 App\Jobs\Archivage ........................ 10.79ms FAIL
+  2024-09-12 12:12:22 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:12:22 App\Jobs\Archivage ......................... 5.64ms FAIL
+  2024-09-12 12:12:22 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:12:22 App\Jobs\Archivage ......................... 3.28ms FAIL
+  2024-09-12 12:13:12 App\Jobs\Archivage ............................. RUNNING
+"TailorBase" // app/Services/MongoDBService.php:17
+  2024-09-12 12:14:38 App\Jobs\Archivage ............................. RUNNING
+App\Services\FirebaseService {#1061
+  #database: Kreait\Firebase\Database {#1107
+    -uri: GuzzleHttp\Psr7\Uri {#1108
+      -scheme: "https"
+      -userInfo: ""
+      -host: "gestiondettelaravel-default-rtdb.firebaseio.com"
+      -port: null
+      -path: "/"
+      -query: ""
+      -fragment: ""
+      -composedComponents: null
+    }
+    -client: Kreait\Firebase\Database\ApiClient {#1109
+      #errorHandler: Kreait\Firebase\Exception\DatabaseApiExceptionConverter {#1110
+        -responseParser: Kreait\Firebase\Http\ErrorResponseParser {#1111}
+      }
+      -client: GuzzleHttp\Client {#1105
+        -config: array:9 [
+          "handler" => GuzzleHttp\HandlerStack {#1074
+            -handler: Closure(RequestInterface $request, array $options): PromiseInterface {#1081
+              returnType: "GuzzleHttp\Promise\PromiseInterface"
+              class: "GuzzleHttp\Handler\Proxy"
+              use: {
+                $default: Closure(RequestInterface $request, array $options): PromiseInterface {#1079 …}
+                $streaming: GuzzleHttp\Handler\StreamHandler {#1080 …}
+              }
+            }
+            -stack: array:6 [
+              0 => array:2 [
+                0 => Closure(callable $handler): callable {#1082
+                  returnType: "callable"
+                  class: "GuzzleHttp\Middleware"
+                  use: {
+                    $bodySummarizer: null
+                  }
+                }
+                1 => "http_errors"
+              ]
+              1 => array:2 [
+                0 => Closure(callable $handler): RedirectMiddleware {#1083
+                  returnType: "GuzzleHttp\RedirectMiddleware"
+                  class: "GuzzleHttp\Middleware"
+                }
+                1 => "allow_redirects"
+              ]
+              2 => array:2 [
+                0 => Closure(callable $handler): callable {#1084
+                  returnType: "callable"
+                  class: "GuzzleHttp\Middleware"
+                }
+                1 => "cookies"
+              ]
+              3 => array:2 [
+                0 => Closure(callable $handler): PrepareBodyMiddleware {#1085
+                  returnType: "GuzzleHttp\PrepareBodyMiddleware"
+                  class: "GuzzleHttp\Middleware"
+                }
+                1 => "prepare_body"
+              ]
+              4 => array:2 [
+                0 => Closure(callable $handler): Closure {#1073
+                  returnType: "Closure"
+                  class: "Kreait\Firebase\Http\Middleware"
+                }
+                1 => ""
+              ]
+              5 => array:2 [
+                0 => Google\Auth\Middleware\AuthTokenMiddleware {#1104
+                  -httpHandler: Google\Auth\HttpHandler\Guzzle7HttpHandler {#1103
+                    -client: GuzzleHttp\Client {#1090
+                      -config: array:8 [
+                        "handler" => GuzzleHttp\HandlerStack {#1091
+                          -handler: Closure(RequestInterface $request, array $options): PromiseInterface {#1098
+                            returnType: "GuzzleHttp\Promise\PromiseInterface"
+                            class: "GuzzleHttp\Handler\Proxy"
+                            use: {
+                              $default: Closure(RequestInterface $request, array $options): PromiseInterface {#1096 …}
+                              $streaming: GuzzleHttp\Handler\StreamHandler {#1097 …}
+                            }
+                          }
+                          -stack: array:4 [
+                            0 => array:2 [
+                              0 => Closure(callable $handler): callable {#1099
+                                returnType: "callable"
+                                class: "GuzzleHttp\Middleware"
+                                use: {
+                                  $bodySummarizer: null
+                                }
+                              }
+                              1 => "http_errors"
+                            ]
+                            1 => array:2 [
+                              0 => Closure(callable $handler): RedirectMiddleware {#1100
+                                returnType: "GuzzleHttp\RedirectMiddleware"
+                                class: "GuzzleHttp\Middleware"
+                              }
+                              1 => "allow_redirects"
+                            ]
+                            2 => array:2 [
+                              0 => Closure(callable $handler): callable {#1101
+                                returnType: "callable"
+                                class: "GuzzleHttp\Middleware"
+                              }
+                              1 => "cookies"
+                            ]
+                            3 => array:2 [
+                              0 => Closure(callable $handler): PrepareBodyMiddleware {#1102
+                                returnType: "GuzzleHttp\PrepareBodyMiddleware"
+                                class: "GuzzleHttp\Middleware"
+                              }
+                              1 => "prepare_body"
+                            ]
+                          ]
+                          -cached: null
+                        }
+                        "allow_redirects" => array:5 [
+                          "max" => 5
+                          "protocols" => array:2 [
+                            0 => "http"
+                            1 => "https"
+                          ]
+                          "strict" => false
+                          "referer" => false
+                          "track_redirects" => false
+                        ]
+                        "http_errors" => true
+                        "decode_content" => true
+                        "verify" => true
+                        "cookies" => false
+                        "idn_conversion" => false
+                        "headers" => array:1 [
+                          "User-Agent" => "GuzzleHttp/7"
+                        ]
+                      ]
+                    }
+                  }
+                  -fetcher: Google\Auth\FetchAuthTokenCache {#1089
+                    -fetcher: Google\Auth\Credentials\ServiceAccountCredentials {#1086
+                      #auth: Google\Auth\OAuth2 {#1087
+                        -authorizationUri: null
+                        -tokenCredentialUri: GuzzleHttp\Psr7\Uri {#1088
+                          -scheme: "https"
+                          -userInfo: ""
+                          -host: "oauth2.googleapis.com"
+                          -port: null
+                          -path: "/token"
+                          -query: ""
+                          -fragment: ""
+                          -composedComponents: null
+                        }
+                        -redirectUri: null
+                        -clientId: null
+                        -clientSecret: null
+                        -username: null
+                        -password: null
+                        -scope: array:8 [
+                          0 => "https://www.googleapis.com/auth/iam"
+                          1 => "https://www.googleapis.com/auth/cloud-platform"
+                          2 => "https://www.googleapis.com/auth/firebase"
+                          3 => "https://www.googleapis.com/auth/firebase.database"
+                          4 => "https://www.googleapis.com/auth/firebase.messaging"
+                          5 => "https://www.googleapis.com/auth/firebase.remoteconfig"
+                          6 => "https://www.googleapis.com/auth/userinfo.email"
+                          7 => "https://www.googleapis.com/auth/securetoken"
+                        ]
+                        -state: null
+                        -code: null
+                        -issuer: "firebase-adminsdk-9jq2q@gestiondettelaravel.iam.gserviceaccount.com"
+                        -audience: "https://oauth2.googleapis.com/token"
+                        -sub: null
+                        -expiry: 3600
+                        -signingKey: """
+                          -----BEGIN PRIVATE KEY-----\n
+                          MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDRz8JHbByQ4b6M\n
+                          r9cgZ2dhan8NJmaEF5bePgJz4oYzq2SYu44muDnJNDH8akgl2/zm+GoDW4/E1KT3\n
+                          rr6/CoJlVPvDAgmEU3+bjIpvy1Ewrq1ZUQ6TYELF5jEa26vuAT7dK1wdsWOPv6wL\n
+                          VUflePZIKnyIP07EeUQFMSJd25LLtJxnCdmCtZFjsyKuaRdjH8MQyNN63aj+lRxm\n
+                          LfkCif2Bn8acnwUGYKzG+99bylRqHfmWrBOLzcROxehSJXVRN4HGD0XCH56+mH+8\n
+                          QUZCxVOMSmTjsxfZ3lhrBZYWHzFUPWJgJmSwJkrKF3j/+OFM+r6eyoSoGWEOiJ8v\n
+                          b5lIvfVfAgMBAAECggEADPUvUvjm1L3UZlzvxNUOCfKpURcXir3oN+aNgTmyvxst\n
+                          Nc+TimmjS/1YvvWTah8pgdxCs91iRi452AAnUKYmAnsap2MHUnBTt7gYzqm4ZHDN\n
+                          TPBYHZr61L0QOE/r0OGrz73/TOgpNXYJepO0QoRTdYaGNWXvh+vTWxy7Oh+287Sh\n
+                          rv3RfQvnWm6zf5W+iMj/MdDzCyV4UKTuYWVp4Rs/QzjdnWIwXt/OsDt5HBkVZFde\n
+                          9Z8xquWTsBGiOTO6R6rPRn/vbR+IOFnlZBDQHTCly7vV3mMUr9AS6JaYydbME2+H\n
+                          xSDXNj7yChNugR2Ieu5jwK+l+JwPs1ulmXAiTVsXJQKBgQD0pxMzDJx2IVNItetw\n
+                          1oGDaqrDNqurR+hT/cgxRTBonrK1kF87mJQ7wXYTo3ZEozlxk//WxfNMnDeCYwTs\n
+                          q8OgbL0Y89psd0TpiFNvbKRPgHQIGv+l0NE/UfcY8/uOoaCv/3R0eNJ/GF2wxeiW\n
+                          yiIOp3QlIfN3Jqd+aPPLnMF5WwKBgQDbiv4NN73QIUKaa0WzCgHV2GQm93k2OCFB\n
+                          EOfdp3UyscYFTKYjniw6Xzsj8qGzR7bQnuNPE+MYf6bzr3BCmtI4O70iNTXmaz6a\n
+                          ukHCV/ZjDbn9IzaeeXWqh0yTTmBcIPmIfzSnAAGV7mo1vUVqAubwOOayfYM3xTJv\n
+                          7Qz54ipvTQKBgQDNuXRul+s1dp525OrfTrFHlbmUP/OpKuVVQ3FE5R5oyxIRlR5P\n
+                          meUEPpEQwIKiAvM5667Vpk0Jnc8bqDIq5eCxlN6KDfwc+0oKamVmq9+bLrPjYPia\n
+                          MXbTHRSAeiGNdaIOfOwrSLIQx6d5D2Ke8cgjtHH5C4yUI//yT0S6cc1LQwKBgFBZ\n
+                          1JWd2xi7s5a0wDPA698Kbc1dMb3IWVNpDpOvYFOHgQQbg4rxrxpGFG0ZtljZXG2K\n
+                          WYNtseYbgk0Z3qph46K1KonEk8+bXLRgiwTIEOM7+OBO7QSfS5N4JWyceOP/JZTx\n
+                          iaG9fNcVBUZZ2XftS/yLttOI4GefAtC4H9GtFv7ZAoGAPutWAeDNmcDJ5IOgVC99\n
+                          Zdb1pVhqOFkY656lGdfJdm6JoPZJKd8rEMpLMC4vmLy6BrKUhN/U9yRppcY+6I5a\n
+                          2WyjzOYR0Kus0dpI/ClwRZGK4oyl5z6tE2psvI4kcl6Ma92iNWG7LhVt6YOawqOy\n
+                          hpkp3zlvyvMNUOhHWmkKCeY=\n
+                          -----END PRIVATE KEY-----\n
+                          """
+                        -signingKeyId: null
+                        -signingAlgorithm: "RS256"
+                        -refreshToken: null
+                        -accessToken: null
+                        -idToken: null
+                        -grantedScope: null
+                        -expiresIn: null
+                        -expiresAt: null
+                        -issuedAt: null
+                        -grantType: null
+                        -extensionParams: []
+                        -additionalClaims: []
+                        -codeVerifier: null
+                        -resource: null
+                        -subjectTokenFetcher: null
+                        -subjectTokenType: null
+                        -actorToken: null
+                        -actorTokenType: null
+                        -issuedTokenType: null
+                        -additionalOptions: []
+                      }
+                      #quotaProject: null
+                      #projectId: "gestiondettelaravel"
+                      -lastReceivedJwtAccessToken: null
+                      -useJwtAccessWithScope: false
+                      -jwtAccessCredentials: null
+                      -universeDomain: "googleapis.com"
+                    }
+                    -eagerRefreshThresholdSeconds: 10
+                    -maxKeyLength: 64
+                    -cacheConfig: array:3 [
+                      "lifetime" => 1500
+                      "prefix" => "kreait_firebase_gestiondettelaravel"
+                      "cacheUniverseDomain" => false
+                    ]
+                    -cache: Beste\Cache\InMemoryCache {#1070
+                      -clock: Beste\Clock\SystemClock {#1032}
+                      -items: []
+                      -deferredItems: []
+                    }
+                  }
+                  -tokenCallback: null
+                }
+                1 => ""
+              ]
+            ]
+            -cached: null
+          }
+          "auth" => "google_auth"
+          "allow_redirects" => array:5 [
+            "max" => 5
+            "protocols" => array:2 [
+              0 => "http"
+              1 => "https"
+            ]
+            "strict" => false
+            "referer" => false
+            "track_redirects" => false
+          ]
+          "http_errors" => true
+          "decode_content" => true
+          "verify" => true
+          "cookies" => false
+          "idn_conversion" => false
+          "headers" => array:1 [
+            "User-Agent" => "GuzzleHttp/7"
+          ]
+        ]
+      }
+      -resourceUrlBuilder: Kreait\Firebase\Database\UrlBuilder {#1106
+        -scheme: "https"
+        -host: "gestiondettelaravel-default-rtdb.firebaseio.com"
+        -defaultQueryParams: []
+      }
+    }
+    -urlBuilder: Kreait\Firebase\Database\UrlBuilder {#1106}
+  }
+} // app/Services/ArchivageService.php:23
+  2024-09-12 12:15:17 App\Jobs\Archivage ............................. RUNNING
+App\Services\FirebaseService {#1035
+  #database: Kreait\Firebase\Database {#1107
+    -uri: GuzzleHttp\Psr7\Uri {#1108
+      -scheme: "https"
+      -userInfo: ""
+      -host: "gestiondettelaravel-default-rtdb.firebaseio.com"
+      -port: null
+      -path: "/"
+      -query: ""
+      -fragment: ""
+      -composedComponents: null
+    }
+    -client: Kreait\Firebase\Database\ApiClient {#1109
+      #errorHandler: Kreait\Firebase\Exception\DatabaseApiExceptionConverter {#1110
+        -responseParser: Kreait\Firebase\Http\ErrorResponseParser {#1111}
+      }
+      -client: GuzzleHttp\Client {#1105
+        -config: array:9 [
+          "handler" => GuzzleHttp\HandlerStack {#1074
+            -handler: Closure(RequestInterface $request, array $options): PromiseInterface {#1081
+              returnType: "GuzzleHttp\Promise\PromiseInterface"
+              class: "GuzzleHttp\Handler\Proxy"
+              use: {
+                $default: Closure(RequestInterface $request, array $options): PromiseInterface {#1079 …}
+                $streaming: GuzzleHttp\Handler\StreamHandler {#1080 …}
+              }
+            }
+            -stack: array:6 [
+              0 => array:2 [
+                0 => Closure(callable $handler): callable {#1082
+                  returnType: "callable"
+                  class: "GuzzleHttp\Middleware"
+                  use: {
+                    $bodySummarizer: null
+                  }
+                }
+                1 => "http_errors"
+              ]
+              1 => array:2 [
+                0 => Closure(callable $handler): RedirectMiddleware {#1083
+                  returnType: "GuzzleHttp\RedirectMiddleware"
+                  class: "GuzzleHttp\Middleware"
+                }
+                1 => "allow_redirects"
+              ]
+              2 => array:2 [
+                0 => Closure(callable $handler): callable {#1084
+                  returnType: "callable"
+                  class: "GuzzleHttp\Middleware"
+                }
+                1 => "cookies"
+              ]
+              3 => array:2 [
+                0 => Closure(callable $handler): PrepareBodyMiddleware {#1085
+                  returnType: "GuzzleHttp\PrepareBodyMiddleware"
+                  class: "GuzzleHttp\Middleware"
+                }
+                1 => "prepare_body"
+              ]
+              4 => array:2 [
+                0 => Closure(callable $handler): Closure {#1073
+                  returnType: "Closure"
+                  class: "Kreait\Firebase\Http\Middleware"
+                }
+                1 => ""
+              ]
+              5 => array:2 [
+                0 => Google\Auth\Middleware\AuthTokenMiddleware {#1104
+                  -httpHandler: Google\Auth\HttpHandler\Guzzle7HttpHandler {#1103
+                    -client: GuzzleHttp\Client {#1090
+                      -config: array:8 [
+                        "handler" => GuzzleHttp\HandlerStack {#1091
+                          -handler: Closure(RequestInterface $request, array $options): PromiseInterface {#1098
+                            returnType: "GuzzleHttp\Promise\PromiseInterface"
+                            class: "GuzzleHttp\Handler\Proxy"
+                            use: {
+                              $default: Closure(RequestInterface $request, array $options): PromiseInterface {#1096 …}
+                              $streaming: GuzzleHttp\Handler\StreamHandler {#1097 …}
+                            }
+                          }
+                          -stack: array:4 [
+                            0 => array:2 [
+                              0 => Closure(callable $handler): callable {#1099
+                                returnType: "callable"
+                                class: "GuzzleHttp\Middleware"
+                                use: {
+                                  $bodySummarizer: null
+                                }
+                              }
+                              1 => "http_errors"
+                            ]
+                            1 => array:2 [
+                              0 => Closure(callable $handler): RedirectMiddleware {#1100
+                                returnType: "GuzzleHttp\RedirectMiddleware"
+                                class: "GuzzleHttp\Middleware"
+                              }
+                              1 => "allow_redirects"
+                            ]
+                            2 => array:2 [
+                              0 => Closure(callable $handler): callable {#1101
+                                returnType: "callable"
+                                class: "GuzzleHttp\Middleware"
+                              }
+                              1 => "cookies"
+                            ]
+                            3 => array:2 [
+                              0 => Closure(callable $handler): PrepareBodyMiddleware {#1102
+                                returnType: "GuzzleHttp\PrepareBodyMiddleware"
+                                class: "GuzzleHttp\Middleware"
+                              }
+                              1 => "prepare_body"
+                            ]
+                          ]
+                          -cached: null
+                        }
+                        "allow_redirects" => array:5 [
+                          "max" => 5
+                          "protocols" => array:2 [
+                            0 => "http"
+                            1 => "https"
+                          ]
+                          "strict" => false
+                          "referer" => false
+                          "track_redirects" => false
+                        ]
+                        "http_errors" => true
+                        "decode_content" => true
+                        "verify" => true
+                        "cookies" => false
+                        "idn_conversion" => false
+                        "headers" => array:1 [
+                          "User-Agent" => "GuzzleHttp/7"
+                        ]
+                      ]
+                    }
+                  }
+                  -fetcher: Google\Auth\FetchAuthTokenCache {#1089
+                    -fetcher: Google\Auth\Credentials\ServiceAccountCredentials {#1086
+                      #auth: Google\Auth\OAuth2 {#1087
+                        -authorizationUri: null
+                        -tokenCredentialUri: GuzzleHttp\Psr7\Uri {#1088
+                          -scheme: "https"
+                          -userInfo: ""
+                          -host: "oauth2.googleapis.com"
+                          -port: null
+                          -path: "/token"
+                          -query: ""
+                          -fragment: ""
+                          -composedComponents: null
+                        }
+                        -redirectUri: null
+                        -clientId: null
+                        -clientSecret: null
+                        -username: null
+                        -password: null
+                        -scope: array:8 [
+                          0 => "https://www.googleapis.com/auth/iam"
+                          1 => "https://www.googleapis.com/auth/cloud-platform"
+                          2 => "https://www.googleapis.com/auth/firebase"
+                          3 => "https://www.googleapis.com/auth/firebase.database"
+                          4 => "https://www.googleapis.com/auth/firebase.messaging"
+                          5 => "https://www.googleapis.com/auth/firebase.remoteconfig"
+                          6 => "https://www.googleapis.com/auth/userinfo.email"
+                          7 => "https://www.googleapis.com/auth/securetoken"
+                        ]
+                        -state: null
+                        -code: null
+                        -issuer: "firebase-adminsdk-9jq2q@gestiondettelaravel.iam.gserviceaccount.com"
+                        -audience: "https://oauth2.googleapis.com/token"
+                        -sub: null
+                        -expiry: 3600
+                        -signingKey: """
+                          -----BEGIN PRIVATE KEY-----\n
+                          MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDRz8JHbByQ4b6M\n
+                          r9cgZ2dhan8NJmaEF5bePgJz4oYzq2SYu44muDnJNDH8akgl2/zm+GoDW4/E1KT3\n
+                          rr6/CoJlVPvDAgmEU3+bjIpvy1Ewrq1ZUQ6TYELF5jEa26vuAT7dK1wdsWOPv6wL\n
+                          VUflePZIKnyIP07EeUQFMSJd25LLtJxnCdmCtZFjsyKuaRdjH8MQyNN63aj+lRxm\n
+                          LfkCif2Bn8acnwUGYKzG+99bylRqHfmWrBOLzcROxehSJXVRN4HGD0XCH56+mH+8\n
+                          QUZCxVOMSmTjsxfZ3lhrBZYWHzFUPWJgJmSwJkrKF3j/+OFM+r6eyoSoGWEOiJ8v\n
+                          b5lIvfVfAgMBAAECggEADPUvUvjm1L3UZlzvxNUOCfKpURcXir3oN+aNgTmyvxst\n
+                          Nc+TimmjS/1YvvWTah8pgdxCs91iRi452AAnUKYmAnsap2MHUnBTt7gYzqm4ZHDN\n
+                          TPBYHZr61L0QOE/r0OGrz73/TOgpNXYJepO0QoRTdYaGNWXvh+vTWxy7Oh+287Sh\n
+                          rv3RfQvnWm6zf5W+iMj/MdDzCyV4UKTuYWVp4Rs/QzjdnWIwXt/OsDt5HBkVZFde\n
+                          9Z8xquWTsBGiOTO6R6rPRn/vbR+IOFnlZBDQHTCly7vV3mMUr9AS6JaYydbME2+H\n
+                          xSDXNj7yChNugR2Ieu5jwK+l+JwPs1ulmXAiTVsXJQKBgQD0pxMzDJx2IVNItetw\n
+                          1oGDaqrDNqurR+hT/cgxRTBonrK1kF87mJQ7wXYTo3ZEozlxk//WxfNMnDeCYwTs\n
+                          q8OgbL0Y89psd0TpiFNvbKRPgHQIGv+l0NE/UfcY8/uOoaCv/3R0eNJ/GF2wxeiW\n
+                          yiIOp3QlIfN3Jqd+aPPLnMF5WwKBgQDbiv4NN73QIUKaa0WzCgHV2GQm93k2OCFB\n
+                          EOfdp3UyscYFTKYjniw6Xzsj8qGzR7bQnuNPE+MYf6bzr3BCmtI4O70iNTXmaz6a\n
+                          ukHCV/ZjDbn9IzaeeXWqh0yTTmBcIPmIfzSnAAGV7mo1vUVqAubwOOayfYM3xTJv\n
+                          7Qz54ipvTQKBgQDNuXRul+s1dp525OrfTrFHlbmUP/OpKuVVQ3FE5R5oyxIRlR5P\n
+                          meUEPpEQwIKiAvM5667Vpk0Jnc8bqDIq5eCxlN6KDfwc+0oKamVmq9+bLrPjYPia\n
+                          MXbTHRSAeiGNdaIOfOwrSLIQx6d5D2Ke8cgjtHH5C4yUI//yT0S6cc1LQwKBgFBZ\n
+                          1JWd2xi7s5a0wDPA698Kbc1dMb3IWVNpDpOvYFOHgQQbg4rxrxpGFG0ZtljZXG2K\n
+                          WYNtseYbgk0Z3qph46K1KonEk8+bXLRgiwTIEOM7+OBO7QSfS5N4JWyceOP/JZTx\n
+                          iaG9fNcVBUZZ2XftS/yLttOI4GefAtC4H9GtFv7ZAoGAPutWAeDNmcDJ5IOgVC99\n
+                          Zdb1pVhqOFkY656lGdfJdm6JoPZJKd8rEMpLMC4vmLy6BrKUhN/U9yRppcY+6I5a\n
+                          2WyjzOYR0Kus0dpI/ClwRZGK4oyl5z6tE2psvI4kcl6Ma92iNWG7LhVt6YOawqOy\n
+                          hpkp3zlvyvMNUOhHWmkKCeY=\n
+                          -----END PRIVATE KEY-----\n
+                          """
+                        -signingKeyId: null
+                        -signingAlgorithm: "RS256"
+                        -refreshToken: null
+                        -accessToken: null
+                        -idToken: null
+                        -grantedScope: null
+                        -expiresIn: null
+                        -expiresAt: null
+                        -issuedAt: null
+                        -grantType: null
+                        -extensionParams: []
+                        -additionalClaims: []
+                        -codeVerifier: null
+                        -resource: null
+                        -subjectTokenFetcher: null
+                        -subjectTokenType: null
+                        -actorToken: null
+                        -actorTokenType: null
+                        -issuedTokenType: null
+                        -additionalOptions: []
+                      }
+                      #quotaProject: null
+                      #projectId: "gestiondettelaravel"
+                      -lastReceivedJwtAccessToken: null
+                      -useJwtAccessWithScope: false
+                      -jwtAccessCredentials: null
+                      -universeDomain: "googleapis.com"
+                    }
+                    -eagerRefreshThresholdSeconds: 10
+                    -maxKeyLength: 64
+                    -cacheConfig: array:3 [
+                      "lifetime" => 1500
+                      "prefix" => "kreait_firebase_gestiondettelaravel"
+                      "cacheUniverseDomain" => false
+                    ]
+                    -cache: Beste\Cache\InMemoryCache {#1070
+                      -clock: Beste\Clock\SystemClock {#1041}
+                      -items: []
+                      -deferredItems: []
+                    }
+                  }
+                  -tokenCallback: null
+                }
+                1 => ""
+              ]
+            ]
+            -cached: null
+          }
+          "auth" => "google_auth"
+          "allow_redirects" => array:5 [
+            "max" => 5
+            "protocols" => array:2 [
+              0 => "http"
+              1 => "https"
+            ]
+            "strict" => false
+            "referer" => false
+            "track_redirects" => false
+          ]
+          "http_errors" => true
+          "decode_content" => true
+          "verify" => true
+          "cookies" => false
+          "idn_conversion" => false
+          "headers" => array:1 [
+            "User-Agent" => "GuzzleHttp/7"
+          ]
+        ]
+      }
+      -resourceUrlBuilder: Kreait\Firebase\Database\UrlBuilder {#1106
+        -scheme: "https"
+        -host: "gestiondettelaravel-default-rtdb.firebaseio.com"
+        -defaultQueryParams: []
+      }
+    }
+    -urlBuilder: Kreait\Firebase\Database\UrlBuilder {#1106}
+  }
+} // app/Services/ArchivageService.php:23
+  2024-09-12 12:17:19 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:17:21 App\Jobs\Archivage ............................. 1s FAIL
+  2024-09-12 12:17:21 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:17:21 App\Jobs\Archivage ....................... 425.19ms FAIL
+  2024-09-12 12:17:21 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:17:22 App\Jobs\Archivage ....................... 469.41ms FAIL
+  2024-09-12 12:18:37 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:18:38 App\Jobs\Archivage ....................... 846.52ms FAIL
+  2024-09-12 12:18:38 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:18:38 App\Jobs\Archivage ....................... 521.02ms FAIL
+  2024-09-12 12:18:38 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:18:39 App\Jobs\Archivage ....................... 511.73ms FAIL
+  2024-09-12 12:18:42 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:18:42 App\Jobs\Archivage ....................... 419.92ms FAIL
+  2024-09-12 12:18:42 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:18:44 App\Jobs\Archivage ............................. 1s FAIL
+  2024-09-12 12:18:44 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:18:44 App\Jobs\Archivage ....................... 479.94ms FAIL
+  2024-09-12 12:18:57 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:18:57 App\Jobs\Archivage ....................... 421.78ms FAIL
+  2024-09-12 12:18:57 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:18:57 App\Jobs\Archivage ....................... 408.62ms FAIL
+  2024-09-12 12:18:57 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:18:58 App\Jobs\Archivage ....................... 395.42ms FAIL
+  2024-09-12 12:22:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:22:02 App\Jobs\Archivage ....................... 984.67ms DONE
+  2024-09-12 12:23:14 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:23:15 App\Jobs\Archivage ....................... 633.95ms DONE
+  2024-09-12 12:24:38 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:24:41 App\Jobs\Archivage ............................. 2s DONE
+  2024-09-12 12:32:18 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:32:18 App\Jobs\Archivage ....................... 203.08ms DONE
+  2024-09-12 12:41:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:41:01 App\Jobs\Archivage ....................... 199.46ms DONE
+  2024-09-12 12:41:22 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:41:23 App\Jobs\Archivage ....................... 168.31ms DONE
+  2024-09-12 12:41:44 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:41:44 App\Jobs\Archivage ....................... 178.73ms DONE
+  2024-09-12 12:42:29 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:42:29 App\Jobs\Archivage ....................... 160.76ms DONE
+  2024-09-12 12:43:41 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 12:43:41 App\Jobs\Archivage ....................... 181.37ms DONE

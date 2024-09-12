@@ -2,8 +2,13 @@
 
 namespace App\Console;
 
+use App\Jobs\Archivage;
+use App\Jobs\MongoArchivage;
+use App\Jobs\SendDebtNotificationJob;
 use Illuminate\Console\Scheduling\Schedule;
+use App\Jobs\UploadUserPhotoToCloudinaryJob;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+
 
 class Kernel extends ConsoleKernel
 {
@@ -12,8 +17,15 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        $schedule->command('upload:failed-photos')->hourly();
-
+     /*   $schedule->job( app(UploadUserPhotoToCloudinaryJob::class))->everyMinute(); */
+     /*   $schedule->job(app(SendDebtNotificationJob::class))->everyMinute();   */
+    /*     $schedule->job(new Archivage)->everyMinute(); */
+        // $schedule->command('inspire')->hourly(); ArchiveSoldeJob
+        $schedule->job(app(Archivage::class))->everyMinute();
+   /* /* The line `->job(new MongoArchivage)->everyMinute();` is scheduling the
+   `MongoArchivage` job to run every minute. This means that the `MongoArchivage` job will be
+   executed once every minute according to the schedule defined in the Laravel application. */
+     /*  $schedule->job(new MongoArchivage)->everyMinute();  */   
     }
     
     /**

@@ -1,609 +1,429 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "API Documentation",
-    "version": "1.0.0",
-    "description": "Documentation de l'API pour la gestion des articles, utilisateurs, clients et rôles."
+      "title": "API de gestion de dettes",
+      "version": "1.0.0",
+      "description": "API pour gérer les dettes des clients dans un magasin"
   },
   "servers": [
-  {
-    "url": "http://127.0.0.1:8000/api/v1",
-    "description": "Serveur de production"
-  }
-],
+      {
+          "url": "http://localhost:8000/api/v1",
+          "description": "Serveur Local"
+      }
+  ],
   "paths": {
-    "/login": {
-      "post": {
-        "summary": "Authentification utilisateur",
-        "operationId": "login",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "login": {
-                    "type": "string"
+      "/clients": {
+          "get": {
+              "tags": ["Clients"],
+              "summary": "Lister tous les clients",
+              "description": "Recupére la liste de tous les clients enregistrés",
+              "operationId": "getClients",
+              "responses": {
+                  "200": {
+                      "description": "Liste des clients récupérée avec succès",
+                      "content": {
+                          "application/json": {}
+                      }
                   },
-                  "password": {
-                    "type": "string"
-                  }
-                },
-                "required": ["login", "password"]
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Connexion réussie",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Échec de l'authentification"
-          }
-        }
-      }
-    },
-    "/clients": {
-      "get": {
-        "summary": "Lister les clients",
-        "operationId": "indexbis",
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Liste des clients",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "status": {
-                      "type": "integer"
-                    },
-                    "message": {
-                      "type": "string"
-                    },
-                    "clients": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/Client"
+                  "401": {
+                      "description": "Non autorisé",
+                      "content": {
+                          "application/json": {}
                       }
-                    }
                   }
-                }
               }
-            }
-          },
-          "403": {
-            "description": "Aucun client trouvé"
           }
-        }
       },
-      "post": {
-        "summary": "Créer un client",
-        "operationId": "createClient",
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClientCreateRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Client créé avec succès",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Client"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Non autorisé"
-          }
-        }
-      }
-    },
-    "/clients/{id}": {
-      "get": {
-        "summary": "Afficher un client par ID",
-        "operationId": "showClient",
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Client trouvé",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ClientDetail"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Client non trouvé"
-          }
-        }
-      }
-    },
-    "/clients/telephone": {
-      "post": {
-        "summary": "Obtenir les clients par téléphone",
-        "operationId": "getClientsByTelephones",
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TelephoneRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Clients trouvés par téléphone",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "status": {
-                      "type": "integer"
-                    },
-                    "message": {
-                      "type": "string"
-                    },
-                    "clients": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/Client"
+
+      "/clients/{id}": {
+          "get": {
+              "summary": "Récupère un client par ID",
+              "description": "Renvoie les détails d'un client spécifique par son ID.",
+              "tags": ["Clients"],
+              "parameters": [
+                  {
+                      "name": "id",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "integer",
+                          "format": "int64"
+                      },
+                      "description": "L'ID de l'utilisateur à récupérer."
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Détails Client.",
+                      "content": {
+                          "application/json": {}
                       }
-                    }
+                  },
+                  "404": {
+                      "description": "Utilisateur non trouvé."
                   }
-                }
               }
-            }
           }
-        }
-      }
-    },
-    "/articles": {
-      "get": {
-        "summary": "Lister les articles",
-        "operationId": "indexArticles",
-        "parameters": [
-          {
-            "name": "disponible",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Liste des articles",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "status": {
-                      "type": "integer"
-                    },
-                    "message": {
-                      "type": "string"
-                    },
-                    "articles": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/Article"
+      },
+      "/clients": {
+          "get": {
+              "summary": "Filtrer par clients avec|sans compte",
+              "description": "Renvoie les clients filtrés par le paramètre 'compte'.",
+              "tags": ["Clients"],
+              "parameters": [
+                  {
+                      "name": "compte",
+                      "in": "query",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      },
+                      "description": "Les client à filtrer avec ou sans compte ('non' ou 'oui)."
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Liste des comptes filtrés.",
+                      "content": {
+                          "application/json": {}
                       }
-                    }
+                  },
+                  "400": {
+                      "description": "Paramètre de requête manquant ou invalide. saisir 'oui' ou 'non"
                   }
-                }
               }
-            }
-          },
-          "404": {
-            "description": "Aucun article trouvé"
           }
-        }
       },
-      "post": {
-        "summary": "Créer un article",
-        "operationId": "storeArticle",
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ArticleCreateRequest"
+      "/clients": {
+          "get": {
+              "summary": "Filtrer les clients par status (bloque, actif)",
+              "description": "Renvoie les clients filtrés par le paramètre 'status'.",
+              "tags": ["Clients"],
+              "parameters": [
+                  {
+                      "name": "status",
+                      "in": "query",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      },
+                      "description": "Les client filtrer par status (actif ou bloque)."
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Liste des clients filtrés.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "400": {
+                      "description": "Paramètre de requête manquant ou invalide. saisir 'actif' ou 'bloque"
+                  }
               }
-            }
           }
-        },
-        "responses": {
-          "201": {
-            "description": "Article créé avec succès",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Article"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/articles/{id}": {
-      "get": {
-        "summary": "Afficher un article par ID",
-        "operationId": "showArticle",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Article trouvé",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Article"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Article non trouvé"
-          }
-        }
       },
-      "patch": {
-        "summary": "Mettre à jour un article",
-        "operationId": "updateArticle",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ArticleUpdateRequest"
+      "/wane/v1/clients/": {
+          "post": {
+              "summary": "Ajouter un nouveau client",
+              "description": "Créer un nouveau client avec les informations fournies",
+              "tags": ["Clients"],
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "type": "object",
+                              "properties": {
+                                  "surname": {
+                                      "type": "string"
+                                  },
+                                  "telephone": {
+                                      "type": "string"
+                                  },
+                                  "adresse": {
+                                      "type": "string"
+                                  }
+                              },
+                              "required": ["surname", "telephone", "adresse"]
+                          }
+                      }
+                  }
+              },
+              "responses": {
+                  "201": {
+                      "description": "Client Crée avec succès."
+                  },
+                  "400": {
+                      "description": "Erreur ajout client"
+                  }
               }
-            }
           }
-        },
-        "responses": {
-          "200": {
-            "description": "Article mis à jour avec succès",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Article"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Article non trouvé"
-          }
-        }
       },
-      "delete": {
-        "summary": "Supprimer un article",
-        "operationId": "deleteArticle",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Article supprimé avec succès"
-          },
-          "404": {
-            "description": "Article non trouvé"
-          }
-        }
-      }
-    },
-    "/articles/update-quantities": {
-      "post": {
-        "summary": "Mettre à jour les quantités des articles",
-        "operationId": "updateQuantities",
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UpdateQuantitiesRequest"
+      "/wane/v1/articles/": {
+          "get": {
+              "tags": ["Articles"],
+              "summary": "Lister tous les articles",
+              "description": "Recupére la liste de tous les articles enregistrés",
+              "operationId": "getArticles",
+              "responses": {
+                  "200": {
+                      "description": "Liste des clients récupérée avec succès",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "401": {
+                      "description": "Non autorisé",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
               }
-            }
           }
-        },
-        "responses": {
-          "200": {
-            "description": "Quantités mises à jour avec succès"
-          },
-          "400": {
-            "description": "Erreur de validation des données"
-          }
-        }
-      }
-    },
-    "/roles": {
-      "post": {
-        "summary": "Créer un rôle",
-        "operationId": "createRole",
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RoleCreateRequest"
+      },
+      "/wane/v1/articles/{id}": {
+          "get": {
+              "summary": "Récupère un article par ID",
+              "description": "Renvoie les détails d'un article spécifique par son ID.",
+              "tags": ["Articles"],
+              "parameters": [
+                  {
+                      "name": "id",
+                      "in": "path",
+                      "required": true,
+                      "schema": {
+                          "type": "integer",
+                          "format": "int64"
+                      },
+                      "description": "L'ID de article à récupérer."
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Détails Article.",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "404": {
+                      "description": "Article non trouvé."
+                  }
               }
-            }
           }
-        },
-        "responses": {
-          "201": {
-            "description": "Rôle créé avec succès",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Role"
-                }
+      },
+      "/wane/v1/articles/search/libelle": {
+          "get": {
+              "summary": "Rechercher un article par son libellé",
+              "description": "Renvoie l'article recherché",
+              "tags": ["Articles"],
+              "parameters": [
+                  {
+                      "name": "libelle",
+                      "in": "query",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      },
+                      "description": "L'article trouvé"
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "L'article avec le libellé saisi",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "400": {
+                      "description": "Paramètre de requête manquant ou invalide. saisir un libellé article valide"
+                  }
               }
-            }
           }
-        }
+      },
+      "/wane/v1/articles/search/dispo": {
+          "get": {
+              "summary": "Filtrer les articles par disponibilité QTÉ",
+              "description": "Renvoie les articles",
+              "tags": ["Articles"],
+              "parameters": [
+                  {
+                      "name": "disponible",
+                      "in": "query",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      },
+                      "description": "Les articles concernés"
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Les articles avec le paramètre saisi",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "400": {
+                      "description": "Paramètre de requête manquant ou invalide. saisir 'oui' ou  'non' "
+                  }
+              }
+          }
+      },
+      "/wane/v1/users/": {
+          "get": {
+              "tags": ["Users"],
+              "summary": "Lister tous les utilisateurs",
+              "description": "Recupére la liste de tous les utilisateurs enregistrés",
+              "operationId": "getUsers",
+              "security": [
+                  {
+                      "BearerAuth": []
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Liste des ustilisateurs récupérée avec succès",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "401": {
+                      "description": "Non autorisé",
+                      "content": {
+                          "application/json": {}
+                      }
+                  }
+              }
+          }
+      },
+      "/wane/v1/users/role/filter": {
+          "get": {
+              "summary": "Filtrer les utilisateurs par role",
+              "description": "Renvoie les utlisateurs avec le rôle entré",
+              "tags": ["Users"],
+              "parameters": [
+                  {
+                      "name": "role",
+                      "in": "query",
+                      "required": true,
+                      "schema": {
+                          "type": "string"
+                      },
+                      "description": "Les utilisateurs avec le rôle entré"
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Liste des utilisateurs avec le role donné",
+                      "content": {
+                          "application/json": {}
+                      }
+                  },
+                  "400": {
+                      "description": "Paramètre de requête manquant ou invalide. saisir 'client' ou  'admin' ou 'boutiquier' "
+                  }
+              }
+          }
+      },
+      "/wane/v1/users/login": {
+          "post": {
+              "tags": ["Authentication"],
+              "summary": "Login user and get authentication token",
+              "operationId": "loginUser",
+              "requestBody": {
+                  "required": true,
+                  "content": {
+                      "application/json": {
+                          "schema": {
+                              "type": "object",
+                              "properties": {
+                                  "email": {
+                                      "type": "string",
+                                      "format": "email",
+                                      "example": "user@example.com"
+                                  },
+                                  "password": {
+                                      "type": "string",
+                                      "format": "password",
+                                      "example": "password123!"
+                                  }
+                              },
+                              "required": ["email", "password"]
+                          }
+                      }
+                  }
+              },
+              "security": [
+                  {
+                      "BearerAuth": []
+                  }
+              ],
+              "responses": {
+                  "200": {
+                      "description": "Successful login",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "type": "object",
+                                  "properties": {
+                                      "token": {
+                                          "type": "string",
+                                          "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  },
+                  "401": {
+                      "description": "Unauthorized - Invalid credentials",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "type": "object",
+                                  "properties": {
+                                      "error": {
+                                          "type": "string",
+                                          "example": "Invalid email or password."
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  },
+                  "400": {
+                      "description": "Bad Request - Missing parameters",
+                      "content": {
+                          "application/json": {
+                              "schema": {
+                                  "type": "object",
+                                  "properties": {
+                                      "error": {
+                                          "type": "string",
+                                          "example": "Email and password are required."
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
       }
-    }
   },
   "components": {
-    "schemas": {
-      "Client": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
+      "securitySchemes": {
+          "BearerAuth": {
+              "type": "http",
+              "scheme": "bearer",
+              "bearerFormat": "JWT"
           }
-        }
-      },
-      "ClientCreateRequest": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          }
-        },
-        "required": ["name", "phone", "email"]
-      },
-      "ClientDetail": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          }
-        }
-      },
-      "Article": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          },
-          "price": {
-            "type": "number"
-          },
-          "quantity": {
-            "type": "integer"
-          },
-          "available": {
-            "type": "boolean"
-          }
-        }
-      },
-      "ArticleCreateRequest": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "price": {
-            "type": "number"
-          },
-          "quantity": {
-            "type": "integer"
-          },
-          "available": {
-            "type": "boolean"
-          }
-        },
-        "required": ["name", "price", "quantity", "available"]
-      },
-      "ArticleUpdateRequest": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "price": {
-            "type": "number"
-          },
-          "quantity": {
-            "type": "integer"
-          },
-          "available": {
-            "type": "boolean"
-          }
-        }
-      },
-      "TelephoneRequest": {
-        "type": "object",
-        "properties": {
-          "phone_numbers": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "required": ["phone_numbers"]
-      },
-      "UpdateQuantitiesRequest": {
-        "type": "object",
-        "properties": {
-          "article_updates": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "article_id": {
-                  "type": "integer"
-                },
-                "quantity": {
-                  "type": "integer"
-                }
-              },
-              "required": ["article_id", "quantity"]
-            }
-          }
-        }
-      },
-      "Role": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "name": {
-            "type": "string"
-          }
-        }
-      },
-      "RoleCreateRequest": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        },
-        "required": ["name"]
       }
-    },
-    "securitySchemes": {
-      "bearerAuth": {
-        "type": "http",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
+  },
+  "security": [
+      {
+          "BearerAuth": []
       }
-    }
-  }
+  ]
 }

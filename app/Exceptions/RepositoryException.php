@@ -6,37 +6,33 @@ use Exception;
 
 class RepositoryException extends Exception
 {
-    // Messages pour le ClientRepository
-    public static function clientNotFound(): self
+    // Propriété pour stocker des informations supplémentaires sur l'exception
+    protected $context;
+    protected $details;
+    // Constructeur
+    public function __construct($message = "", $code = 0, Exception $previous = null, $context = null,$details = null)
     {
-        return new self('Client non trouvé.');
+        // Appeler le constructeur parent
+        parent::__construct($message, $code, $previous);
+        // Stocker le contexte supplémentaire, s'il y en a
+        $this->context = $context;
+        $this->details = $details;
     }
 
-    public static function roleNotFound(): self
+    // Méthode pour obtenir le contexte supplémentaire de l'exception
+    public function getContext()
     {
-        return new self('Rôle non trouvé.');
+        return $this->context;
+    }
+    public function getDetails()
+    {
+        return $this->details;
     }
 
-    public static function clientAlreadyHasUserAccount(): self
+    // Méthode pour déterminer si l'exception est liée à une erreur de base de données
+    public function isDatabaseError()
     {
-        return new self('Ce client a déjà un compte utilisateur.');
+        // Vous pouvez ajouter des vérifications spécifiques ici, par exemple en fonction du code d'erreur
+        return $this->code >= 500; // Par exemple, considérer les codes d'erreur 500+ comme erreurs de base de données
     }
-
-    public static function photoUploadFailed(): self
-    {
-        return new self('Échec du téléchargement de la photo. Veuillez réessayer ou fournir une photo valide.');
-    }
-
-    // Messages pour le ProductRepository (ajoutez des méthodes similaires pour chaque repository)
-    public static function productNotFound(): self
-    {
-        return new self('Produit non trouvé.');
-    }
-
-    public static function categoryNotFound(): self
-    {
-        return new self('Catégorie non trouvée.');
-    }
-
-    // Ajoutez d'autres messages d'erreur spécifiques pour d'autres repositories si nécessaire
 }
