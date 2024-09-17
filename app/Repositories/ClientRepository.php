@@ -70,22 +70,21 @@ public function afficherDettes($clientId)
 public function getClientWithDebtswithArticle()
 {
     $clients = Client::with(['dettes' => function ($query) {
-            // Inclure uniquement les dettes réglées et leurs articles
             $query->where('status', 'settled')->with('articles');
         }])
         ->get()
         ->filter(function ($client) {
-            // Inclure uniquement les clients ayant des dettes réglées
             return $client->dettes->isNotEmpty();
         })
         ->map(function ($client) {
-            // Structurer les données du client et des dettes
             return [
                 'client' => [
-                    'name' => $client->surnom, // Changement: Utilisation de l'attribut 'surnom' au lieu de 'surname'
+                    'client_id' => $client->id,
+                    'name' => $client->surnom,
                     'phone' => $client->telephone,
                     'debts' => $client->dettes->map(function ($dette) {
                         return [
+                            'id' => $dette->id,  // Add the debt ID here
                             'amount' => $dette->montant,
                             'status' => 'settled',
                             'articles' => $dette->articles->mapWithKeys(function ($article) {
@@ -102,7 +101,43 @@ public function getClientWithDebtswithArticle()
             ];
         });
 
-    // Retourner ou afficher le résultat
     return $clients;
-} 
+}
+
+public function getClientWithDebtswithArticleForMongo()
+{
+    $clients = Client::with(['dettes' => function ($query) {
+            $query->where('status', 'settled')->with('articles');
+        }])
+        ->get()
+        ->filter(function ($client) {
+            return $client->dettes->isNotEmpty();
+        })
+        ->map(function ($client) {
+            return [
+                'client' => [
+                    'client_id' => $client->id,
+                    'name' => $client->surnom,
+                    'phone' => $client->telephone,
+                    'debts' => $client->dettes->map(function ($dette) {
+                        return [
+                            'id' => $dette->id,  // Add the debt ID here
+                            'amount' => $dette->montant,
+                            'status' => 'settled',
+                            'articles' => $dette->articles->map(function ($article) {
+                                return [
+                                    'article_id' => $article->id,
+                                    'name' => $article->libelle,
+                                    'price' => $article->prix,
+                                ];
+                            })->toArray(),
+                        ];
+                    })->toArray(),
+                ]
+            ];
+        });
+
+    return $clients->toArray();
+}
+
 }

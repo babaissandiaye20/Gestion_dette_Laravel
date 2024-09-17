@@ -1804,3 +1804,1382 @@ App\Services\FirebaseService {#1035
   2024-09-12 12:42:29 App\Jobs\Archivage ....................... 160.76ms DONE
   2024-09-12 12:43:41 App\Jobs\Archivage ............................. RUNNING
   2024-09-12 12:43:41 App\Jobs\Archivage ....................... 181.37ms DONE
+  2024-09-12 17:02:21 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 17:02:23 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-12 17:02:59 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 17:02:59 App\Jobs\Archivage ....................... 157.69ms DONE
+  2024-09-12 17:16:06 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 17:16:06 App\Jobs\Archivage ....................... 179.07ms DONE
+  2024-09-12 17:16:15 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 17:16:16 App\Jobs\Archivage ....................... 180.88ms DONE
+  2024-09-12 17:22:58 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 17:22:58 App\Jobs\Archivage ....................... 173.37ms DONE
+  2024-09-12 17:53:39 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 17:53:39 App\Jobs\Archivagerecup ................... 13.08ms FAIL
+  2024-09-12 17:53:39 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 17:53:39 App\Jobs\Archivagerecup .................... 7.79ms FAIL
+  2024-09-12 17:53:39 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 17:53:39 App\Jobs\Archivagerecup .................... 6.69ms FAIL
+  2024-09-12 18:00:10 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:00:10 App\Jobs\Archivagerecup .................... 6.66ms FAIL
+  2024-09-12 18:00:10 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:00:10 App\Jobs\Archivagerecup .................... 5.17ms FAIL
+  2024-09-12 18:00:10 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:00:10 App\Jobs\Archivagerecup .................... 3.87ms FAIL
+  2024-09-12 18:05:19 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:05:19 App\Jobs\Archivagerecup .................... 2.97ms FAIL
+  2024-09-12 18:05:19 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:05:19 App\Jobs\Archivagerecup .................... 2.52ms FAIL
+  2024-09-12 18:05:19 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:05:19 App\Jobs\Archivagerecup .................... 1.18ms FAIL
+  2024-09-12 18:06:31 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:06:31 App\Jobs\Archivagerecup ................... 10.99ms FAIL
+  2024-09-12 18:06:31 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:06:31 App\Jobs\Archivagerecup .................... 8.06ms FAIL
+  2024-09-12 18:06:31 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:06:31 App\Jobs\Archivagerecup .................... 5.89ms FAIL
+  2024-09-12 18:06:58 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:06:58 App\Jobs\Archivagerecup .................... 8.18ms FAIL
+  2024-09-12 18:06:58 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:06:58 App\Jobs\Archivagerecup .................... 4.60ms FAIL
+  2024-09-12 18:06:58 App\Jobs\Archivagerecup ........................ RUNNING
+  2024-09-12 18:06:58 App\Jobs\Archivagerecup .................... 2.13ms FAIL
+  2024-09-12 18:11:32 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 18:11:33 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-12 18:12:15 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 18:12:16 App\Jobs\Archivage ....................... 201.08ms DONE
+  2024-09-12 18:48:18 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 18:48:19 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-12 18:48:20 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 18:48:21 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-12 18:48:21 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 18:48:22 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-12 18:48:37 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 18:48:38 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-12 18:48:38 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 18:48:39 App\Jobs\SendDebtNotificationJob ......... 916.68ms FAIL
+  2024-09-12 18:48:39 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-12 18:48:41 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-12 18:55:56 App\Jobs\Archivage ............................. RUNNING
+  2024-09-12 18:55:58 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-13 12:11:27 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 12:11:30 App\Jobs\Archivage ............................. 2s DONE
+  2024-09-13 12:40:23 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 12:40:23 App\Jobs\Archivage ....................... 192.65ms DONE
+  2024-09-13 12:43:36 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 12:43:36 App\Jobs\Archivage ....................... 174.85ms DONE
+  2024-09-13 12:49:48 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 12:49:48 App\Jobs\Archivage ....................... 170.54ms DONE
+  2024-09-13 12:54:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 12:54:40 App\Jobs\Archivage ....................... 206.32ms DONE
+  2024-09-13 12:55:58 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 12:55:59 App\Jobs\Archivage ....................... 450.71ms DONE
+  2024-09-13 12:58:08 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 12:58:08 App\Jobs\Archivage ....................... 177.13ms DONE
+  2024-09-13 15:09:13 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:09:15 App\Jobs\Archivage ............................. 2s DONE
+  2024-09-13 15:20:10 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:20:10 App\Jobs\Archivage ....................... 184.60ms DONE
+  2024-09-13 15:22:04 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:22:05 App\Jobs\Archivage ....................... 406.76ms DONE
+  2024-09-13 15:23:17 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:23:17 App\Jobs\Archivage ....................... 182.25ms DONE
+  2024-09-13 15:24:11 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:24:11 App\Jobs\Archivage ....................... 162.57ms DONE
+  2024-09-13 15:27:24 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:27:24 App\Jobs\Archivage ....................... 168.11ms DONE
+  2024-09-13 15:35:39 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:35:52 App\Jobs\Archivage ............................ 12s DONE
+  2024-09-13 15:37:07 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:37:07 App\Jobs\Archivage ....................... 168.88ms DONE
+  2024-09-13 15:38:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:38:40 App\Jobs\Archivage ....................... 172.94ms DONE
+  2024-09-13 15:42:04 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:42:05 App\Jobs\Archivage ....................... 298.29ms DONE
+  2024-09-13 15:45:17 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:45:17 App\Jobs\Archivage ....................... 186.16ms DONE
+  2024-09-13 15:45:47 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:45:47 App\Jobs\Archivage ....................... 164.91ms DONE
+  2024-09-13 15:47:11 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:47:12 App\Jobs\Archivage ....................... 181.05ms DONE
+  2024-09-13 15:57:56 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 15:57:58 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-13 16:01:07 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 16:01:08 App\Jobs\Archivage ....................... 700.11ms DONE
+  2024-09-13 16:03:53 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 16:03:54 App\Jobs\Archivage ....................... 848.97ms DONE
+  2024-09-13 16:04:48 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 16:04:48 App\Jobs\Archivage ....................... 414.01ms DONE
+  2024-09-13 16:22:14 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 16:22:14 App\Jobs\Archivage ....................... 756.10ms DONE
+  2024-09-13 20:57:56 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 20:57:57 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-13 21:11:53 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 21:11:54 App\Jobs\Archivage ....................... 536.34ms FAIL
+  2024-09-13 21:11:54 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 21:11:54 App\Jobs\Archivage ......................... 3.15ms FAIL
+  2024-09-13 21:11:54 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 21:11:54 App\Jobs\Archivage ......................... 2.82ms FAIL
+  2024-09-13 21:22:12 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 21:22:12 App\Jobs\Archivage ......................... 4.10ms FAIL
+  2024-09-13 21:22:12 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 21:22:12 App\Jobs\Archivage ......................... 2.80ms FAIL
+  2024-09-13 21:22:12 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 21:22:12 App\Jobs\Archivage ......................... 2.73ms FAIL
+  2024-09-13 23:06:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:06:01 App\Jobs\Archivage ......................... 3.41ms FAIL
+  2024-09-13 23:06:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:06:01 App\Jobs\Archivage ......................... 2.53ms FAIL
+  2024-09-13 23:06:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:06:01 App\Jobs\Archivage ......................... 2.03ms FAIL
+  2024-09-13 23:13:34 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:13:34 App\Jobs\Archivage ......................... 5.00ms FAIL
+  2024-09-13 23:13:34 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:13:34 App\Jobs\Archivage ......................... 2.64ms FAIL
+  2024-09-13 23:13:34 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:13:34 App\Jobs\Archivage ......................... 2.35ms FAIL
+  2024-09-13 23:14:37 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:14:37 App\Jobs\Archivage ......................... 2.51ms FAIL
+  2024-09-13 23:14:37 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:14:37 App\Jobs\Archivage ......................... 2.57ms FAIL
+  2024-09-13 23:14:37 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:14:37 App\Jobs\Archivage ......................... 2.71ms FAIL
+  2024-09-13 23:25:11 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:25:11 App\Jobs\Archivage ......................... 2.93ms FAIL
+  2024-09-13 23:25:11 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:25:11 App\Jobs\Archivage ......................... 2.77ms FAIL
+  2024-09-13 23:25:11 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:25:11 App\Jobs\Archivage ......................... 2.29ms FAIL
+  2024-09-13 23:51:15 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:51:15 App\Jobs\Archivage ......................... 3.53ms FAIL
+  2024-09-13 23:51:15 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:51:15 App\Jobs\Archivage ......................... 2.72ms FAIL
+  2024-09-13 23:51:15 App\Jobs\Archivage ............................. RUNNING
+  2024-09-13 23:51:15 App\Jobs\Archivage ......................... 2.85ms FAIL
+  2024-09-14 00:11:34 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 00:11:37 App\Jobs\Archivage ............................. 2s DONE
+  2024-09-14 12:02:26 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 12:02:27 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-14 12:29:08 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 12:29:08 App\Jobs\Archivage ....................... 261.48ms DONE
+  2024-09-14 13:00:22 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 13:00:22 App\Jobs\Archivage ....................... 239.02ms DONE
+  2024-09-14 13:01:22 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 13:01:22 App\Jobs\Archivage ....................... 168.52ms DONE
+  2024-09-14 13:34:39 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 13:34:39 App\Jobs\Archivage ....................... 166.70ms DONE
+  2024-09-14 13:37:21 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 13:37:21 App\Jobs\Archivage ....................... 175.99ms DONE
+  2024-09-14 13:38:48 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 13:38:49 App\Jobs\Archivage ....................... 163.78ms DONE
+  2024-09-14 13:42:40 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 13:42:41 App\Jobs\Archivage ............................. 1s FAIL
+  2024-09-14 13:42:41 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 13:42:42 App\Jobs\Archivage ....................... 496.95ms FAIL
+  2024-09-14 13:42:42 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 13:42:42 App\Jobs\Archivage ....................... 396.86ms FAIL
+  2024-09-14 13:44:00 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 13:44:01 App\Jobs\Archivage ....................... 729.78ms FAIL
+  2024-09-14 13:44:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 13:44:01 App\Jobs\Archivage ....................... 418.07ms FAIL
+  2024-09-14 13:44:01 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 13:44:02 App\Jobs\Archivage ....................... 415.16ms FAIL
+  2024-09-14 19:48:51 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 19:48:51 App\Jobs\ArchiverDebtsJob .................. 4.21ms FAIL
+  2024-09-14 19:48:51 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 19:48:51 App\Jobs\ArchiverDebtsJob .................. 2.90ms FAIL
+  2024-09-14 19:48:51 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 19:48:51 App\Jobs\ArchiverDebtsJob .................. 1.93ms FAIL
+  2024-09-14 20:02:37 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:02:37 App\Jobs\ArchiverDebtsJob .................. 4.07ms FAIL
+  2024-09-14 20:02:37 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:02:37 App\Jobs\ArchiverDebtsJob .................. 2.49ms FAIL
+  2024-09-14 20:02:37 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:02:37 App\Jobs\ArchiverDebtsJob .................. 1.75ms FAIL
+  2024-09-14 20:04:04 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:04:04 App\Jobs\ArchiverDebtsJob .................. 4.26ms FAIL
+  2024-09-14 20:04:04 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:04:04 App\Jobs\ArchiverDebtsJob .................. 4.39ms FAIL
+  2024-09-14 20:04:04 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:04:04 App\Jobs\ArchiverDebtsJob .................. 1.55ms FAIL
+  2024-09-14 20:06:40 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:06:40 App\Jobs\ArchiverDebtsJob .................. 3.05ms FAIL
+  2024-09-14 20:06:40 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:06:40 App\Jobs\ArchiverDebtsJob .................. 3.60ms FAIL
+  2024-09-14 20:06:40 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:06:40 App\Jobs\ArchiverDebtsJob .................. 3.75ms FAIL
+  2024-09-14 20:29:59 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:29:59 App\Jobs\ArchiverDebtsJob .................. 5.81ms FAIL
+  2024-09-14 20:29:59 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:29:59 App\Jobs\ArchiverDebtsJob .................. 5.97ms FAIL
+  2024-09-14 20:29:59 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:29:59 App\Jobs\ArchiverDebtsJob .................. 5.50ms FAIL
+  2024-09-14 20:33:54 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:33:54 App\Jobs\ArchiverDebtsJob .................. 7.29ms FAIL
+  2024-09-14 20:33:54 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:33:54 App\Jobs\ArchiverDebtsJob .................. 5.70ms FAIL
+  2024-09-14 20:33:54 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:33:54 App\Jobs\ArchiverDebtsJob .................. 4.94ms FAIL
+  2024-09-14 20:36:50 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-14 20:36:56 App\Jobs\ArchiverDebtsJob ...................... 6s DONE
+  2024-09-14 20:41:15 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 20:41:16 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-14 20:49:16 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 20:49:17 App\Jobs\Archivage ....................... 830.32ms DONE
+  2024-09-14 20:52:21 App\Jobs\Archivage ............................. RUNNING
+Illuminate\Support\Collection {#2201
+  #items: array:2 [
+    14 => array:1 [
+      "client" => array:4 [
+        "client_id" => 252
+        "name" => "Birama"
+        "phone" => "785420085"
+        "debts" => Illuminate\Support\Collection {#2200
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 85
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2195
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 86
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2199
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+    21 => array:1 [
+      "client" => array:4 [
+        "client_id" => 253
+        "name" => "E199"
+        "phone" => "+221755263051"
+        "debts" => Illuminate\Support\Collection {#2192
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 84
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2145
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 53
+              "amount" => "50000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Support\Collection {#2142
+                #items: array:1 [
+                  3 => array:2 [
+                    "name" => "Poudre Mbout"
+                    "price" => "1500"
+                  ]
+                ]
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+  ]
+  #escapeWhenCastingToString: false
+} // app/Services/FirebaseService.php:29
+  2024-09-14 20:52:36 App\Jobs\Archivage ............................. RUNNING
+Illuminate\Support\Collection {#2201
+  #items: array:2 [
+    14 => array:1 [
+      "client" => array:4 [
+        "client_id" => 252
+        "name" => "Birama"
+        "phone" => "785420085"
+        "debts" => Illuminate\Support\Collection {#2200
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 85
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2195
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 86
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2199
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+    21 => array:1 [
+      "client" => array:4 [
+        "client_id" => 253
+        "name" => "E199"
+        "phone" => "+221755263051"
+        "debts" => Illuminate\Support\Collection {#2192
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 84
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2145
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 53
+              "amount" => "50000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Support\Collection {#2142
+                #items: array:1 [
+                  3 => array:2 [
+                    "name" => "Poudre Mbout"
+                    "price" => "1500"
+                  ]
+                ]
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+  ]
+  #escapeWhenCastingToString: false
+} // app/Services/FirebaseService.php:29
+  2024-09-14 20:57:47 App\Jobs\Archivage ............................. RUNNING
+Illuminate\Support\Collection {#2201
+  #items: array:2 [
+    14 => array:1 [
+      "client" => array:4 [
+        "client_id" => 252
+        "name" => "Birama"
+        "phone" => "785420085"
+        "debts" => Illuminate\Support\Collection {#2200
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 85
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2195
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 86
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2199
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+    21 => array:1 [
+      "client" => array:4 [
+        "client_id" => 253
+        "name" => "E199"
+        "phone" => "+221755263051"
+        "debts" => Illuminate\Support\Collection {#2192
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 84
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2145
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 53
+              "amount" => "50000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Support\Collection {#2142
+                #items: array:1 [
+                  3 => array:2 [
+                    "name" => "Poudre Mbout"
+                    "price" => "1500"
+                  ]
+                ]
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+  ]
+  #escapeWhenCastingToString: false
+} // app/Services/FirebaseService.php:29
+  2024-09-14 20:58:07 App\Jobs\Archivage ............................. RUNNING
+Illuminate\Support\Collection {#2201
+  #items: array:2 [
+    14 => array:1 [
+      "client" => array:4 [
+        "client_id" => 252
+        "name" => "Birama"
+        "phone" => "785420085"
+        "debts" => Illuminate\Support\Collection {#2200
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 85
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2195
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 86
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2199
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+    21 => array:1 [
+      "client" => array:4 [
+        "client_id" => 253
+        "name" => "E199"
+        "phone" => "+221755263051"
+        "debts" => Illuminate\Support\Collection {#2192
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 84
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2145
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 53
+              "amount" => "50000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Support\Collection {#2142
+                #items: array:1 [
+                  3 => array:2 [
+                    "name" => "Poudre Mbout"
+                    "price" => "1500"
+                  ]
+                ]
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+  ]
+  #escapeWhenCastingToString: false
+} // app/Services/FirebaseService.php:29
+  2024-09-14 20:59:19 App\Jobs\Archivage ............................. RUNNING
+Illuminate\Support\Collection {#2201
+  #items: array:2 [
+    14 => array:1 [
+      "client" => array:4 [
+        "client_id" => 252
+        "name" => "Birama"
+        "phone" => "785420085"
+        "debts" => Illuminate\Support\Collection {#2200
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 85
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2195
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 86
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2199
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+    21 => array:1 [
+      "client" => array:4 [
+        "client_id" => 253
+        "name" => "E199"
+        "phone" => "+221755263051"
+        "debts" => Illuminate\Support\Collection {#2192
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 84
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2145
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 53
+              "amount" => "50000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Support\Collection {#2142
+                #items: array:1 [
+                  3 => array:2 [
+                    "name" => "Poudre Mbout"
+                    "price" => "1500"
+                  ]
+                ]
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+  ]
+  #escapeWhenCastingToString: false
+} // app/Services/FirebaseService.php:29
+  2024-09-14 20:59:39 App\Jobs\Archivage ............................. RUNNING
+Illuminate\Support\Collection {#2201
+  #items: array:2 [
+    14 => array:1 [
+      "client" => array:4 [
+        "client_id" => 252
+        "name" => "Birama"
+        "phone" => "785420085"
+        "debts" => Illuminate\Support\Collection {#2200
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 85
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2195
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 86
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2199
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+    21 => array:1 [
+      "client" => array:4 [
+        "client_id" => 253
+        "name" => "E199"
+        "phone" => "+221755263051"
+        "debts" => Illuminate\Support\Collection {#2192
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 84
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2145
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 53
+              "amount" => "50000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Support\Collection {#2142
+                #items: array:1 [
+                  3 => array:2 [
+                    "name" => "Poudre Mbout"
+                    "price" => "1500"
+                  ]
+                ]
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+  ]
+  #escapeWhenCastingToString: false
+} // app/Services/FirebaseService.php:29
+  2024-09-14 21:00:51 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 21:00:51 App\Jobs\Archivage ......................... 2.96ms FAIL
+  2024-09-14 21:01:09 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 21:01:09 App\Jobs\Archivage ......................... 1.83ms FAIL
+  2024-09-14 21:56:44 App\Jobs\Archivage ............................. RUNNING
+Illuminate\Support\Collection {#2285
+  #items: array:2 [
+    14 => array:1 [
+      "client" => array:4 [
+        "client_id" => 252
+        "name" => "Birama"
+        "phone" => "785420085"
+        "debts" => Illuminate\Support\Collection {#2286
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 85
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2291
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 86
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2287
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+    21 => array:1 [
+      "client" => array:4 [
+        "client_id" => 253
+        "name" => "E199"
+        "phone" => "+221755263051"
+        "debts" => Illuminate\Support\Collection {#2294
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 84
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2136
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 53
+              "amount" => "50000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Support\Collection {#2139
+                #items: array:1 [
+                  3 => array:2 [
+                    "name" => "Poudre Mbout"
+                    "price" => "1500"
+                  ]
+                ]
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+  ]
+  #escapeWhenCastingToString: false
+} // app/Services/FirebaseService.php:29
+  2024-09-14 21:58:16 App\Jobs\Archivage ............................. RUNNING
+Illuminate\Support\Collection {#2201
+  #items: array:2 [
+    14 => array:1 [
+      "client" => array:4 [
+        "client_id" => 252
+        "name" => "Birama"
+        "phone" => "785420085"
+        "debts" => Illuminate\Support\Collection {#2200
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 85
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2195
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 86
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2199
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+    21 => array:1 [
+      "client" => array:4 [
+        "client_id" => 253
+        "name" => "E199"
+        "phone" => "+221755263051"
+        "debts" => Illuminate\Support\Collection {#2192
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 84
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2145
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 53
+              "amount" => "50000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Support\Collection {#2142
+                #items: array:1 [
+                  3 => array:2 [
+                    "name" => "Poudre Mbout"
+                    "price" => "1500"
+                  ]
+                ]
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+  ]
+  #escapeWhenCastingToString: false
+} // app/Services/FirebaseService.php:29
+  2024-09-14 21:59:46 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 21:59:46 App\Jobs\Archivage ......................... 3.16ms FAIL
+  2024-09-14 22:23:35 App\Jobs\Archivage ............................. RUNNING
+Illuminate\Support\Collection {#2265
+  #items: array:2 [
+    14 => array:1 [
+      "client" => array:4 [
+        "client_id" => 252
+        "name" => "Birama"
+        "phone" => "785420085"
+        "debts" => Illuminate\Support\Collection {#2266
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 85
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2271
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 86
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2267
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+    21 => array:1 [
+      "client" => array:4 [
+        "client_id" => 253
+        "name" => "E199"
+        "phone" => "+221755263051"
+        "debts" => Illuminate\Support\Collection {#2274
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 84
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2115
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 53
+              "amount" => "50000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Support\Collection {#2118
+                #items: array:1 [
+                  3 => array:2 [
+                    "name" => "Poudre Mbout"
+                    "price" => "1500"
+                  ]
+                ]
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+  ]
+  #escapeWhenCastingToString: false
+} // app/Services/FirebaseService.php:29
+  2024-09-14 22:25:05 App\Jobs\Archivage ............................. RUNNING
+Illuminate\Support\Collection {#2201
+  #items: array:2 [
+    14 => array:1 [
+      "client" => array:4 [
+        "client_id" => 252
+        "name" => "Birama"
+        "phone" => "785420085"
+        "debts" => Illuminate\Support\Collection {#2200
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 85
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2195
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 86
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2199
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+    21 => array:1 [
+      "client" => array:4 [
+        "client_id" => 253
+        "name" => "E199"
+        "phone" => "+221755263051"
+        "debts" => Illuminate\Support\Collection {#2192
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 84
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2145
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 53
+              "amount" => "50000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Support\Collection {#2142
+                #items: array:1 [
+                  3 => array:2 [
+                    "name" => "Poudre Mbout"
+                    "price" => "1500"
+                  ]
+                ]
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+  ]
+  #escapeWhenCastingToString: false
+} // app/Services/FirebaseService.php:29
+  2024-09-14 22:26:35 App\Jobs\Archivage ............................. RUNNING
+Illuminate\Support\Collection {#2201
+  #items: array:2 [
+    14 => array:1 [
+      "client" => array:4 [
+        "client_id" => 252
+        "name" => "Birama"
+        "phone" => "785420085"
+        "debts" => Illuminate\Support\Collection {#2200
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 85
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2195
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 86
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2199
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+    21 => array:1 [
+      "client" => array:4 [
+        "client_id" => 253
+        "name" => "E199"
+        "phone" => "+221755263051"
+        "debts" => Illuminate\Support\Collection {#2192
+          #items: array:2 [
+            0 => array:4 [
+              "id" => 84
+              "amount" => "4000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Database\Eloquent\Collection {#2145
+                #items: []
+                #escapeWhenCastingToString: false
+              }
+            ]
+            1 => array:4 [
+              "id" => 53
+              "amount" => "50000.00"
+              "status" => "settled"
+              "articles" => Illuminate\Support\Collection {#2142
+                #items: array:1 [
+                  3 => array:2 [
+                    "name" => "Poudre Mbout"
+                    "price" => "1500"
+                  ]
+                ]
+                #escapeWhenCastingToString: false
+              }
+            ]
+          ]
+          #escapeWhenCastingToString: false
+        }
+      ]
+    ]
+  ]
+  #escapeWhenCastingToString: false
+} // app/Services/FirebaseService.php:29
+  2024-09-14 22:28:07 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 22:28:07 App\Jobs\Archivage ......................... 2.93ms FAIL
+  2024-09-14 22:32:37 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 22:32:38 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-14 22:58:06 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 22:58:07 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-14 23:02:20 App\Jobs\Archivage ............................. RUNNING
+  2024-09-14 23:02:21 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-15 00:40:12 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:40:13 App\Jobs\SendDebtNotificationJob ............... 1s DONE
+  2024-09-15 00:48:43 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:48:44 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-15 00:48:44 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:48:45 App\Jobs\SendDebtNotificationJob ......... 741.64ms FAIL
+  2024-09-15 00:48:45 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:48:46 App\Jobs\SendDebtNotificationJob ......... 630.03ms FAIL
+  2024-09-15 00:52:16 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:52:17 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-15 00:52:17 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:52:18 App\Jobs\SendDebtNotificationJob ......... 812.56ms FAIL
+  2024-09-15 00:52:18 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:52:19 App\Jobs\SendDebtNotificationJob ......... 745.79ms FAIL
+  2024-09-15 00:54:52 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:54:53 App\Jobs\SendDebtNotificationJob ......... 945.47ms FAIL
+  2024-09-15 00:54:53 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:54:53 App\Jobs\SendDebtNotificationJob ......... 731.77ms FAIL
+  2024-09-15 00:54:53 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:54:54 App\Jobs\SendDebtNotificationJob ......... 727.73ms FAIL
+  2024-09-15 00:55:18 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:55:19 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-15 00:55:19 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:55:20 App\Jobs\SendDebtNotificationJob ......... 834.82ms FAIL
+  2024-09-15 00:55:20 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 00:55:21 App\Jobs\SendDebtNotificationJob ......... 715.98ms FAIL
+  2024-09-15 01:03:12 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:03:13 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-15 01:03:13 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:03:14 App\Jobs\SendDebtNotificationJob ......... 728.36ms FAIL
+  2024-09-15 01:03:14 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:03:15 App\Jobs\SendDebtNotificationJob ......... 802.17ms FAIL
+  2024-09-15 01:07:27 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:07:28 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-15 01:07:28 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:07:29 App\Jobs\SendDebtNotificationJob ......... 668.15ms FAIL
+  2024-09-15 01:07:29 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:07:30 App\Jobs\SendDebtNotificationJob ......... 883.51ms FAIL
+  2024-09-15 01:20:00 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:20:01 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-15 01:20:01 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:20:02 App\Jobs\SendDebtNotificationJob ......... 678.18ms FAIL
+  2024-09-15 01:20:02 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:20:03 App\Jobs\SendDebtNotificationJob ......... 637.11ms FAIL
+  2024-09-15 01:21:27 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:21:28 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-15 01:21:28 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:21:29 App\Jobs\SendDebtNotificationJob ......... 744.01ms FAIL
+  2024-09-15 01:21:29 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:21:30 App\Jobs\SendDebtNotificationJob ......... 815.99ms FAIL
+  2024-09-15 01:24:09 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 01:24:10 App\Jobs\ArchiverDebtsJob ................ 861.94ms DONE
+  2024-09-15 01:27:31 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:27:32 App\Jobs\SendDebtNotificationJob ............... 1s FAIL
+  2024-09-15 01:27:32 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:27:33 App\Jobs\SendDebtNotificationJob ......... 820.92ms FAIL
+  2024-09-15 01:27:33 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-15 01:27:34 App\Jobs\SendDebtNotificationJob ......... 731.48ms FAIL
+  2024-09-15 01:42:44 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 01:42:45 App\Jobs\ArchiverDebtsJob ................ 585.30ms DONE
+  2024-09-15 01:43:27 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 01:43:27 App\Jobs\ArchiverDebtsJob ................ 224.53ms DONE
+  2024-09-15 12:08:49 App\Jobs\Archivage ............................. RUNNING
+  2024-09-15 12:08:50 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-15 12:09:32 App\Jobs\Archivage ............................. RUNNING
+  2024-09-15 12:09:34 App\Jobs\Archivage ............................. 1s DONE
+  2024-09-15 12:10:34 App\Jobs\Archivage ............................. RUNNING
+  2024-09-15 12:10:35 App\Jobs\Archivage ....................... 469.92ms DONE
+  2024-09-15 12:12:56 App\Jobs\Archivage ............................. RUNNING
+  2024-09-15 12:12:57 App\Jobs\Archivage ....................... 746.23ms DONE
+  2024-09-15 12:13:12 App\Jobs\Archivage ............................. RUNNING
+  2024-09-15 12:13:12 App\Jobs\Archivage ....................... 398.91ms DONE
+  2024-09-15 12:13:24 App\Jobs\Archivage ............................. RUNNING
+  2024-09-15 12:13:25 App\Jobs\Archivage ....................... 534.41ms DONE
+  2024-09-15 13:09:40 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 13:09:41 App\Jobs\ArchiverDebtsJob ................ 956.31ms DONE
+  2024-09-15 13:27:36 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 13:27:37 App\Jobs\ArchiverDebtsJob ................ 601.25ms DONE
+  2024-09-15 13:34:31 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 13:34:32 App\Jobs\ArchiverDebtsJob ................ 673.78ms DONE
+  2024-09-15 13:36:11 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 13:36:12 App\Jobs\ArchiverDebtsJob ................ 895.17ms DONE
+  2024-09-15 13:42:09 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 13:42:10 App\Jobs\ArchiverDebtsJob ................ 632.74ms DONE
+  2024-09-15 13:45:46 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 13:45:47 App\Jobs\ArchiverDebtsJob ................ 606.36ms DONE
+  2024-09-15 13:54:15 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 13:54:16 App\Jobs\ArchiverDebtsJob ................ 903.20ms DONE
+  2024-09-15 14:47:26 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 14:47:27 App\Jobs\ArchiverDebtsJob ...................... 1s DONE
+  2024-09-15 14:51:13 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 14:51:13 App\Jobs\ArchiverDebtsJob ................ 645.29ms DONE
+  2024-09-15 14:57:44 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 14:57:45 App\Jobs\ArchiverDebtsJob ................ 659.98ms DONE
+  2024-09-15 14:59:30 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 14:59:30 App\Jobs\ArchiverDebtsJob ................ 456.51ms DONE
+  2024-09-15 15:36:52 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 15:36:53 App\Jobs\ArchiverDebtsJob ................ 868.09ms DONE
+  2024-09-15 15:50:18 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 15:50:19 App\Jobs\ArchiverDebtsJob ................ 677.72ms DONE
+  2024-09-15 18:10:31 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 18:10:37 App\Jobs\ArchiverDebtsJob ...................... 6s DONE
+  2024-09-15 21:18:01 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 21:18:01 App\Jobs\ArchiverDebtsJob ................. 17.13ms DONE
+  2024-09-15 21:21:37 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-15 21:26:39 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-16 15:29:09 App\Jobs\ArchiverDebtsJob ...................... RUNNING
+  2024-09-16 15:29:11 App\Jobs\ArchiverDebtsJob ...................... 2s DONE
+  2024-09-16 15:41:51 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-16 15:41:51 App\Jobs\SendDebtNotificationJob ......... 413.77ms DONE
+  2024-09-16 16:08:44 App\Jobs\SendDebtNotificationJob ............... RUNNING
+  2024-09-16 16:08:45 App\Jobs\SendDebtNotificationJob ............... 1s DONE
+  2024-09-16 16:25:28 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 16:25:28 App\Jobs\SendDebtReminderJob .............. 31.92ms FAIL
+  2024-09-16 16:25:28 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 16:25:28 App\Jobs\SendDebtReminderJob ............... 7.72ms FAIL
+  2024-09-16 16:25:28 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 16:25:28 App\Jobs\SendDebtReminderJob ............... 2.58ms FAIL
+  2024-09-16 16:40:17 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 16:40:17 App\Jobs\SendDebtReminderJob .............. 11.13ms FAIL
+  2024-09-16 16:40:17 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 16:40:17 App\Jobs\SendDebtReminderJob ............... 6.52ms FAIL
+  2024-09-16 16:40:17 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 16:40:17 App\Jobs\SendDebtReminderJob ............... 5.87ms FAIL
+  2024-09-16 16:54:24 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 16:54:24 App\Jobs\SendDebtReminderJob ............... 7.77ms FAIL
+  2024-09-16 16:54:24 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 16:54:24 App\Jobs\SendDebtReminderJob ............... 6.11ms FAIL
+  2024-09-16 16:54:24 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 16:54:24 App\Jobs\SendDebtReminderJob ............... 5.49ms FAIL
+  2024-09-16 16:58:21 App\Notifications\DebtReminderNotification ..... RUNNING
+  2024-09-16 16:58:21 App\Notifications\DebtReminderNotification . 2.69ms FAIL
+  2024-09-16 16:58:21 App\Notifications\DebtReminderNotification ..... RUNNING
+  2024-09-16 16:58:21 App\Notifications\DebtReminderNotification . 4.06ms FAIL
+  2024-09-16 16:58:21 App\Notifications\DebtReminderNotification ..... RUNNING
+  2024-09-16 16:58:21 App\Notifications\DebtReminderNotification . 2.83ms FAIL
+  2024-09-16 17:08:25 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 17:08:25 App\Jobs\SendDebtReminderJob ............... 5.33ms FAIL
+  2024-09-16 17:08:25 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 17:08:25 App\Jobs\SendDebtReminderJob ............... 4.50ms FAIL
+  2024-09-16 17:08:25 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 17:08:25 App\Jobs\SendDebtReminderJob ............... 2.83ms FAIL
+  2024-09-16 17:31:29 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 17:31:29 App\Jobs\SendDebtReminderJob .............. 10.88ms FAIL
+  2024-09-16 17:31:29 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 17:31:29 App\Jobs\SendDebtReminderJob ............... 8.09ms FAIL
+  2024-09-16 17:31:29 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 17:31:29 App\Jobs\SendDebtReminderJob ............... 7.72ms FAIL
+  2024-09-16 17:47:21 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 17:47:22 App\Jobs\SendDebtReminderJob ............... 8.21ms FAIL
+  2024-09-16 17:47:22 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 17:47:22 App\Jobs\SendDebtReminderJob ............... 7.59ms FAIL
+  2024-09-16 17:47:22 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 17:47:22 App\Jobs\SendDebtReminderJob ............... 6.56ms FAIL
+  2024-09-16 18:33:20 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 18:33:20 App\Jobs\SendDebtReminderJob ............... 6.81ms FAIL
+  2024-09-16 18:33:20 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 18:33:20 App\Jobs\SendDebtReminderJob ............... 6.34ms FAIL
+  2024-09-16 18:33:20 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 18:33:20 App\Jobs\SendDebtReminderJob ............... 5.70ms FAIL
+  2024-09-16 18:47:27 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 18:47:27 App\Jobs\SendDebtReminderJob ............... 9.46ms FAIL
+  2024-09-16 18:47:27 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 18:47:27 App\Jobs\SendDebtReminderJob .............. 10.85ms FAIL
+  2024-09-16 18:47:27 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 18:47:27 App\Jobs\SendDebtReminderJob ............... 6.63ms FAIL
+  2024-09-16 18:47:48 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 18:47:48 App\Jobs\SendDebtReminderJob ............... 7.91ms FAIL
+  2024-09-16 18:47:48 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 18:47:48 App\Jobs\SendDebtReminderJob ............... 6.43ms FAIL
+  2024-09-16 18:47:48 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 18:47:48 App\Jobs\SendDebtReminderJob ............... 6.00ms FAIL
+  2024-09-16 19:04:58 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 19:04:58 App\Jobs\SendDebtReminderJob ............... 8.38ms FAIL
+  2024-09-16 19:04:58 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 19:04:58 App\Jobs\SendDebtReminderJob ............... 4.74ms FAIL
+  2024-09-16 19:04:58 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 19:04:58 App\Jobs\SendDebtReminderJob ............... 3.84ms FAIL
+  2024-09-16 19:09:44 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 19:09:44 App\Jobs\SendDebtReminderJob ............... 8.46ms FAIL
+  2024-09-16 19:09:44 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 19:09:44 App\Jobs\SendDebtReminderJob ............... 4.01ms FAIL
+  2024-09-16 19:09:44 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 19:09:44 App\Jobs\SendDebtReminderJob ............... 3.72ms FAIL
+  2024-09-16 19:10:23 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 19:10:23 App\Jobs\SendDebtReminderJob ............... 6.45ms FAIL
+  2024-09-16 19:10:23 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 19:10:23 App\Jobs\SendDebtReminderJob ............... 6.69ms FAIL
+  2024-09-16 19:10:23 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 19:10:23 App\Jobs\SendDebtReminderJob ............... 6.16ms FAIL
+  2024-09-16 20:41:35 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 20:41:35 App\Jobs\SendDebtReminderJob .............. 11.93ms FAIL
+  2024-09-16 20:41:35 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 20:41:35 App\Jobs\SendDebtReminderJob ............... 8.91ms FAIL
+  2024-09-16 20:41:35 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 20:41:35 App\Jobs\SendDebtReminderJob ............... 7.90ms FAIL
+  2024-09-16 21:52:20 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 21:52:20 App\Jobs\SendDebtReminderJob ............... 8.22ms FAIL
+  2024-09-16 21:52:20 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 21:52:20 App\Jobs\SendDebtReminderJob ............... 6.47ms FAIL
+  2024-09-16 21:52:20 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 21:52:20 App\Jobs\SendDebtReminderJob ............... 4.52ms FAIL
+  2024-09-16 21:54:21 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 21:54:21 App\Jobs\SendDebtReminderJob ............... 7.98ms FAIL
+  2024-09-16 21:54:21 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 21:54:21 App\Jobs\SendDebtReminderJob ............... 4.56ms FAIL
+  2024-09-16 21:54:21 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 21:54:21 App\Jobs\SendDebtReminderJob ............... 5.30ms FAIL
+  2024-09-16 21:57:21 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 21:57:21 App\Jobs\SendDebtReminderJob ............... 8.50ms FAIL
+  2024-09-16 21:57:21 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 21:57:21 App\Jobs\SendDebtReminderJob ............... 6.50ms FAIL
+  2024-09-16 21:57:21 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 21:57:21 App\Jobs\SendDebtReminderJob ............... 4.39ms FAIL
+  2024-09-16 22:00:33 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:00:33 App\Jobs\SendDebtReminderJob ............... 8.90ms FAIL
+  2024-09-16 22:00:33 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:00:33 App\Jobs\SendDebtReminderJob .............. 15.44ms FAIL
+  2024-09-16 22:00:33 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:00:33 App\Jobs\SendDebtReminderJob ............... 6.17ms FAIL
+  2024-09-16 22:01:09 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:01:09 App\Jobs\SendDebtReminderJob .............. 10.68ms FAIL
+  2024-09-16 22:01:09 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:01:09 App\Jobs\SendDebtReminderJob ............... 6.22ms FAIL
+  2024-09-16 22:01:09 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:01:09 App\Jobs\SendDebtReminderJob ............... 6.23ms FAIL
+  2024-09-16 22:05:15 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:05:15 App\Jobs\SendDebtReminderJob .............. 10.97ms FAIL
+  2024-09-16 22:05:16 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:05:16 App\Jobs\SendDebtReminderJob ............... 5.63ms FAIL
+  2024-09-16 22:05:16 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:05:16 App\Jobs\SendDebtReminderJob ............... 5.93ms FAIL
+  2024-09-16 22:09:46 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:09:46 App\Jobs\SendDebtReminderJob ............... 7.41ms FAIL
+  2024-09-16 22:09:46 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:09:46 App\Jobs\SendDebtReminderJob ............... 8.68ms FAIL
+  2024-09-16 22:09:46 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:09:46 App\Jobs\SendDebtReminderJob ............... 5.35ms FAIL
+  2024-09-16 22:10:19 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:10:19 App\Jobs\SendDebtReminderJob .............. 12.31ms FAIL
+  2024-09-16 22:10:19 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:10:19 App\Jobs\SendDebtReminderJob ............... 7.49ms FAIL
+  2024-09-16 22:10:19 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:10:19 App\Jobs\SendDebtReminderJob ............... 5.41ms FAIL
+  2024-09-16 22:11:55 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:11:55 App\Jobs\SendDebtReminderJob ............... 9.49ms FAIL
+  2024-09-16 22:11:55 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:11:55 App\Jobs\SendDebtReminderJob ............... 6.51ms FAIL
+  2024-09-16 22:11:55 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:11:55 App\Jobs\SendDebtReminderJob ............... 3.37ms FAIL
+  2024-09-16 22:12:16 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:12:16 App\Jobs\SendDebtReminderJob .............. 10.60ms FAIL
+  2024-09-16 22:12:16 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:12:16 App\Jobs\SendDebtReminderJob ............... 8.93ms FAIL
+  2024-09-16 22:12:16 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:12:16 App\Jobs\SendDebtReminderJob ............... 7.88ms FAIL
+  2024-09-16 22:28:02 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:28:02 App\Jobs\SendDebtReminderJob ............... 8.98ms FAIL
+  2024-09-16 22:28:02 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:28:02 App\Jobs\SendDebtReminderJob ............... 5.59ms FAIL
+  2024-09-16 22:28:02 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:28:02 App\Jobs\SendDebtReminderJob ............... 3.81ms FAIL
+  2024-09-16 22:38:37 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:38:37 App\Jobs\SendDebtReminderJob .............. 35.22ms DONE
+  2024-09-16 22:38:37 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:38:37 App\Notifications\InvoicePaid .............. 6.06ms FAIL
+  2024-09-16 22:38:37 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:38:37 App\Notifications\InvoicePaid .............. 6.92ms DONE
+  2024-09-16 22:38:37 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:38:37 App\Notifications\InvoicePaid .............. 3.22ms FAIL
+  2024-09-16 22:38:37 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:38:37 App\Notifications\InvoicePaid .............. 2.29ms FAIL
+  2024-09-16 22:41:10 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:41:10 App\Jobs\SendDebtReminderJob .............. 10.94ms DONE
+  2024-09-16 22:41:10 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:41:10 App\Notifications\InvoicePaid .............. 4.70ms FAIL
+  2024-09-16 22:41:10 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:41:10 App\Notifications\InvoicePaid .............. 6.26ms DONE
+  2024-09-16 22:41:11 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:41:11 App\Notifications\InvoicePaid .............. 3.28ms FAIL
+  2024-09-16 22:41:11 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:41:11 App\Notifications\InvoicePaid .............. 5.53ms FAIL
+  2024-09-16 22:41:47 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:41:47 App\Jobs\SendDebtReminderJob .............. 17.45ms DONE
+  2024-09-16 22:41:47 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:41:47 App\Notifications\InvoicePaid .............. 6.55ms FAIL
+  2024-09-16 22:41:47 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:41:47 App\Notifications\InvoicePaid .............. 7.81ms DONE
+  2024-09-16 22:41:47 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:41:47 App\Notifications\InvoicePaid .............. 7.04ms FAIL
+  2024-09-16 22:41:47 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:41:47 App\Notifications\InvoicePaid .............. 6.10ms FAIL
+  2024-09-16 22:44:35 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:44:35 App\Jobs\SendDebtReminderJob ............... 7.06ms DONE
+  2024-09-16 22:44:35 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:44:35 App\Notifications\InvoicePaid .............. 1.72ms FAIL
+  2024-09-16 22:44:35 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:44:35 App\Notifications\InvoicePaid .............. 2.38ms DONE
+  2024-09-16 22:44:35 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:44:35 App\Notifications\InvoicePaid .............. 2.50ms FAIL
+  2024-09-16 22:44:35 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:44:35 App\Notifications\InvoicePaid .............. 3.99ms FAIL
+  2024-09-16 22:46:17 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:46:17 App\Jobs\SendDebtReminderJob ............... 6.40ms DONE
+  2024-09-16 22:46:17 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:46:17 App\Notifications\InvoicePaid .............. 2.38ms FAIL
+  2024-09-16 22:46:17 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:46:17 App\Notifications\InvoicePaid .............. 3.01ms DONE
+  2024-09-16 22:46:17 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:46:17 App\Notifications\InvoicePaid .............. 2.41ms FAIL
+  2024-09-16 22:46:17 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:46:17 App\Notifications\InvoicePaid .............. 2.41ms FAIL
+  2024-09-16 22:47:26 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:47:26 App\Jobs\SendDebtReminderJob ............... 8.99ms DONE
+  2024-09-16 22:47:26 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:47:26 App\Notifications\InvoicePaid .............. 3.61ms FAIL
+  2024-09-16 22:47:26 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:47:26 App\Notifications\InvoicePaid .............. 4.06ms DONE
+  2024-09-16 22:47:26 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:47:26 App\Notifications\InvoicePaid .............. 3.37ms FAIL
+  2024-09-16 22:47:26 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:47:26 App\Notifications\InvoicePaid .............. 6.01ms FAIL
+  2024-09-16 22:49:11 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:49:11 App\Jobs\SendDebtReminderJob .............. 10.51ms DONE
+  2024-09-16 22:49:11 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:49:11 App\Notifications\InvoicePaid .............. 5.06ms FAIL
+  2024-09-16 22:49:11 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:49:11 App\Notifications\InvoicePaid .............. 4.55ms DONE
+  2024-09-16 22:49:11 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:49:11 App\Notifications\InvoicePaid .............. 3.10ms FAIL
+  2024-09-16 22:49:11 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:49:11 App\Notifications\InvoicePaid .............. 3.47ms FAIL
+  2024-09-16 22:55:00 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 22:55:00 App\Jobs\SendDebtReminderJob ............... 8.69ms DONE
+  2024-09-16 22:55:00 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:55:00 App\Notifications\InvoicePaid .............. 3.29ms FAIL
+  2024-09-16 22:55:00 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:55:00 App\Notifications\InvoicePaid .............. 4.55ms DONE
+  2024-09-16 22:55:00 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:55:00 App\Notifications\InvoicePaid .............. 3.80ms FAIL
+  2024-09-16 22:55:00 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 22:55:00 App\Notifications\InvoicePaid .............. 2.58ms FAIL
+  2024-09-16 23:00:24 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-16 23:00:24 App\Jobs\SendDebtReminderJob .............. 13.26ms DONE
+  2024-09-16 23:00:24 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 23:00:24 App\Notifications\InvoicePaid .............. 3.45ms FAIL
+  2024-09-16 23:00:24 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 23:00:24 App\Notifications\InvoicePaid .............. 4.35ms DONE
+  2024-09-16 23:00:24 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 23:00:24 App\Notifications\InvoicePaid .............. 4.67ms FAIL
+  2024-09-16 23:00:24 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-16 23:00:24 App\Notifications\InvoicePaid .............. 2.67ms FAIL
+  2024-09-17 08:35:38 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-17 08:35:38 App\Jobs\SendDebtReminderJob ............... 9.83ms DONE
+  2024-09-17 08:35:38 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 08:35:38 App\Notifications\InvoicePaid .............. 4.66ms FAIL
+  2024-09-17 08:35:38 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 08:35:38 App\Notifications\InvoicePaid .............. 5.45ms DONE
+  2024-09-17 08:35:38 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 08:35:38 App\Notifications\InvoicePaid .............. 4.15ms FAIL
+  2024-09-17 08:35:38 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 08:35:38 App\Notifications\InvoicePaid .............. 3.44ms FAIL

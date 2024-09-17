@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
-  use Laravel\Passport\HasApiTokens ; 
+use Illuminate\Notifications\Notifiable;
+  use Laravel\Passport\HasApiTokens ;
  // or
  /*  use Laravel\Sanctum\HasApiTokens as SanctumHasApiTokens;  */
 class User extends Authenticatable
 {
-    use   HasApiTokens   /* sanctumHasApiTokens */  ,HasFactory;
+    use   HasApiTokens   /* sanctumHasApiTokens */  ,HasFactory,  Notifiable;
 
 
     protected $fillable = ['nom', 'prenom', 'login', 'password', 'role_id','photo'];
@@ -51,5 +51,9 @@ class User extends Authenticatable
             $this->attributes['type'] = false; // Ce n'est pas une URL Cloudinary
         }
     }
+public function routeNotificationForSms()
+{
+    return "+221755263051"; // Numéro de téléphone du client associé
 }
- 
+
+}

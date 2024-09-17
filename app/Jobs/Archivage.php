@@ -20,13 +20,23 @@ class Archivage implements ShouldQueue
      */
     public function handle(): void
     {
-        // Resolve the ArchivageService dependency within the handle method
+        // Resolve the ArchivageService dependency
         $archivageService = app(ArchivageService::class);
-
-
-        $clientDette = ClientRepositoryFacade::getClientWithDebtswithArticle();
+    
+        // Vérifier si MongoDB ou Firebase est utilisé
+        if (env('ARCHIVAGE_SERVICE') === 'mongodb') {
+            // Utiliser la méthode spécifique à MongoDB
+            $clientDette = ClientRepositoryFacade::getClientWithDebtswithArticleForMongo();
+        } else {
+            // Utiliser la méthode originale pour Firebase
+            $clientDette = ClientRepositoryFacade::getClientWithDebtswithArticle();
+        }
+    
+        // Stocker les données dans le service approprié (MongoDB ou Firebase)
+       /*  $archivageService->store($clientDette); */
         $archivageService->store($clientDette);
-
-        Log::debug('Clients archivés avec succès');
+        $result = 'Clients archivés ';
+       Log::debug( $result);
     }
-}
+    
+} 

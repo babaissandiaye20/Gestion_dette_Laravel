@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Providers;
+use Illuminate\Support\Facades\Notification;
 
 use App\Services\UserService;
 use App\Services\DetteService;
@@ -66,7 +67,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton('client_repository', function ($app){
             return $app->make(ClientRepository::class);
         });
-        
+
         $this->app->singleton('clientservice', function ($app) {
             return new ClientServiceFacade(
                 $app->make(QRCodeService::class),
@@ -74,8 +75,8 @@ class AppServiceProvider extends ServiceProvider
                 $app->make(PhotoStorageService::class)
             );
         });
-       
-        
+
+
         // Vous pouvez également enregistrer le ClientService de la même manière si nécessaire
         /* $this->app->singleton('client_service', function ($app) {
             return new ClientService($app->make('client_repository'));
@@ -84,27 +85,29 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton('clientservice', function ($app) {
             return $app->make(ClientService::class);
         });
-        $this->app->bind(ClientRepositoryInterface::class, ClientRepository::class); 
+        $this->app->bind(ClientRepositoryInterface::class, ClientRepository::class);
         $this->app->singleton(ClientServiceInterface::class, ClientService::class);
 
         $this->app->bind(DetteRepositories::class, DetteRepositoriesImpl::class);
-        
-       
+
+
           $this->app->bind(DetteService::class, DetteServiceImpl::class);
           $this->app->bind(PaiementServiceInterface::class, PaiementService::class);
         $this->app->bind(PaiementRepositoryInterface::class, PaiementRepository::class);
-       
+
         $this->app->bind(UserServiceInterface::class, UserService::class);
         $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
-     
-        $this->app->bind(SmsServiceInterface::class, function () {
+$this->app->singleton(InfobipSmsService::class, InfobipSmsService::class);
+       $this->app->bind(SmsServiceInterface::class, function () {
             if (env('SMS_PROVIDER') === 'twilio') {
                 return new TwilioSmsService();
             } else {
                 return new InfobipSmsService();
             }
+
         });
-        
+       $this->app->bind(InfobipSmsService::class,InfobipSmsService::class);
+
     }
 
 
@@ -115,6 +118,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
-    }
+        /*Notification::extend('sms', function ($app) {
+                  return new SmsNotificationChannel($app->make(InfobipSmsService::class));
+              });*/
+          }
+
+
+
 }

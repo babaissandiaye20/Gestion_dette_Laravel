@@ -11,16 +11,38 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\FirebaseController;
 use App\Http\Controllers\PaiementController;
 use App\Http\Controllers\ArchivageController;
+use App\Http\Controllers\NotificationController;
 // Endpoint pour le login
+
+
+
+// Endpoint pour envoyer un SMS
+Route::post('/send-sms', [NotificationController::class, 'sendSms']);
+
+// Endpoint pour notifier tous les clients avec des dettes
+Route::post('/notify-debt-clients', [NotificationController::class, 'notifyClientsWithDebts']);
+
+// Endpoint pour lire toutes les notifications
+Route::get('/notifications', [NotificationController::class, 'getAllNotifications']);
+
+// Endpoint pour lire les notifications non lues
+Route::get('/notifications/unread', [NotificationController::class, 'getUnreadNotifications']);
+
+// Endpoint pour marquer une notification comme lue
+Route::put('/notifications/{id}/read', [NotificationController::class, 'markAsRead']);
+
 Route::post('/login', [UserController::class, 'login']);
-Route::post('/archive-clients-test', [ArchivageController::class, 'archiveClients']);
+Route::post('/dettes/inserer-archivees', [ArchivageController::class, 'insererDettesArchivées']);
+
+Route::get('/archive-client', [ArchivageController::class, 'getArchivedClients']);
+
  // Affiche tous les clients
  // Crée un nouvel utilisateur
  Route::get('dettes/{id}', [DetteController::class, 'getDette']);
 
- Route::get('/archive-clients', [ClientController::class, 'archiveClients']);
+/*  Route::get('/archive-clients', [ClientController::class, 'archiveClients']);
 
- Route::post('/clients/archive-to-mongo', [ClientController::class, 'archiveClientsToMongo']);
+ Route::post('/clients/archive-to-mongo', [ClientController::class, 'archiveClientsToMongo']); */
 // Route pour créer une nouvelle dette
 Route::post('dettes', [DetteController::class, 'createDette']);
 
@@ -28,7 +50,7 @@ Route::get('/send-sms-to-clients', [SmsController::class, 'sendSmsToClients']);
 // Route pour ajouter des articles à une dette spécifique
 Route::post('dettes/{id}/articles', [DetteController::class, 'addArticlesToDette']);
 
-//pour payment 
+//pour payment
 Route::post('/paiements', [PaiementController::class, 'store'])->name('paiements.store');
 
 // Route pour afficher les paiements par dette (par dette ID)

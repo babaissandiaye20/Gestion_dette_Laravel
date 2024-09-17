@@ -1,17 +1,17 @@
 <?php
 
 namespace App\Models;
-
 use App\Observers\ClientObserver;
 use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Notifications\Notifiable;
 #[ObservedBy([ClientObserver::class])]
 
 class Client extends Model
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
     protected $fillable = ['telephone', 'surnom', 'adresse', 'user_id'];
     protected $hidden=['created_at','updated_at'];
@@ -65,6 +65,10 @@ class Client extends Model
             $q->where('etat', 'inactif');
         });
     }
-    
+ public function routeNotificationForSms()
+    {
+        return $this->telephone;
+
+
 }
- 
+}

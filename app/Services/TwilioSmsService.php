@@ -1,5 +1,4 @@
-<?php 
-namespace App\Services;
+<?php
 
 namespace App\Services;
 
@@ -57,7 +56,7 @@ class TwilioSmsService implements SmsServiceInterface
                 $this->sendSms($client->telephone, $message);
             }
         }
-    }
+    }*/
 }
 
 

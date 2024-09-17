@@ -9,7 +9,7 @@ class InfobipSmsService implements SmsServiceInterface
 {
     protected $infobipClient;
 
-   
+
     protected $apiKey;
     protected $baseUri;
 

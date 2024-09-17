@@ -26,7 +26,23 @@ class FirebaseService
 
     public function store($request)
     {
-        $newData = $this->database->getReference(date('Y-m-d H:i:s'))->push($request);
+
+        $newData = $this->database->getReference(date('Y-m-d'))->push($request);
         return response()->json($newData->getValue());
     }
+  public function retrieve($id = null, $date = null)
+  {
+      // Récupération des données depuis Firebase
+      $reference = $this->database->getReference('/');
+      $data = $reference->getValue();
+
+      // Débogage pour voir les données récupérées
+     // dd($data);
+
+      return $data ? array_values($data) : [];
+  }
+
+
+
+
 }

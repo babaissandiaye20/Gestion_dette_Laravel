@@ -26,20 +26,47 @@ class MongoDBService
         // Initialize the MongoDB client and select the database and collection
         $this->client = new MongoClient(env('mongodbconnection_uri'));
         $this->database = $this->client->selectDatabase(env('MONGO_DATABASE_NAME'));
-        $this->collection = $this->database->selectCollection(env('mongodb_collection_name')); 
+        $this->collection = $this->database->selectCollection(env('mongodb_collection_name'));
     }
 
     public function store($data)
-    {
-        // Insert data into MongoDB and log the result
-        $insertResult = $this->collection->insertOne($data);
-    
-        Log::debug('MongoDB insert result: ', ['inserted_count' => $insertResult->getInsertedCount()]);
-    
-        if ($insertResult->getInsertedCount() > 0) {
-            return response()->json(['success' => true, 'id' => $insertResult->getInsertedId()], 201);
-        } else {
-            return response()->json(['success' => false], 500);
-        }
+{
+    Log::debug('Données avant insertion dans MongoDB : ' . json_encode($data));
+
+    $timestampKey = date('Y-m-d H:i:s');
+    $formattedData = [
+        'timestamp' => $timestampKey,
+        'data' => $data
+    ];
+
+    Log::debug('Données formatées pour MongoDB : ' . json_encode($formattedData));
+
+    $insertResult = $this->collection->insertOne($formattedData);
+
+    Log::debug('Résultat de l\'insertion MongoDB : ' . json_encode([
+        'inserted_id' => $insertResult->getInsertedId(),
+        'count' => $insertResult->getInsertedCount()
+    ]));
+
+    if ($insertResult->getInsertedCount() > 0) {
+        return ['success' => true, 'data' => $formattedData, 'id' => $insertResult->getInsertedId()];
+    } else {
+        return ['success' => false];
     }
+}
+
+
+public function retrieve($id = null, $date = null)
+{
+    // Récupération des données MongoDB sans filtres
+    $data = $this->collection->find()->toArray();
+
+    // Débogage pour voir les données récupérées
+   // dd($data);
+
+    return $data ? array_values($data) : [];
+}
+
+
+
 }
