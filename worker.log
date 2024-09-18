@@ -3183,3 +3183,59 @@ Illuminate\Support\Collection {#2201
   2024-09-17 08:35:38 App\Notifications\InvoicePaid .............. 4.15ms FAIL
   2024-09-17 08:35:38 App\Notifications\InvoicePaid .................. RUNNING
   2024-09-17 08:35:38 App\Notifications\InvoicePaid .............. 3.44ms FAIL
+  2024-09-17 08:47:47 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 08:47:47 App\Notifications\InvoicePaid .............. 9.24ms DONE
+  2024-09-17 09:00:09 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-17 09:00:09 App\Jobs\SendDebtReminderJob ............... 9.91ms DONE
+  2024-09-17 09:00:09 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:09 App\Notifications\InvoicePaid .............. 2.47ms FAIL
+  2024-09-17 09:00:09 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:09 App\Notifications\InvoicePaid .............. 3.18ms DONE
+  2024-09-17 09:00:09 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:09 App\Notifications\InvoicePaid .............. 6.23ms FAIL
+  2024-09-17 09:00:09 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:09 App\Notifications\InvoicePaid .............. 4.76ms FAIL
+  2024-09-17 09:00:42 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-17 09:00:42 App\Jobs\SendDebtReminderJob ............... 8.47ms DONE
+  2024-09-17 09:00:42 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:42 App\Notifications\InvoicePaid .............. 6.14ms FAIL
+  2024-09-17 09:00:42 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:42 App\Notifications\InvoicePaid .............. 6.79ms DONE
+  2024-09-17 09:00:42 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:42 App\Notifications\InvoicePaid .............. 3.00ms FAIL
+  2024-09-17 09:00:42 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:42 App\Notifications\InvoicePaid .............. 4.61ms FAIL
+  2024-09-17 09:00:57 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-17 09:00:57 App\Jobs\SendDebtReminderJob ............... 9.85ms DONE
+  2024-09-17 09:00:57 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:57 App\Notifications\InvoicePaid .............. 3.43ms FAIL
+  2024-09-17 09:00:57 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:57 App\Notifications\InvoicePaid .............. 4.58ms DONE
+  2024-09-17 09:00:57 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:57 App\Notifications\InvoicePaid .............. 2.49ms FAIL
+  2024-09-17 09:00:57 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:00:57 App\Notifications\InvoicePaid .............. 3.08ms FAIL
+  2024-09-17 09:01:06 App\Jobs\SendDebtReminderJob ................... RUNNING
+  2024-09-17 09:01:06 App\Jobs\SendDebtReminderJob .............. 12.84ms DONE
+  2024-09-17 09:01:06 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:01:06 App\Notifications\InvoicePaid .............. 5.92ms FAIL
+  2024-09-17 09:01:06 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:01:06 App\Notifications\InvoicePaid .............. 3.53ms DONE
+  2024-09-17 09:01:06 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:01:06 App\Notifications\InvoicePaid .............. 4.68ms FAIL
+  2024-09-17 09:01:06 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:01:06 App\Notifications\InvoicePaid .............. 4.89ms FAIL
+  2024-09-17 09:05:46 App\Notifications\InvoicePaid .................. RUNNING
+  2024-09-17 09:05:46 App\Notifications\InvoicePaid .............. 6.78ms DONE
+  2024-09-17 23:30:30 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-17 23:30:30 App\Jobs\SendFidelityCardEmailJob ........ 223.64ms FAIL
+  2024-09-17 23:30:30 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-17 23:30:33 App\Jobs\UploadUserPhotoJob .................... 3s DONE
+  2024-09-17 23:31:36 App\Jobs\UploadUserPhotoJob .................... RUNNING
+  2024-09-17 23:31:38 App\Jobs\UploadUserPhotoJob .................... 2s DONE
+  2024-09-17 23:34:23 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-17 23:34:24 App\Jobs\SendFidelityCardEmailJob ......... 52.82ms FAIL
+  2024-09-17 23:34:24 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-17 23:34:24 App\Jobs\SendFidelityCardEmailJob ......... 59.64ms FAIL
+  2024-09-17 23:34:24 App\Jobs\SendFidelityCardEmailJob .............. RUNNING
+  2024-09-17 23:34:24 App\Jobs\SendFidelityCardEmailJob ......... 64.51ms FAIL

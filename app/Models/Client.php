@@ -7,15 +7,18 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Notifications\Notifiable;
+use App\Enums\ClientCategory;
 #[ObservedBy([ClientObserver::class])]
 
 class Client extends Model
 {
     use HasFactory, Notifiable;
 
-    protected $fillable = ['telephone', 'surnom', 'adresse', 'user_id'];
+    protected $fillable = ['telephone', 'surnom', 'adresse', 'user_id', 'category', 'max_debt_amount'];
+
     protected $hidden=['created_at','updated_at'];
     protected $appends = ['photo'];
+
 
     public function user()
     {
@@ -71,4 +74,22 @@ class Client extends Model
 
 
 }
+public function getCategoryAttribute($value)
+    {
+        // Convertir la valeur en énumération lorsque l'attribut est accédé
+        return ClientCategory::from($value);
+    }
+
+    public function setCategoryAttribute($value)
+    {
+        // Convertir la valeur en entier avant de la stocker
+        $this->attributes['category'] = $value instanceof ClientCategory ? $value->value : $value;
+    }
+public function getTotalPaiementsAttribute()
+{
+    // Sum all the payments associated with this client's debts
+    return $this->dettes()->withSum('paiements', 'montant')->get()->sum('paiements_sum_montant');
+}
+
+
 }

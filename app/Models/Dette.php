@@ -42,7 +42,7 @@ class Dette extends Model
             }
         });
     }
-   
+
     public function getTotalPaiementsAttribute()
     {
         // Calculer la somme des paiements pour cette dette
@@ -65,4 +65,4 @@ class Dette extends Model
     }
 
 }
-      
+

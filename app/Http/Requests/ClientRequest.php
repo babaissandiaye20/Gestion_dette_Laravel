@@ -18,7 +18,7 @@ class ClientRequest extends FormRequest
     {
         $clientIdProvided = $this->input('client_id') !== null;
         $userInfoProvided = $this->has(['nom', 'prenom', 'login', 'password']);
-    
+
         return [
             'client_id' => 'nullable|exists:clients,id',
             'surnom' => $clientIdProvided ? 'nullable' : 'required|string|max:255|unique:clients,surnom',
@@ -37,6 +37,8 @@ class ClientRequest extends FormRequest
             // Rendre le rôle facultatif si aucune information utilisateur n'est fournie
             'role' => $userInfoProvided ? 'required|exists:roles,id' : 'nullable|exists:roles,id',
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+             'category' => 'in:bronze,silver,gold',
+                    'max_debt_amount' => 'required_if:category,silver|numeric|min:0',
         ];
     }
 
@@ -58,6 +60,9 @@ class ClientRequest extends FormRequest
             'client_id.exists' => 'Le client spécifié n\'existe pas.',
             'photo.mimes' => 'L\'image doit être de type jpeg, png, jpg ou gif.',
             'photo.max' => 'L\'image ne doit pas dépasser 2MB.',
+            'max_debt_amount.required_if' => 'Le montant de dette maximale est requis pour la catégorie Silver.',
+                    'max_debt_amount.numeric' => 'Le montant de dette maximale doit être un nombre.',
+                    'max_debt_amount.min' => 'Le montant de dette maximale doit être supérieur à zéro.',
         ];
     }
 }

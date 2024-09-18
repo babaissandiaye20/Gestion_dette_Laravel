@@ -16,6 +16,9 @@ use App\Http\Controllers\NotificationController;
 
 
 
+
+
+
 // Endpoint pour envoyer un SMS
 Route::post('/send-sms', [NotificationController::class, 'sendSms']);
 
@@ -68,6 +71,10 @@ Route::post('/fire', [FirebaseController::class, 'send']);
 Route::get('dettes', [DetteController::class, 'getAllDettes']);
 Route::middleware('auth:api')->group(function () {
     // Clients Routes
+    Route::post('/demandes/create', [DetteController::class, 'createDemande']);
+    Route::get('/demandes/{demandeId}/confirmer', [DetteController::class, 'confirmerDemande']);
+    Route::post('/demandes/{demandeId}/annuler', [DetteController::class, 'annulerDemande']);
+    Route::post('/demandes/{demandeId}/relancer', [DetteController::class, 'relancerDemande']);
     Route::get('/clients/{id}', [ClientController::class, 'getClientById']); // Affiche les détails d'un client par ID
     Route::post('/clients', [ClientController::class, 'register']);// Inscrit un nouveau client
     Route::post('/client', [ClientController::class, 'create']); // Crée un client (duplicata ?)
@@ -80,6 +87,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/articles/libelle', [ArticleController::class, 'searchByLibelle']); // Recherche d'articles par libellé
     Route::post('/articles/update-quantities', [ArticleController::class, 'updateQuantities']); // Met à jour les quantités d'articles
     Route::apiResource('articles', ArticleController::class); // Routes RESTful pour les articles
+Route::patch('/demandes/{demandeId}', [DetteController::class, 'traiterDemande']);
 
     // Roles Routes
     Route::post('/roles', [RoleController::class, 'create']); // Crée un nouveau rôle

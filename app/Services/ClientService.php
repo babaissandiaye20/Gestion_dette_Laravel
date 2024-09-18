@@ -21,6 +21,7 @@ use App\Http\Requests\ClientCreateRequest;
 use  App\Services\UserService;
 use App\Exceptions\ServiceException;
 use App\Events\ClientFidelityEvent;
+use App\Enums\ClientCategory;
 class ClientService implements ClientServiceInterface
 {
     protected $qrCodeService;
@@ -51,20 +52,33 @@ class ClientService implements ClientServiceInterface
         return $client;
     }
 
-    public function createClient($request)
-{
-    // Directly pass the request data to the ClientRepositoryFacade
-    $client = ClientRepositoryFacade::create($request->all());
+  public function createClient($request)
+      {
+          // Ajout de la catégorie par défaut (Bronze) si non spécifiée
+          $category = $request->input('category', ClientCategory::BRONZE);
+          $maxDebtAmount = null;
 
-    // If user-related data is present, create a user for the client
-    if ($request->has(['nom', 'prenom', 'login', 'password', 'password_confirmation'])) {
-        $this->createUserForClient($request, $client);
-    }
-  /*   event(new ClientFidelityEvent($client));  */
+          // Si la catégorie est Silver, on exige un montant maximal pour la dette
+          if ($category === ClientCategory::SILVER) {
+              $maxDebtAmount = $request->input('max_debt_amount');
+              if (!$maxDebtAmount) {
+                  throw new ServiceException('Le montant de la dette maximale est requis pour la catégorie Silver.');
+              }
+          }
 
-    
-    return $client;
-}
+          // Création du client en passant la catégorie et le montant maximal de la dette
+          $client = ClientRepositoryFacade::create(array_merge(
+              $request->all(),
+              ['category' => $category, 'max_debt_amount' => $maxDebtAmount]
+          ));
+
+          if ($request->has(['nom', 'prenom', 'login', 'password', 'password_confirmation'])) {
+              $this->createUserForClient($request, $client);
+          }
+
+          return $client;
+      }
+
 
 
     public function createUserForClient($request, $client)
@@ -109,18 +123,33 @@ class ClientService implements ClientServiceInterface
 
         return null;
     }
-    public function create(array $data)
-    {
-        // Directly pass the entire data array to the ClientRepositoryFacade
-        $client = ClientRepositoryFacade::create($data);
-    
-        return response()->json([
-            'statut' => 201,
-            'message' => 'Client créé sans utilisateur avec succès.',
-            'client' => $client
-        ], 201);
-    }
-    
+   public function create(array $data)
+   {
+       // Ajout de la catégorie par défaut (Bronze) si non spécifiée
+       $category = $data['category'] ?? ClientCategory::BRONZE;
+       $maxDebtAmount = null;
+
+       // Si la catégorie est Silver, on exige un montant maximal pour la dette
+       if ($category === ClientCategory::SILVER) {
+           $maxDebtAmount = $data['max_debt_amount'] ?? null;
+           if (!$maxDebtAmount) {
+               throw new ServiceException('Le montant de la dette maximale est requis pour la catégorie Silver.');
+           }
+       }
+
+       // Création du client en passant la catégorie et le montant maximal de la dette
+       $client = ClientRepositoryFacade::create(array_merge(
+           $data,
+           ['category' => $category, 'max_debt_amount' => $maxDebtAmount]
+       ));
+
+       return response()->json([
+           'statut' => 201,
+           'message' => 'Client créé avec succès.',
+           'client' => $client
+       ], 201);
+   }
+
     public function getClientsByTelephones(array $telephones)
 {
     $clients = ClientRepositoryFacade::getClientsByTelephones($telephones);
@@ -135,7 +164,7 @@ class ClientService implements ClientServiceInterface
     return ['statut' => 200, 'clients' => $clients,'message'=>'Success'];
 }
 
-    
+
 public function getClientById($id)
 {
     $client = ClientRepositoryFacade::getClientById($id);
@@ -161,7 +190,7 @@ public function getClientWithUser($id)
     return ['statut' => 200, 'client' => $client,'message'=>'Sucess'];
 }
 
-    
+
 
     public function afficherDettes($clientId)
     {
@@ -172,15 +201,15 @@ public function getClientWithUser($id)
     public function getClientsWithFilters(?string $comptes, ?string $etat): LengthAwarePaginator
     {
         $clients = ClientRepositoryFacade::getClientsWithFilters($comptes, $etat);
-    
+
         // Parcourez chaque client et encodez la photo en base64 s'il y a un utilisateur avec une photo
         foreach ($clients as $client) {
             if ($client->user && $client->user->photo) {
                 $client->user->photo_base64 = $this->encodePhotoToBase64($client->user->photo);
             }
         }
-    
+
         return $clients;
     }
-    
+
 }
